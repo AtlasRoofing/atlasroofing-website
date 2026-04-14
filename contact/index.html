@@ -169,7 +169,9 @@ img { max-width: 100%; height: auto; display: block; }
 <div class="contact-form">
 <h2>Request Your Free Inspection</h2>
 <p class="sub">Fill out the form and one of our team members will reach out within 2 business hours to schedule your free, no-obligation inspection.</p>
-<form action="/thankyou/" method="POST">
+<form name="inspection-request" method="POST" action="/thankyou/" data-netlify="true" netlify-honeypot="bot-field">
+<input type="hidden" name="form-name" value="inspection-request">
+<input type="text" name="bot-field" style="display:none" aria-hidden="true">
 <div class="fg-row">
 <div class="fg"><label for="fname">First name *</label><input type="text" id="fname" name="first_name" placeholder="John" required></div>
 <div class="fg"><label for="lname">Last name *</label><input type="text" id="lname" name="last_name" placeholder="Smith" required></div>

@@ -23,3 +23,10 @@
   for = "/*.html"
   [headers.values]
     Cache-Control = "public, max-age=3600"
+
+# Form submission notifications
+[[notifications]]
+  event = "submission_created"
+  type = "email"
+  data.to = "office@atlasroofingrestoration.com"
+  data.subject = "New Atlas Website Lead: {{data.first_name}} {{data.last_name}}"

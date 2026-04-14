@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ice Dams & Winter Roof Damage: What Ohio Homeowners Need to Know | Atlas Roofing & Restoration</title>
+<meta name="description" content="Ice dams are one of the top causes of roof and interior damage in Cleveland. Learn what causes them, how to prevent them, and what to do if your roof is already damaged.">
+<link rel="canonical" href="https://atlasroofingrestoration.com/blog/ice-dams-winter-damage/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;font-size:16px;}
+body{font-family:'Manrope',sans-serif;color:#111827;background:#fff;line-height:1.6;overflow-x:hidden;}
+a{text-decoration:none;color:inherit;}
+img{max-width:100%;height:auto;display:block;}
+:root{
+  --blue:#0076c1;--blue-dk:#005a94;--blue-lt:#e8f4fb;
+  --green:#65c47b;--green-dk:#4aab61;--green-lt:#eaf7ed;
+  --navy:#003d6b;--dark:#111827;--gray:#6b7280;--gray-lt:#f3f6f9;
+  --border:#e2e8f0;--white:#ffffff;
+  --grad:linear-gradient(135deg,#003d6b 0%,#005a94 60%,#0a6b52 100%);
+  --shadow:0 4px 20px rgba(0,0,0,0.10);--shadow-lg:0 8px 40px rgba(0,0,0,0.15);
+  --r:8px;--r-lg:14px;
+}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px;}
+.btn{display:inline-block;font-family:'Manrope',sans-serif;font-weight:700;font-size:15px;padding:13px 26px;border-radius:var(--r);cursor:pointer;transition:transform 0.15s,opacity 0.15s;white-space:nowrap;border:none;}
+.btn:hover{transform:translateY(-1px);opacity:0.92;}
+.btn-blue{background:var(--blue);color:#fff;}
+.btn-green{background:var(--green);color:#fff;}
+/* TOPBAR */
+.topbar{background:#0a1520;padding:8px 0;}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;}
+.topbar-left{font-size:12px;color:rgba(255,255,255,0.45);display:flex;align-items:center;gap:20px;}
+.topbar-left span{display:flex;align-items:center;gap:5px;}
+.topbar-left span::before{content:'';display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--green);}
+.topbar-phone{font-size:17px;font-weight:800;color:#fff;display:flex;align-items:center;gap:7px;}
+.topbar-phone:hover{color:var(--green);}
+.topbar-phone-icon{width:18px;height:18px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;flex-shrink:0;}
+/* NAV */
+.nav{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;box-shadow:0 1px 12px rgba(0,0,0,0.06);}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:70px;gap:16px;}
+.nav-logo img{height:42px;width:auto;display:block;}
+.nav-links{display:flex;align-items:center;gap:2px;list-style:none;}
+.nav-links a{font-size:14px;font-weight:500;color:var(--gray);padding:7px 12px;border-radius:6px;transition:all 0.2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--blue);background:var(--blue-lt);}
+.nav-right{display:flex;align-items:center;gap:10px;flex-shrink:0;}
+.nav-tel{font-size:14px;font-weight:700;color:var(--blue);display:flex;align-items:center;gap:5px;}
+.hamburger{display:none;background:none;border:none;cursor:pointer;padding:4px;flex-direction:column;gap:5px;}
+.hamburger span{display:block;width:22px;height:2px;background:var(--dark);border-radius:2px;}
+.mobile-nav{display:none;flex-direction:column;background:#fff;border-top:1px solid var(--border);padding:12px 24px 20px;gap:2px;}
+.mobile-nav.open{display:flex;}
+.mobile-nav a{font-size:15px;font-weight:500;color:var(--dark);padding:10px 0;border-bottom:1px solid #f3f4f6;}
+.mobile-nav .m-btn{margin-top:12px;text-align:center;background:var(--blue);color:#fff;padding:13px;border-radius:var(--r);font-weight:700;font-size:15px;border:none;display:block;}
+/* BREADCRUMB */
+.breadcrumb{background:var(--gray-lt);border-bottom:1px solid var(--border);padding:10px 0;}
+.breadcrumb .wrap{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--gray);}
+.breadcrumb a{color:var(--blue);}
+.breadcrumb a:hover{text-decoration:underline;}
+/* BLOG HERO */
+.blog-hero{background:var(--grad);padding:56px 0 48px;position:relative;overflow:hidden;}
+.blog-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 50%,rgba(101,196,123,0.12) 0%,transparent 60%);pointer-events:none;}
+.blog-hero-inner{position:relative;z-index:1;max-width:760px;}
+.blog-hero-cat{display:inline-flex;align-items:center;gap:7px;background:rgba(101,196,123,0.15);border:1px solid rgba(101,196,123,0.3);border-radius:100px;padding:5px 14px;font-size:11px;font-weight:700;letter-spacing:0.1em;color:#a0eab0;text-transform:uppercase;margin-bottom:18px;}
+.blog-hero h1{font-size:clamp(28px,4vw,46px);font-weight:800;color:#fff;line-height:1.1;letter-spacing:-0.02em;margin-bottom:16px;}
+.blog-hero-meta{font-size:13px;color:rgba(255,255,255,0.5);display:flex;gap:16px;flex-wrap:wrap;}
+.blog-hero-meta span::before{content:'';display:inline-block;width:4px;height:4px;background:var(--green);border-radius:50%;margin-right:7px;vertical-align:middle;}
+/* BLOG LAYOUT */
+.blog-layout{display:grid;grid-template-columns:1fr 300px;gap:48px;padding:56px 0;align-items:start;}
+/* ARTICLE */
+.blog-article h2{font-size:24px;font-weight:800;color:var(--dark);margin:36px 0 14px;line-height:1.2;}
+.blog-article h3{font-size:18px;font-weight:700;color:var(--navy);margin:28px 0 10px;}
+.blog-article p{font-size:16px;color:#374151;line-height:1.75;margin-bottom:18px;}
+.blog-article ul,.blog-article ol{padding-left:24px;margin-bottom:18px;}
+.blog-article li{font-size:15px;color:#374151;line-height:1.7;margin-bottom:6px;}
+.blog-article strong{color:var(--dark);font-weight:700;}
+.blog-article a{color:var(--blue);}
+.blog-article a:hover{text-decoration:underline;}
+.blog-tip{background:var(--blue-lt);border-left:4px solid var(--blue);border-radius:0 var(--r) var(--r) 0;padding:16px 20px;margin:24px 0;font-size:15px;color:#1e4f7a;line-height:1.65;}
+.blog-tip strong{color:var(--navy);}
+.blog-warning{background:#fff8e1;border-left:4px solid #f59e0b;border-radius:0 var(--r) var(--r) 0;padding:16px 20px;margin:24px 0;font-size:15px;color:#7c5a00;line-height:1.65;}
+.blog-cta-box{background:var(--grad);border-radius:var(--r-lg);padding:32px;margin:40px 0;text-align:center;}
+.blog-cta-box h3{font-size:22px;font-weight:800;color:#fff;margin-bottom:10px;}
+.blog-cta-box p{font-size:15px;color:rgba(255,255,255,0.7);margin-bottom:22px;}
+.blog-cta-box .cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+/* SIDEBAR */
+.blog-sidebar{position:sticky;top:90px;display:flex;flex-direction:column;gap:24px;}
+.sidebar-card{background:#fff;border:1px solid var(--border);border-radius:var(--r-lg);padding:24px;box-shadow:var(--shadow);}
+.sidebar-card-title{font-size:13px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--gray);margin-bottom:16px;}
+.sidebar-card h3{font-size:17px;font-weight:800;color:var(--navy);margin-bottom:8px;}
+.sidebar-card p{font-size:13px;color:var(--gray);line-height:1.6;margin-bottom:16px;}
+.sidebar-card .btn{width:100%;text-align:center;display:block;margin-bottom:8px;}
+.sidebar-card .sc-phone{font-size:18px;font-weight:800;color:var(--blue);display:block;text-align:center;margin-bottom:14px;}
+.sidebar-links{display:flex;flex-direction:column;gap:8px;}
+.sidebar-links a{font-size:14px;color:var(--blue);display:flex;align-items:center;gap:8px;}
+.sidebar-links a::before{content:'›';font-weight:700;}
+.sidebar-links a:hover{text-decoration:underline;}
+.author-box{display:flex;gap:14px;align-items:flex-start;padding-top:24px;border-top:1px solid var(--border);margin-top:32px;}
+.author-avatar{width:52px;height:52px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
+.author-name{font-size:14px;font-weight:700;color:var(--dark);}
+.author-role{font-size:12px;color:var(--gray);}
+/* FOOTER */
+.footer{background:#0a1520;padding:56px 0 26px;}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);margin-bottom:26px;}
+.footer-logo img{height:36px;margin-bottom:14px;}
+.footer-desc{font-size:13px;color:rgba(255,255,255,0.4);line-height:1.7;margin-bottom:18px;}
+.footer-contact{display:flex;flex-direction:column;gap:8px;}
+.footer-contact a{font-size:13px;color:rgba(255,255,255,0.45);transition:color 0.2s;}
+.footer-contact a:hover{color:var(--green);}
+.footer-col-title{font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.22);margin-bottom:14px;}
+.footer-links{display:flex;flex-direction:column;gap:8px;}
+.footer-links a{font-size:13px;color:rgba(255,255,255,0.45);transition:color 0.2s;}
+.footer-links a:hover{color:var(--green);}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;font-size:12px;color:rgba(255,255,255,0.25);}
+.footer-badges{display:flex;gap:8px;}
+.fbadge{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);border-radius:4px;padding:4px 10px;font-size:11px;font-weight:600;color:rgba(255,255,255,0.4);}
+/* MOBILE STICKY */
+.mob-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;background:#0a1520;border-top:2px solid var(--blue);padding:10px 16px;gap:10px;}
+.mob-call,.mob-insp{flex:1;text-align:center;padding:11px;border-radius:var(--r);font-weight:700;font-size:14px;}
+.mob-call{background:rgba(255,255,255,0.08);color:#fff;border:1px solid rgba(255,255,255,0.15);}
+.mob-insp{background:var(--blue);color:#fff;}
+@media(max-width:900px){
+  .blog-layout{grid-template-columns:1fr;}
+  .blog-sidebar{position:static;}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:600px){
+  .nav-links,.nav-right .nav-tel,.nav-right .btn{display:none;}
+  .hamburger{display:flex;}
+  .mob-bar{display:flex;}
+  .footer-grid{grid-template-columns:1fr;}
+  .topbar-left{display:none;}
+}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="wrap">
+    <div class="topbar-left">
+      <span>23945 Mercantile Rd, Suite D — Beachwood, OH</span>
+      <span>BBB A+ Accredited</span>
+      <span>GAF Certified</span>
+    </div>
+    <a href="tel:2168883208" class="topbar-phone">
+      <span class="topbar-phone-icon">☎</span>
+      (216) 888-3208
+    </a>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="wrap">
+    <a href="/" class="nav-logo"><img src="../../logo.png" alt="Atlas Roofing &amp; Restoration"></a>
+    <ul class="nav-links">
+      <li><a href="/residential-roofing/">Residential</a></li>
+      <li><a href="/commercial-roofing/">Commercial</a></li>
+      <li><a href="/gutters/">Gutters</a></li>
+      <li><a href="/siding/">Siding</a></li>
+      <li><a href="/insurance-claims/">Insurance</a></li>
+      <li><a href="/#instant-estimates">Estimate</a></li>
+      <li><a href="/about/">About</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="tel:2168883208" class="nav-tel">☎ (216) 888-3208</a>
+      <a href="/contact/" class="btn btn-blue">Free Inspection</a>
+    </div>
+    <button class="hamburger" onclick="document.getElementById('mobileNav').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="/residential-roofing/">Residential Roofing</a>
+    <a href="/commercial-roofing/">Commercial Roofing</a>
+    <a href="/gutters/">Gutters</a>
+    <a href="/siding/">Siding</a>
+    <a href="/insurance-claims/">Insurance Claims</a>
+    <a href="/#instant-estimates">Instant Estimate</a>
+    <a href="/financing/">Financing</a>
+    <a href="/about/">About Us</a>
+    <a href="/contact/" class="m-btn">Get Free Inspection</a>
+  </div>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <div class="wrap">
+    <a href="/">Home</a>
+    <span>›</span>
+    <a href="/blog/">Blog</a>
+    <span>›</span>
+    <span>Ice Dams & Winter Damage</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="blog-hero">
+  <div class="wrap">
+    <div class="blog-hero-inner">
+      <div class="blog-hero-cat">🏠 Atlas Roofing Blog</div>
+      <h1>Ice Dams and Winter Roof Damage: A Guide for Ohio Homeowners</h1>
+      <div class="blog-hero-meta">
+        <span>Atlas Roofing &amp; Restoration</span>
+        <span>April 2026</span>
+        <span>7 min read</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTENT -->
+<div class="wrap">
+  <div class="blog-layout">
+    <article class="blog-article">
+
+      <p>If you own a home in Northeast Ohio, ice dams are a real and recurring threat. Every winter, they're responsible for damaged shingles, ruined insulation, stained ceilings, and rotted roof decking — often in homes that appear perfectly fine from the outside. Here's what causes them, how to prevent them, and what to do if your roof has already suffered damage.</p>
+
+      <h2>What Is an Ice Dam?</h2>
+      <p>An ice dam forms when heat escaping from your living space warms the upper portion of your roof deck, melting the snow sitting on top. That meltwater runs down toward the eaves, which are colder (since they extend beyond the heated house) and refreeze. Over time, a ridge of ice builds up at the edge of the roof — the "dam." More meltwater backs up behind it and, with nowhere to go, seeps under the shingles and into the roof assembly.</p>
+      <p>The result: water infiltration into the attic, insulation, wall cavities, and eventually the ceilings and walls of your living space. It can happen surprisingly fast during a cycle of warming and refreezing temperatures — exactly what Cleveland winters specialize in.</p>
+
+      <h2>Signs You Have an Ice Dam Problem</h2>
+      <ul>
+        <li>Large icicles hanging from the eaves (a little is normal; a wall of ice is not)</li>
+        <li>Water stains or wet spots on ceilings near exterior walls</li>
+        <li>Peeling paint on interior walls near the roofline</li>
+        <li>Visible ice buildup on the roof edge that doesn't melt when the rest of the roof clears</li>
+        <li>Damp or compressed attic insulation after a cold snap</li>
+      </ul>
+
+      <div class="blog-tip"><strong>Don't ignore water stains:</strong> A ceiling stain that appears in February may trace back to an ice dam that formed weeks earlier. The damage can be ongoing even after the ice melts.</div>
+
+      <h2>What Causes Ice Dams (and Why Ventilation Matters)</h2>
+      <p>The root cause is almost always inadequate attic insulation or ventilation — sometimes both. When the attic is too warm relative to the outside, it heats the roof deck unevenly. The fix isn't on the roof itself; it's in the attic.</p>
+      <p>Proper attic ventilation (intake at soffits, exhaust at the ridge) keeps the roof deck at a uniform temperature close to the outside air, preventing the freeze-thaw cycle that creates dams. Adequate insulation (typically R-49 to R-60 in Ohio) keeps heated air from rising into the attic in the first place.</p>
+      <p>A complete roof replacement is a good time to address both — we can assess your current ventilation during the inspection and recommend improvements.</p>
+
+      <h2>How to Prevent Ice Dams</h2>
+      <ul>
+        <li><strong>Improve attic insulation</strong> — the most effective long-term fix</li>
+        <li><strong>Improve attic ventilation</strong> — ridge vents, soffit vents, and baffles to maintain airflow</li>
+        <li><strong>Ice and water shield underlayment</strong> — required by Ohio building code at eaves; provides a waterproof barrier if a dam forms</li>
+        <li><strong>Roof rake after heavy snow</strong> — removing the bottom 3–4 feet of snow from the eave edge reduces the meltwater supply</li>
+        <li><strong>Heated cable systems</strong> — a short-term solution that creates melt channels through the dam; not a substitute for addressing the underlying cause</li>
+      </ul>
+
+      <h2>What to Do If You Already Have Damage</h2>
+      <p>If you're seeing interior water stains or suspect ice dam infiltration, here's the priority order:</p>
+      <ul>
+        <li>Don't attempt to chip the ice off the roof — this almost always damages the shingles</li>
+        <li>Document the damage with photos and note when it appeared</li>
+        <li>Call a roofing contractor for an inspection once the ice clears</li>
+        <li>Check with your homeowner's insurance — ice dam damage is typically covered under standard policies</li>
+        <li>Address the attic insulation/ventilation cause as part of any repair or replacement</li>
+      </ul>
+
+      <div class="blog-warning"><strong>Winter roofing note:</strong> Most roof replacements in Ohio are done between April and November. Winter repairs to address active leaks are possible but come with limitations. Getting an inspection early in spring positions you to act quickly before the next storm season.</div>
+
+      <h2>Does Homeowner's Insurance Cover Ice Dam Damage?</h2>
+      <p>Usually yes — ice dam damage is generally covered under the "water damage" provision of a standard homeowner's policy, as long as the damage resulted from a covered weather event. However, if the insurer can show that the damage was caused by a maintenance failure (like severely deteriorated shingles or an insulation problem that's been there for years), coverage may be disputed. Documenting the condition of your roof over time is important.</p>
+
+      <div class="blog-cta-box">
+        <h3>Had Ice Dam Problems This Winter? Let's Take a Look.</h3>
+        <p>We inspect roofs and attics throughout Cleveland and NE Ohio — free, no obligation. We'll tell you what happened and how to prevent it from happening again.</p>
+        <div class="cta-btns">
+          <a href="/contact/" class="btn btn-green">Schedule Free Inspection</a>
+          <a href="/residential-roofing/" class="btn btn-outline-white">Residential Roofing</a>
+        </div>
+      </div>
+
+
+      <div class="author-box">
+        <div class="author-avatar">🏠</div>
+        <div>
+          <div class="author-name">Atlas Roofing &amp; Restoration</div>
+          <div class="author-role">GAF Certified Roofing Contractor · Beachwood, OH · (216) 888-3208</div>
+        </div>
+      </div>
+    </article>
+
+    <aside class="blog-sidebar">
+      <div class="sidebar-card" style="background:var(--grad);border:none;">
+        <h3 style="color:#fff;font-size:18px;margin-bottom:8px;">Get a Free Roof Inspection</h3>
+        <p style="color:rgba(255,255,255,0.7);margin-bottom:18px;">No commitment. No pressure. Just an honest assessment from a GAF Certified contractor.</p>
+        <a href="/contact/" class="btn btn-green" style="display:block;text-align:center;margin-bottom:10px;">Schedule Inspection</a>
+        <a href="tel:2168883208" style="display:block;text-align:center;font-size:17px;font-weight:800;color:#fff;">☎ (216) 888-3208</a>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-card-title">Instant Estimate</div>
+        <p style="font-size:13px;color:var(--gray);margin-bottom:14px;">Get a ballpark roof replacement cost in under 60 seconds — no personal info required.</p>
+        <a href="/instant-estimates/" class="btn btn-blue" style="display:block;text-align:center;">Get Instant Estimate</a>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-card-title">More Articles</div>
+        <div class="sidebar-links">
+          <a href="/blog/hail-damage-signs/">Signs of Hail Damage</a>
+          <a href="/blog/repair-vs-replace/">Repair vs. Replace Your Roof</a>
+          <a href="/blog/gaf-warranty-explained/">GAF Warranty Explained</a>
+          <a href="/blog/insurance-claims-process/">Insurance Claims Process</a>
+          <a href="/blog/ice-dams-winter-damage/">Ice Dams &amp; Winter Damage</a>
+          <a href="/blog/best-shingles-ohio/">Best Shingles for Ohio</a>
+          <a href="/blog/how-long-roof-replacement-takes/">How Long Replacement Takes</a>
+          <a href="/blog/signs-you-need-gutters/">Signs You Need New Gutters</a>
+          <a href="/blog/what-free-inspection-includes/">What a Free Inspection Includes</a>
+          <a href="/blog/how-to-choose-contractor-cleveland/">Choose a Cleveland Contractor</a>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-card-title">Our Services</div>
+        <div class="sidebar-links">
+          <a href="/residential-roofing/">Residential Roofing</a>
+          <a href="/commercial-roofing/">Commercial Roofing</a>
+          <a href="/gutters/">Gutters</a>
+          <a href="/siding/">Siding</a>
+          <a href="/insurance-claims/">Insurance Claims</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo"><img src="../../logo-dark.png" alt="Atlas Roofing &amp; Restoration"></div>
+        <p class="footer-desc">Cleveland and Northeast Ohio's trusted roofing contractor. GAF certified, BBB A+ rated, proud to serve our community.</p>
+        <div class="footer-contact">
+          <a href="tel:2168883208">☎ (216) 888-3208</a>
+          <a href="mailto:office@atlasroofingrestoration.com">✉ office@atlasroofingrestoration.com</a>
+          <a href="#">📍 23945 Mercantile Rd, Suite D, Beachwood OH 44122</a>
+        </div>
+        <div style="display:flex;gap:12px;margin-top:14px;">
+          <a href="https://www.facebook.com/atlasroofingrestoration" target="_blank" rel="noopener" style="width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;font-size:16px;color:rgba(255,255,255,0.6);" title="Facebook">f</a>
+          <a href="https://www.instagram.com/atlasroofingrestoration" target="_blank" rel="noopener" style="width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;font-size:14px;color:rgba(255,255,255,0.6);" title="Instagram">📷</a>
+          <a href="https://www.google.com/maps/place/Atlas+Roofing+%26+Restoration/@41.4608547,-81.5060061,707m/data=!3m2!1e3!5s0x883102a495403b37:0xfd9c252c052527cd!4m8!3m7!1s0x883102bd2b5a73b9:0x92937d2914e8a622!8m2!3d41.4608547!4d-81.5060061!9m1!1b1!16s%2Fg%2F11vkr36yfr?entry=ttu&g_ep=EgoyMDI2MDQxMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" style="width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;font-size:14px;color:rgba(255,255,255,0.6);" title="Google Reviews">⭐</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Services</div>
+        <div class="footer-links">
+          <a href="/residential-roofing/">Residential Roofing</a>
+          <a href="/commercial-roofing/">Commercial Roofing</a>
+          <a href="/gutters/">Gutters</a>
+          <a href="/siding/">Siding</a>
+          <a href="/multi-family-roofing/">Multi-Family Roofing</a>
+          <a href="/insurance-claims/">Insurance Claims</a>
+          <a href="/financing/">Financing</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Company</div>
+        <div class="footer-links">
+          <a href="/about/">About Us</a>
+          <a href="/past-jobs/">Past Jobs</a>
+          <a href="/faq/">FAQ</a>
+          <a href="/blog/">Blog</a>
+          <a href="/warranty/">Warranty</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Service Areas</div>
+        <div class="footer-links">
+          <a href="/cleveland-ohio/">Cleveland</a>
+          <a href="/beachwood-ohio/">Beachwood</a>
+          <a href="/roofing-shaker-heights/">Shaker Heights</a>
+          <a href="/roofing-solon-ohio/">Solon</a>
+          <a href="/lyndhurst-ohio/">Lyndhurst</a>
+          <a href="/roofing-south-euclid-oh/">South Euclid</a>
+          <a href="/parma-ohio/">Parma</a>
+          <a href="/contact/">+ More Areas</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Atlas Roofing &amp; Restoration. All rights reserved. | <a href="/privacy-policy/" style="color:rgba(255,255,255,0.25);">Privacy Policy</a></p>
+      <div class="footer-badges">
+        <span class="fbadge">BBB A+</span>
+        <span class="fbadge">GAF Certified</span>
+        <span class="fbadge">Licensed &amp; Insured</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="mob-bar">
+  <a href="tel:2168883208" class="mob-call">☎ Call Now</a>
+  <a href="/contact/" class="mob-insp">Free Inspection</a>
+</div>
+
+<script>
+function toggleFaq(el) {
+  var item = el.parentElement;
+  var isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(function(i){ i.classList.remove('open'); });
+  if (!isOpen) item.classList.add('open');
+}
+</script>
+</body>
+</html>

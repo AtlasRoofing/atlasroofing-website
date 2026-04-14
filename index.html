@@ -922,7 +922,10 @@ img { max-width: 100%; display: block; }
           <div class="ins-tip">
             <strong>Did you know?</strong> Storm or hail damage may qualify for a full roof replacement through your homeowner's insurance — at no out-of-pocket cost. We'll check for free.
           </div>
-          <form action="/thankyou/" method="POST">
+          <form name="free-inspection" action="/thankyou/" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="free-inspection">
+            <input type="hidden" name="subject" value="New Lead — Free Inspection Request">
+            <p style="display:none"><label>Skip: <input name="bot-field"></label></p>
             <div class="fg">
               <label for="fname">Your name</label>
               <input type="text" id="fname" name="name" placeholder="John Smith" required>

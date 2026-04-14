@@ -785,6 +785,17 @@ img { max-width: 100%; display: block; }
   .gallery-grid { grid-template-columns: 1fr; }
   .why-stats { grid-template-columns: 1fr 1fr; }
 }
+
+.video-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 52px;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .video-grid { grid-template-columns: 1fr; gap: 32px; }
+}
 </style>
 <meta property="og:type" content="website">
 <meta property="og:title" content="Atlas Roofing &amp; Restoration | Cleveland Ohio Roofing Contractor">
@@ -800,7 +811,7 @@ img { max-width: 100%; display: block; }
 
 <!-- TOP BAR -->
 <div class="topbar">
-  <div class="wrap">
+  <div class="container">
     <div class="topbar-inner">
       <div class="topbar-left">
         <span>23945 Mercantile Rd, Suite D — Beachwood, OH</span>
@@ -817,7 +828,7 @@ img { max-width: 100%; display: block; }
 
 <!-- NAV -->
 <nav class="nav">
-  <div class="wrap">
+  <div class="container">
     <div class="nav-inner">
       <a href="/" class="nav-logo">
         <img src="logo.png" alt="Atlas Roofing & Restoration">
@@ -860,7 +871,7 @@ img { max-width: 100%; display: block; }
 <!-- HERO -->
 <section class="hero">
   <div class="hero-glow"></div>
-  <div class="wrap">
+  <div class="container">
     <div class="hero-inner">
       <div>
         <div class="hero-badge">
@@ -947,7 +958,7 @@ img { max-width: 100%; display: block; }
 
 <!-- TRUST BAR -->
 <div class="trustbar">
-  <div class="wrap">
+  <div class="container">
     <div class="trustbar-inner">
       <div class="tb-item"><div class="tb-icon blue"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg></div>Licensed, Bonded & Insured</div>
       <div class="tb-divider"></div>
@@ -964,7 +975,7 @@ img { max-width: 100%; display: block; }
 
 <!-- SERVICES -->
 <section class="services">
-  <div class="wrap">
+  <div class="container">
     <div class="services-header">
       <div>
         <span class="eyebrow">What we do</span>
@@ -1007,7 +1018,7 @@ img { max-width: 100%; display: block; }
 
 <!-- WHY ATLAS -->
 <section class="why">
-  <div class="wrap">
+  <div class="container">
     <div class="why-inner">
       <div>
         <span class="eyebrow">Why Atlas</span>
@@ -1056,7 +1067,7 @@ img { max-width: 100%; display: block; }
 
 <!-- INSTANT ESTIMATOR (ROOFR) -->
 <section class="estimator" id="instant-estimates">
-  <div class="wrap">
+  <div class="container">
     <div class="estimator-header">
       <span class="eyebrow">Powered by Roofr</span>
       <h2 class="section-title">Get an Instant Roof Estimate</h2>
@@ -1089,7 +1100,7 @@ img { max-width: 100%; display: block; }
 
 <!-- PAST JOBS GALLERY -->
 <section class="gallery" id="past-jobs">
-  <div class="wrap">
+  <div class="container">
     <div class="gallery-header">
       <div>
         <span class="eyebrow">Our work</span>
@@ -1147,7 +1158,7 @@ img { max-width: 100%; display: block; }
 
 <!-- INSURANCE SECTION -->
 <section class="insurance">
-  <div class="wrap">
+  <div class="container">
     <div class="insurance-inner">
       <div>
         <span class="ins-tag">Insurance claim assistance</span>
@@ -1165,7 +1176,7 @@ img { max-width: 100%; display: block; }
 
 <!-- PROCESS -->
 <section class="process">
-  <div class="wrap">
+  <div class="container">
     <div class="process-header">
       <span class="eyebrow">How it works</span>
       <h2 class="section-title">Your New Roof in 4 Simple Steps</h2>
@@ -1198,7 +1209,7 @@ img { max-width: 100%; display: block; }
 
 <!-- REVIEWS -->
 <section class="reviews">
-  <div class="wrap">
+  <div class="container">
     <div class="reviews-header">
       <span class="eyebrow">What customers say</span>
       <h2 class="section-title">Real Reviews from Real Neighbors</h2>
@@ -1233,8 +1244,8 @@ img { max-width: 100%; display: block; }
 
 
 <section style="background:#0a1520;padding:72px 0;">
-  <div class="wrap">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center;" class="video-grid">
+  <div class="container">
+    <div class="video-grid">
       <div>
         <span style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#65c47b;display:block;margin-bottom:12px;">See our work</span>
         <h2 style="font-size:clamp(26px,4vw,40px);font-weight:800;color:#fff;letter-spacing:-0.02em;line-height:1.1;margin-bottom:16px;">We Let Our Work<br>Speak for Itself.</h2>
@@ -1257,7 +1268,7 @@ img { max-width: 100%; display: block; }
 
 
 <section class="areas">
-  <div class="wrap">
+  <div class="container">
     <div class="areas-header">
       <span class="eyebrow">Service area</span>
       <h2 class="section-title">Proudly Serving Northeast Ohio</h2>
@@ -1293,7 +1304,7 @@ img { max-width: 100%; display: block; }
 
 <!-- FAQ -->
 <section class="faq">
-  <div class="wrap">
+  <div class="container">
     <div class="faq-inner">
       <div>
         <span class="eyebrow">Common questions</span>
@@ -1334,7 +1345,7 @@ img { max-width: 100%; display: block; }
 
 <!-- FINAL CTA -->
 <section class="final-cta">
-  <div class="wrap">
+  <div class="container">
     <div class="fct-inner">
       <h2>Ready for a New Roof?<br>Let's Talk.</h2>
       <p>Schedule your free, no-obligation inspection. We'll give you a straight answer, a fair quote, and a roof that lasts.</p>
@@ -1348,7 +1359,7 @@ img { max-width: 100%; display: block; }
 
 <!-- FOOTER -->
 <footer class="footer">
-  <div class="wrap">
+  <div class="container">
     <div class="footer-grid">
       <div>
         <div class="footer-logo"><img src="logo-dark.png" alt="Atlas Roofing & Restoration"></div>
@@ -1358,6 +1369,11 @@ img { max-width: 100%; display: block; }
           <a href="mailto:office@atlasroofingrestoration.com">✉ office@atlasroofingrestoration.com</a>
           <a href="#">📍 23945 Mercantile Rd, Suite D, Beachwood OH 44122</a>
         </div>
+<div style="display:flex;gap:12px;margin-top:14px;">
+<a href="https://www.facebook.com/atlasroofingrestoration" target="_blank" rel="noopener" style="width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;font-size:15px;color:rgba(255,255,255,0.6);" title="Facebook">f</a>
+<a href="https://www.instagram.com/atlasroofingrestoration" target="_blank" rel="noopener" style="width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;font-size:14px;color:rgba(255,255,255,0.6);" title="Instagram">📷</a>
+<a href="https://www.google.com/maps/place/Atlas+Roofing+%26+Restoration/@41.4608547,-81.5060061,707m/data=!3m2!1e3!5s0x883102a495403b37:0xfd9c252c052527cd!4m8!3m7!1s0x883102bd2b5a73b9:0x92937d2914e8a622!8m2!3d41.4608547!4d-81.5060061!9m1!1b1!16s%2Fg%2F11vkr36yfr?entry=ttu&g_ep=EgoyMDI2MDQxMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" style="width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;font-size:14px;color:rgba(255,255,255,0.6);" title="Google Reviews">⭐</a>
+</div>
       </div>
       <div>
         <div class="footer-col-title">Services</div>

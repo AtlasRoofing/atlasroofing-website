@@ -169,29 +169,56 @@ img { max-width: 100%; height: auto; display: block; }
 <div class="contact-form">
 <h2>Request Your Free Inspection</h2>
 <p class="sub">Fill out the form and one of our team members will reach out within 2 business hours to schedule your free, no-obligation inspection.</p>
-<form name="inspection-request" method="POST" action="/thankyou/" data-netlify="true" netlify-honeypot="bot-field">
-<input type="hidden" name="form-name" value="inspection-request">
-<input type="text" name="bot-field" style="display:none" aria-hidden="true">
-<div class="fg-row">
-<div class="fg"><label for="fname">First name *</label><input type="text" id="fname" name="first_name" placeholder="John" required></div>
-<div class="fg"><label for="lname">Last name *</label><input type="text" id="lname" name="last_name" placeholder="Smith" required></div>
-</div>
-<div class="fg"><label for="email">Email address *</label><input type="email" id="email" name="email" placeholder="john@email.com" required></div>
-<div class="fg"><label for="phone">Phone number *</label><input type="tel" id="phone" name="phone" placeholder="(216) 555-0100" required></div>
-<div class="fg"><label for="address">Property address *</label><input type="text" id="address" name="address" placeholder="123 Main St, Beachwood OH 44122" required></div>
-<div class="fg"><label for="service">Service needed</label>
-<select id="service" name="service">
-<option value="">Select a service...</option>
-<option value="roof-replacement">Roof Replacement</option>
-<option value="roof-repair">Roof Repair</option>
-<option value="commercial-roofing">Commercial Roofing</option>
-<option value="gutters">Gutters</option>
-<option value="siding">Siding</option>
-<option value="insurance-claim">Insurance Claim Help</option>
-<option value="inspection">General Inspection</option>
-</select></div>
-<div class="fg"><label for="message">Additional details</label><textarea id="message" name="message" placeholder="Tell us anything helpful — age of roof, any known issues, recent storms, etc."></textarea></div>
-<button type="submit" class="submit-btn">Request My Free Inspection →</button>
+<form 
+  name="inspection-request" 
+  method="POST" 
+  action="/thankyou/"
+  data-netlify="true"
+  data-netlify-honeypot="bot-field">
+  
+  <input type="hidden" name="form-name" value="inspection-request">
+  <p style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
+
+  <div class="fg-row">
+    <div class="fg">
+      <label for="fname">First name *</label>
+      <input type="text" id="fname" name="first_name" placeholder="John" required>
+    </div>
+    <div class="fg">
+      <label for="lname">Last name *</label>
+      <input type="text" id="lname" name="last_name" placeholder="Smith" required>
+    </div>
+  </div>
+  <div class="fg">
+    <label for="email">Email address *</label>
+    <input type="email" id="email" name="email" placeholder="john@email.com" required>
+  </div>
+  <div class="fg">
+    <label for="phone">Phone number *</label>
+    <input type="tel" id="phone" name="phone" placeholder="(216) 555-0100" required>
+  </div>
+  <div class="fg">
+    <label for="address">Property address *</label>
+    <input type="text" id="address" name="address" placeholder="123 Main St, Beachwood OH 44122" required>
+  </div>
+  <div class="fg">
+    <label for="service">Service needed</label>
+    <select id="service" name="service">
+      <option value="">Select a service...</option>
+      <option value="Roof Replacement">Roof Replacement</option>
+      <option value="Roof Repair">Roof Repair</option>
+      <option value="Commercial Roofing">Commercial Roofing</option>
+      <option value="Gutters">Gutters</option>
+      <option value="Siding">Siding</option>
+      <option value="Insurance Claim Help">Insurance Claim Help</option>
+      <option value="General Inspection">General Inspection</option>
+    </select>
+  </div>
+  <div class="fg">
+    <label for="message">Additional details</label>
+    <textarea id="message" name="message" placeholder="Tell us anything helpful — age of roof, any known issues, recent storms, etc."></textarea>
+  </div>
+  <button type="submit" class="submit-btn">Request My Free Inspection →</button>
 </form>
 <p class="submit-note">We respond within 2 business hours. No spam, no pressure — ever.</p>
 </div>

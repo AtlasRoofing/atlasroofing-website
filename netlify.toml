@@ -4,7 +4,7 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    X-Frame-Options = "DENY"
+    X-Frame-Options = "SAMEORIGIN"
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
@@ -23,10 +23,3 @@
   for = "/*.html"
   [headers.values]
     Cache-Control = "public, max-age=3600"
-
-# Form submission notifications
-[[notifications]]
-  event = "submission_created"
-  type = "email"
-  data.to = "office@atlasroofingrestoration.com"
-  data.subject = "New Atlas Website Lead: {{data.first_name}} {{data.last_name}}"

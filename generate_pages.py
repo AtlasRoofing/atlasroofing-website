@@ -171,13 +171,24 @@ def trustbar_html():
 <div class="trust-item"><span class="trust-icon blue">📅</span> Most Roofs Done in 1 Day</div>
 </div></div>"""
 
+REVIEW_POOL = [
+    {"text": "I asked them to take a look at my roof based on my home inspection report. They were very honest when inspecting and only recommended the exact work that needed to be done, and nothing more. Well done — I'll definitely use them when I need a new roof.", "author": "Benjamin Kaplan", "source": "Northeast Ohio · Google Review"},
+    {"text": "Quick and professional roofing service. Great communication throughout the entire process and left a very clean job site.", "author": "Tawn Kramer", "source": "Northeast Ohio · Google Review"},
+    {"text": "What a divine appointment from beginning to completion. Trustworthy, competent, efficient, polite, orderly team work. A big smile comes on my face every time I leave and return to my home and see my beautiful new roof.", "author": "Lorna Joy Larkin", "source": "South Euclid, OH · Google Review"},
+    {"text": "I had such a great experience with Atlas Roofing and truly can't recommend them enough. They replaced my entire roof in just one day. Everything was done so efficiently and the quality of the work is excellent.", "author": "Adina Forouzan", "source": "Northeast Ohio · Google Review"},
+    {"text": "They literally put a roof over our heads. Great communication. Employees were pleasant and were there when they said they would be there.", "author": "Robert Schloss", "source": "Northeast Ohio · Google Review"},
+    {"text": "Andrew is fantastic — called him about a roof leak, he came out the same day, assessed what needed to be done, and had everything sorted out quickly. Highly recommend.", "author": "Jimmy Valencia", "source": "Northeast Ohio · Google Review"},
+]
+_review_counter = [0]
+
 def review_html(c):
-    r = c["review"]
-    return f"""<div class="review-box">
-<div class="review-stars">★★★★★</div>
-<p class="review-text">"{r['text']}"</p>
-<div class="review-author">{r['author']}</div>
-<div class="review-source">{r['source']}</div>
+    r = REVIEW_POOL[_review_counter[0] % len(REVIEW_POOL)]
+    _review_counter[0] += 1
+    return f"""<div class=\"review-box\">
+<div class=\"review-stars\">★★★★★</div>
+<p class=\"review-text\">"{r['text']}"</p>
+<div class=\"review-author\">{r['author']}</div>
+<div class=\"review-source\">{r['source']}</div>
 </div>"""
 
 def nearby_cities_html(c):
@@ -527,19 +538,6 @@ def page_siding(c):
     final_p = "Professional installation, quality materials, free written estimate."
     return slug_out, title, desc, canonical, h1_line1, h1_line2, badge_text, hero_p, cta_btn, checklist_items, info_box_title, info_box_body, faq_items, section2_h, section2_body, final_h, final_p, c
 
-# ── All 9 page type functions ─────────────────────────────────────────────────
-PAGE_TYPES = [
-    page_roof_repair,
-    page_roof_replacement,
-    page_roofing_contractor,
-    page_roof_leak,
-    page_roof_inspection,
-    page_new_roof_cost,
-    page_hail_damage,
-    page_gutter,
-    page_siding,
-]
-
 # ── HTML builder ──────────────────────────────────────────────────────────────
 def build_html(slug_out, title, desc, canonical, h1_line1, h1_line2, badge_text,
                hero_p, cta_btn, checklist_items, info_box_title, info_box_body,
@@ -742,22 +740,412 @@ Total hyper-local pages: {total}
     with open(tracker_path, "w") as f:
         f.write(content)
 
+
+# ── 11 NEW PAGE TYPES ─────────────────────────────────────────────────────────
+
+def page_leaking_roof(c):
+    name, slug, county, era, streets = c["name"], c["slug"], c["county"], c["housing_era"], c["streets"]
+    st1 = streets[0]
+    slug_out = f"leaking-roof-{slug}-oh"
+    title = f"Leaking Roof {name} Ohio | Fast Repair — Atlas Roofing & Restoration"
+    desc = f"Leaking roof in {name}, Ohio? Atlas Roofing responds fast. Find the source, fix it right. GAF certified, BBB A+. Free inspection. Call (216) 888-3208."
+    canonical = f"https://atlasroofingrestoration.com/{slug_out}/"
+    h1_line1 = "Leaking Roof Repair in"
+    h1_line2 = f"{name}, Ohio"
+    badge_text = f"Leaking Roof — {name}, {c['state']}"
+    hero_p = f"Roof leaking in {name}? Don't wait — water inside your home causes compounding damage within hours. Atlas Roofing & Restoration responds fast throughout {name} and {county}, diagnoses the exact source of the leak, and repairs it correctly. We serve homes along {st1} and all surrounding neighborhoods. Free inspection, honest quote, same-day response available. GAF certified. BBB A+."
+    cta_btn = f"Stop My Roof Leak in {name}"
+    checklist_items = [
+        "<strong>Same-day response available</strong> — we prioritize active leaks",
+        "<strong>Source diagnosis</strong> — we find where it's actually coming from, not just where it drips",
+        "<strong>Temporary tarping</strong> — available for severe cases while repair is scheduled",
+        "<strong>Insurance coordination</strong> — storm-caused leaks may be fully covered",
+        "<strong>Written repair quote</strong> — exact cost before any work starts",
+        "<strong>Free inspection</strong> — no charge to assess your leaking roof",
+    ]
+    info_box_title = "Every hour matters with a leaking roof"
+    info_box_body = f"In {name}, a small roof leak can saturate insulation, rot roof decking, and start mold growth within 24-48 hours of a heavy rain event. The repair cost today is a fraction of what structural water damage costs next month. Call us now at (216) 888-3208."
+    faq_items = [
+        (f"How fast can you respond to a leaking roof in {name}?", f"We prioritize active leaks. Call (216) 888-3208 and tell us you have a leaking roof in {name} — we aim for same-day or next-day response."),
+        ("What causes most roof leaks in Ohio?", f"The most common causes in {name} area homes: failed flashing around chimneys and skylights, cracked pipe boots, wind-lifted or missing shingles, and ice dam damage along eaves during winter."),
+        ("Can a leaking roof be temporarily patched?", "In most cases yes — we can stop the water intrusion immediately and schedule a permanent repair. We'll always give you our honest recommendation."),
+        ("Will insurance cover my leaking roof?", f"If the leak was caused by a storm event — hail, wind, ice — your homeowner's insurance likely covers it. We help {name} homeowners navigate the claims process at no extra cost."),
+    ]
+    section2_h = f"Where Roofs Commonly Leak in {name} Homes"
+    section2_body = f"Most {name} homes were built in the {era} era, and we see leaks in the same spots repeatedly: chimney flashing that has separated after decades of freeze-thaw cycles, pipe boots and vent collars that were never replaced during prior roofwork, valleys where water concentrates and shingles wear fastest, and eave edges where ice dams force water back under shingles each winter. A free inspection tells you exactly where your leak is originating."
+    final_h = f"Leaking Roof in {name}? We Fix It Fast."
+    final_p = "Same-day response available. Free inspection. No obligation."
+    return slug_out, title, desc, canonical, h1_line1, h1_line2, badge_text, hero_p, cta_btn, checklist_items, info_box_title, info_box_body, faq_items, section2_h, section2_body, final_h, final_p, c
+
+def page_water_stains(c):
+    name, slug, county, era, streets = c["name"], c["slug"], c["county"], c["housing_era"], c["streets"]
+    slug_out = f"water-stains-ceiling-{slug}-oh"
+    title = f"Water Stains on Ceiling {name} Ohio | Roof Leak Inspection — Atlas Roofing"
+    desc = f"Water stains on your ceiling in {name}, Ohio? It's almost always a roof leak. Atlas Roofing finds the source fast. Free inspection, GAF certified, BBB A+. Call (216) 888-3208."
+    canonical = f"https://atlasroofingrestoration.com/{slug_out}/"
+    h1_line1 = "Water Stains on Ceiling in"
+    h1_line2 = f"{name}, Ohio"
+    badge_text = f"Ceiling Water Stains — {name}, {c['state']}"
+    hero_p = f"Noticed brown rings or water stains on your ceiling in {name}? That's almost always a sign of a roof leak — and it means water has already been getting in long enough to leave a mark. Atlas Roofing & Restoration provides free inspections throughout {name} and {county} to find the source and stop it before the damage gets worse. Don't paint over it — fix it. GAF certified. BBB A+."
+    cta_btn = f"Free Inspection — {name} Ceiling Stains"
+    checklist_items = [
+        "<strong>Free source diagnosis</strong> — we find where the water is actually entering",
+        "<strong>Photo documentation</strong> — we show you exactly what we found on the roof",
+        "<strong>Repair or replace recommendation</strong> — honest assessment, no upsell",
+        "<strong>Insurance review</strong> — storm-caused leaks may be covered",
+        "<strong>Same-day response available</strong> — don't let it get worse",
+        "<strong>No obligation inspection</strong> — free, always",
+    ]
+    info_box_title = f"What do ceiling water stains mean for {name} homeowners?"
+    info_box_body = f"A water stain on your ceiling means moisture has already penetrated your roof, traveled through insulation, and saturated your drywall. By the time you see the stain, the leak has typically been active for multiple rain events. The sooner you get a free inspection, the less damage you'll have to deal with."
+    faq_items = [
+        ("Are ceiling water stains always caused by the roof?", f"Not always — HVAC condensation, plumbing, and bathroom exhaust issues can also cause ceiling stains. But in {name} homes, a roof leak is the most common cause. Our free inspection checks the roof first and rules out other sources."),
+        ("Can I just paint over a water stain?", "Painting over a stain without fixing the source is a temporary cosmetic fix that will reappear after the next rain. Fix the leak first, then repaint."),
+        (f"How quickly can you inspect my {name} home?", f"We aim for same-day or next-day inspections throughout {name} and {county}. Call (216) 888-3208 to schedule."),
+        ("Will insurance cover the roof repair?", "If the leak was caused by storm damage — hail, wind, ice — your homeowner's insurance may cover the roof repair. We help with the claims process at no additional cost."),
+    ]
+    section2_h = f"Common Causes of Ceiling Water Stains in {name} Homes"
+    section2_body = f"In {name} homes built during the {era} era, ceiling water stains most commonly trace back to: worn flashing around chimneys, skylights, or dormers that has cracked or separated; aged pipe boot seals around plumbing vents that have deteriorated; shingles that have lost granules and are no longer shedding water effectively; and ice dam damage along the eaves during Ohio winters. Our certified inspector traces the path from your ceiling stain back to the entry point on the roof and gives you a clear picture of what needs to be done."
+    final_h = f"Ceiling Stains in {name}? Find the Source for Free."
+    final_p = "Free roof inspection. Honest diagnosis. Stop the damage now."
+    return slug_out, title, desc, canonical, h1_line1, h1_line2, badge_text, hero_p, cta_btn, checklist_items, info_box_title, info_box_body, faq_items, section2_h, section2_body, final_h, final_p, c
+
+def page_blown_shingles(c):
+    name, slug, county, era, streets = c["name"], c["slug"], c["county"], c["housing_era"], c["streets"]
+    slug_out = f"blown-off-shingles-{slug}-oh"
+    title = f"Blown Off Shingles {name} Ohio | Storm Shingle Repair — Atlas Roofing"
+    desc = f"Shingles blown off your roof in {name}, Ohio? Atlas Roofing repairs storm damage fast. GAF certified, BBB A+. Insurance claims handled. Free inspection. Call (216) 888-3208."
+    canonical = f"https://atlasroofingrestoration.com/{slug_out}/"
+    h1_line1 = "Blown Off Shingles in"
+    h1_line2 = f"{name}, Ohio"
+    badge_text = f"Storm Shingle Damage — {name}, {c['state']}"
+    hero_p = f"Found shingles in your yard after a storm in {name}? Blown-off shingles expose your roof deck directly to rain and need to be addressed immediately. Atlas Roofing & Restoration provides fast storm repair throughout {name} and {county} — replacing missing shingles, inspecting for hidden damage, and helping you file an insurance claim if the storm qualifies. Free inspection, same-day response available."
+    cta_btn = f"Emergency Shingle Repair — {name}"
+    checklist_items = [
+        "<strong>Fast storm response</strong> — same-day and next-day service available",
+        "<strong>Matching shingle replacement</strong> — we match your existing shingles as closely as possible",
+        "<strong>Full damage inspection</strong> — we check the entire roof, not just visible missing areas",
+        "<strong>Insurance claim support</strong> — wind damage is typically a covered event",
+        "<strong>Temporary protection</strong> — tarping available while repairs are scheduled",
+        "<strong>Free inspection</strong> — no charge to assess storm damage",
+    ]
+    info_box_title = f"Blown shingles in {name} mean exposed roof deck"
+    info_box_body = f"Every hour your roof deck is exposed to the elements after shingles blow off, moisture penetrates further. In {name}'s climate, even a single rain event on an unprotected deck can cause significant wood rot and interior water damage. Call us immediately — (216) 888-3208."
+    faq_items = [
+        ("Does homeowner's insurance cover blown-off shingles?", f"Wind damage that causes shingles to blow off is almost always a covered event under standard Ohio homeowner's insurance policies. We inspect your {name} home for free and help you file the claim."),
+        ("Can you match my existing shingles?", "We carry a wide range of GAF shingles and will match your existing shingles as closely as possible. In some cases where shingles are discontinued, we may recommend replacing a full slope for a uniform appearance."),
+        (f"How quickly can you respond in {name}?", f"We prioritize storm damage calls. Call (216) 888-3208 and we'll get to your {name} home same-day or next-day."),
+        ("What if more shingles blow off before you can get there?", "If you're expecting more rain, we can tarp the exposed areas to prevent interior water damage until the permanent repair is completed."),
+    ]
+    section2_h = f"Why Shingles Blow Off {name} Homes"
+    section2_body = f"Shingles blow off roofs in {name} for two main reasons: storm winds exceeding the shingle's design rating, or shingles that were already compromised by age, improper installation, or prior storm damage. Homes in {name} built during the {era} era often have shingles that have lost significant flexibility and granule coverage — making them far more susceptible to wind uplift than newer materials. Our free inspection after any storm event tells you whether you're dealing with isolated damage or a roof that's telling you it's time for replacement."
+    final_h = f"Missing Shingles in {name}? We're On It."
+    final_p = "Fast storm response. Insurance claims handled. Free inspection."
+    return slug_out, title, desc, canonical, h1_line1, h1_line2, badge_text, hero_p, cta_btn, checklist_items, info_box_title, info_box_body, faq_items, section2_h, section2_body, final_h, final_p, c
+
+def page_shingle_repair(c):
+    name, slug, county, era, streets = c["name"], c["slug"], c["county"], c["housing_era"], c["streets"]
+    slug_out = f"shingle-repair-{slug}-oh"
+    title = f"Shingle Repair {name} Ohio | Atlas Roofing & Restoration"
+    desc = f"Professional shingle repair in {name}, Ohio. Cracked, curling, or missing shingles fixed right. GAF certified, BBB A+. Free inspection. Call (216) 888-3208."
+    canonical = f"https://atlasroofingrestoration.com/{slug_out}/"
+    h1_line1 = "Shingle Repair in"
+    h1_line2 = f"{name}, Ohio"
+    badge_text = f"Shingle Repair — {name}, {c['state']}"
+    hero_p = f"Cracked, curling, or missing shingles on your {name} home? Don't wait for a leak to develop. Atlas Roofing & Restoration provides professional shingle repair throughout {name} and {county} — replacing damaged sections with matching GAF materials and inspecting the surrounding area for hidden issues. Free inspection, upfront pricing, quality workmanship guaranteed."
+    cta_btn = f"Free Shingle Inspection — {name}"
+    checklist_items = [
+        "<strong>GAF certified materials</strong> — manufacturer-backed quality on every repair",
+        "<strong>Matching shingles</strong> — we source materials that match your existing roof",
+        "<strong>Full area inspection</strong> — we check the entire roof while we're there",
+        "<strong>Repair vs. replace guidance</strong> — honest recommendation based on your roof's condition",
+        "<strong>Storm damage documentation</strong> — for insurance claims if applicable",
+        "<strong>Free inspection</strong> — no charge, no obligation",
+    ]
+    info_box_title = f"Shingle problems in {name} — catch them early"
+    info_box_body = f"Cracked or curling shingles are your roof telling you it's reaching end of life. In {name}'s climate, damaged shingles become full leaks after just one winter storm. A free inspection tells you whether targeted repairs will buy you years, or whether replacement is the smarter investment."
+    faq_items = [
+        ("What types of shingle damage can be repaired?", f"We repair cracked, curling, lifted, missing, or granule-depleted shingles on {name} homes. If damage is widespread, we'll give you an honest recommendation on whether repair or full replacement makes more sense."),
+        ("How long does shingle repair take?", f"Most shingle repairs on {name} homes are completed in a few hours, often the same day we inspect."),
+        ("Will repaired shingles match my existing roof?", "We do our best to match your existing shingles. On older roofs, perfect color matching may not be possible, but we'll come as close as available materials allow."),
+        ("Does insurance cover shingle damage?", f"Storm-caused shingle damage — from hail, wind, or fallen debris — is typically covered. Age-related wear is not. We help {name} homeowners determine what qualifies during our free inspection."),
+    ]
+    section2_h = f"Common Shingle Problems in {name} Homes"
+    section2_body = f"Homes in {name} built during the {era} era have shingles that have weathered decades of Ohio's freeze-thaw cycles, summer heat, and Great Lakes storm systems. The most common shingle issues we repair include: cracking and curling from thermal expansion, granule loss that accelerates water absorption, wind-lifted tabs that allow water intrusion, and damaged flashing where shingles meet vertical surfaces. Our certified technicians inspect the full roof surface and identify every issue — not just the obvious ones."
+    final_h = f"Shingle Repair in {name} — Done Right."
+    final_p = "GAF certified materials. Free inspection. Honest pricing."
+    return slug_out, title, desc, canonical, h1_line1, h1_line2, badge_text, hero_p, cta_btn, checklist_items, info_box_title, info_box_body, faq_items, section2_h, section2_body, final_h, final_p, c
+
+def page_gutter_repair(c):
+    name, slug, county, era, streets = c["name"], c["slug"], c["county"], c["housing_era"], c["streets"]
+    slug_out = f"gutter-repair-{slug}-oh"
+    title = f"Gutter Repair {name} Ohio | Atlas Roofing & Restoration"
+    desc = f"Professional gutter repair in {name}, Ohio. Sagging, leaking, or separated gutters fixed fast. GAF certified, BBB A+. Free inspection. Call (216) 888-3208."
+    canonical = f"https://atlasroofingrestoration.com/{slug_out}/"
+    h1_line1 = "Gutter Repair in"
+    h1_line2 = f"{name}, Ohio"
+    badge_text = f"Gutter Repair — {name}, {c['state']}"
+    hero_p = f"Gutters sagging, leaking at seams, or pulling away from your {name} home? Failing gutters allow water to pour directly against your foundation, eroding soil and causing basement moisture issues. Atlas Roofing & Restoration repairs gutters throughout {name} and {county} — rehanging, resealing, and replacing sections as needed. Free inspection, fast turnaround, honest pricing."
+    cta_btn = f"Free Gutter Inspection — {name}"
+    checklist_items = [
+        "<strong>Rehang sagging gutters</strong> — new hidden hangers for lasting support",
+        "<strong>Seal leaking joints</strong> — professional-grade sealant at all seams and corners",
+        "<strong>Downspout repair</strong> — disconnected or damaged downspouts fixed or replaced",
+        "<strong>Fascia board assessment</strong> — we check for rot before rehanging",
+        "<strong>Slope correction</strong> — gutters re-pitched to drain properly",
+        "<strong>Free inspection</strong> — honest assessment of your entire gutter system",
+    ]
+    info_box_title = f"Damaged gutters cost {name} homeowners more than they realize"
+    info_box_body = f"A leaking or sagging gutter system in {name} channels thousands of gallons of water directly against your foundation every year. Over time this causes soil erosion, basement seepage, and even foundation settling. Gutter repair is one of the most cost-effective home maintenance investments you can make."
+    faq_items = [
+        ("What gutter problems can be repaired vs. replaced?", f"Sagging sections, leaking seams, loose hangers, and minor cracks are all repairable. Gutters that are severely dented, corroded, or completely separated are typically better replaced. We'll tell you honestly during our free {name} inspection."),
+        ("How long does gutter repair take?", f"Most gutter repairs on {name} homes are completed in a single visit, often within a few hours."),
+        ("Do you repair all types of gutters?", "Yes — we repair aluminum, vinyl, and steel gutters. We also install new seamless aluminum sections if replacement is the better option."),
+        ("Can you fix gutters that are pulling away from the house?", f"Yes — this is one of the most common repairs we make in {name}. We replace failed spikes with hidden hanger systems that provide much stronger, longer-lasting attachment."),
+    ]
+    section2_h = f"Common Gutter Problems in {name}"
+    section2_body = f"Gutters on {name} homes from the {era} era are frequently at or past their expected lifespan of 20-30 years. The most common issues we see: gutters pulling away from the fascia as original spike fasteners fail, seam separation at joints allowing water to pour down the siding, sagging sections where water pools instead of draining, and downspouts that have disconnected or become blocked with debris. A free inspection tells you exactly what your system needs."
+    final_h = f"Gutter Repair in {name} — Fast and Affordable."
+    final_p = "Free inspection. Honest pricing. Protecting your foundation."
+    return slug_out, title, desc, canonical, h1_line1, h1_line2, badge_text, hero_p, cta_btn, checklist_items, info_box_title, info_box_body, faq_items, section2_h, section2_body, final_h, final_p, c
+
+def page_gutter_collapse(c):
+    name, slug, county, era, streets = c["name"], c["slug"], c["county"], c["housing_era"], c["streets"]
+    slug_out = f"gutter-collapse-{slug}-oh"
+    title = f"Gutter Collapse {name} Ohio | Emergency Gutter Repair — Atlas Roofing"
+    desc = f"Gutters collapsed or fallen in {name}, Ohio? Atlas Roofing fixes it fast. Emergency gutter repair and replacement. Free inspection. Call (216) 888-3208."
+    canonical = f"https://atlasroofingrestoration.com/{slug_out}/"
+    h1_line1 = "Gutter Collapse Repair in"
+    h1_line2 = f"{name}, Ohio"
+    badge_text = f"Collapsed Gutters — {name}, {c['state']}"
+    hero_p = f"Gutters collapsed or completely fallen off your {name} home? A gutter collapse — whether from ice buildup, storm damage, or simple age failure — leaves your fascia exposed and your foundation unprotected. Atlas Roofing & Restoration responds quickly throughout {name} and {county} to assess the damage, repair or replace the affected sections, and restore protection to your home. Free inspection, fast turnaround."
+    cta_btn = f"Emergency Gutter Repair — {name}"
+    checklist_items = [
+        "<strong>Fast response</strong> — same-day and next-day service available",
+        "<strong>Full collapse repair or replacement</strong> — we handle any extent of damage",
+        "<strong>Fascia damage assessment</strong> — gutters that fall often damage the fascia board",
+        "<strong>Ice dam prevention advice</strong> — if ice caused the collapse, we address the root cause",
+        "<strong>Insurance review</strong> — storm or ice-caused collapse may be covered",
+        "<strong>Free inspection</strong> — no charge to assess the damage",
+    ]
+    info_box_title = f"Gutter collapse in {name} — what to do right now"
+    info_box_body = f"A collapsed gutter in {name} is both a drainage emergency and a potential fascia damage situation. Water is now hitting your siding and foundation uncontrolled. If ice caused the collapse, the same ice may be damaging your roof. Call us at (216) 888-3208 — we respond fast."
+    faq_items = [
+        ("What causes gutters to collapse?", f"The most common causes in {name}: ice dam buildup that adds hundreds of pounds of weight, hanger failure on aging gutters, storm winds, and gutters that were improperly installed originally."),
+        ("Does insurance cover gutter collapse?", "Storm or ice-caused gutter collapse is typically covered under homeowner's insurance. We help with the documentation and claims process."),
+        ("Can you fix the fascia damage at the same time?", f"Yes — gutter collapses frequently damage the fascia board they were attached to. We repair or replace damaged fascia as part of the gutter reinstallation on {name} homes."),
+        (f"How quickly can you respond in {name}?", f"We prioritize gutter collapses. Call (216) 888-3208 and we'll work to get to your {name} home same-day or next-day."),
+    ]
+    section2_h = f"Gutter Collapse in {name} — What We Fix"
+    section2_body = f"When gutters collapse on {name} homes, the damage typically extends beyond just the gutter itself. We assess and repair: the collapsed or fallen gutter sections, damaged or rotted fascia boards behind the gutters, soffit damage from prolonged water exposure, and any roof edge damage if ice was involved. We then reinstall new seamless aluminum gutters with heavy-duty hidden hangers — far more robust than the original spike-and-ferrule systems used on {era} era homes."
+    final_h = f"Collapsed Gutters in {name}? We Fix It Fast."
+    final_p = "Emergency response available. Free inspection. Full repair."
+    return slug_out, title, desc, canonical, h1_line1, h1_line2, badge_text, hero_p, cta_btn, checklist_items, info_box_title, info_box_body, faq_items, section2_h, section2_body, final_h, final_p, c
+
+def page_ice_dam(c):
+    name, slug, county, era, streets = c["name"], c["slug"], c["county"], c["housing_era"], c["streets"]
+    slug_out = f"ice-dam-{slug}-oh"
+    title = f"Ice Dam {name} Ohio | Ice Dam Removal & Repair — Atlas Roofing"
+    desc = f"Ice dam damage in {name}, Ohio? Atlas Roofing removes ice dams and repairs the damage. Free inspection, GAF certified, BBB A+. Call (216) 888-3208."
+    canonical = f"https://atlasroofingrestoration.com/{slug_out}/"
+    h1_line1 = "Ice Dam Removal & Repair in"
+    h1_line2 = f"{name}, Ohio"
+    badge_text = f"Ice Dam Damage — {name}, {c['state']}"
+    hero_p = f"Ice dams forming on your {name} roof? Atlas Roofing & Restoration provides ice dam removal and damage repair throughout {name} and {county}. Ice dams form when heat escapes through the roof, melts snow, and the water refreezes at the cold eaves — backing up under shingles and into your home. We remove the ice safely and repair any resulting damage to shingles, flashing, and gutters. Free inspection."
+    cta_btn = f"Ice Dam Help in {name}"
+    checklist_items = [
+        "<strong>Safe ice dam removal</strong> — no ice picks or power tools that damage shingles",
+        "<strong>Leak damage assessment</strong> — inspect for water intrusion caused by ice backup",
+        "<strong>Shingle and flashing repair</strong> — fix damage caused by ice dam pressure",
+        "<strong>Gutter repair</strong> — ice dams frequently collapse gutters",
+        "<strong>Insurance claim support</strong> — ice dam damage is often a covered event",
+        "<strong>Free inspection</strong> — full assessment of ice dam damage",
+    ]
+    info_box_title = f"Ice dams are common in {name} every winter"
+    info_box_body = f"Northeast Ohio's freeze-thaw cycles make ice dams a recurring problem for {name} homeowners, especially on homes with insufficient attic insulation or ventilation. Once formed, ice dams can push hundreds of gallons of water back under your shingles in a single thaw event. Don't wait until you see water stains on your ceiling."
+    faq_items = [
+        ("What causes ice dams in Ohio?", f"Ice dams form when heat escapes through the roof deck and melts snow, which refreezes at the cold eaves. Insufficient attic insulation and poor ventilation are the root causes. {name} homes from the {era} era frequently have both issues."),
+        ("How do you remove ice dams safely?", "We use steam and calcium chloride treatment — never ice picks, axes, or pressure washers, which damage shingles. Safe removal is critical to avoid creating new leak points."),
+        ("Does insurance cover ice dam damage?", "Ice dam damage to your roof, gutters, and interior is typically covered as a weather-related event under most Ohio homeowner's insurance policies. We help with documentation and claims."),
+        ("How can I prevent ice dams in the future?", "The long-term solution is improving attic insulation and ventilation to keep the roof deck cold and even. We can assess your situation and recommend the right fix during our inspection."),
+    ]
+    section2_h = f"Ice Dam Damage We Repair in {name}"
+    section2_body = f"Ice dams cause a predictable pattern of damage on {name} homes: shingles lifted or cracked by ice pressure along the eaves, gutters collapsed or pulled away from the fascia under the weight of ice, water intrusion at the eave line that appears as ceiling stains in top-floor rooms, and damaged or displaced ice and water shield membrane. We repair all of these issues and give you an honest assessment of whether your attic insulation and ventilation should be addressed to prevent recurrence."
+    final_h = f"Ice Dam Damage in {name}? We Handle It."
+    final_p = "Safe removal. Full damage repair. Free inspection."
+    return slug_out, title, desc, canonical, h1_line1, h1_line2, badge_text, hero_p, cta_btn, checklist_items, info_box_title, info_box_body, faq_items, section2_h, section2_body, final_h, final_p, c
+
+def page_commercial_roof(c):
+    name, slug, county, era, streets = c["name"], c["slug"], c["county"], c["housing_era"], c["streets"]
+    st1 = streets[0]
+    slug_out = f"commercial-roof-{slug}-oh"
+    title = f"Commercial Roofing {name} Ohio | Atlas Roofing & Restoration"
+    desc = f"Commercial roofing contractor in {name}, Ohio. Flat roofs, TPO, EPDM, repairs & replacement. GAF certified, BBB A+. Free inspections. Call (216) 888-3208."
+    canonical = f"https://atlasroofingrestoration.com/{slug_out}/"
+    h1_line1 = "Commercial Roofing in"
+    h1_line2 = f"{name}, Ohio"
+    badge_text = f"Commercial Roofing — {name}, {c['state']}"
+    hero_p = f"Looking for a commercial roofing contractor in {name}? Atlas Roofing & Restoration serves businesses, property managers, and commercial property owners throughout {name} and {county}. From flat roof repairs and TPO/EPDM systems to full commercial replacements, we deliver the same GAF certified quality and professionalism that has made us the trusted choice along {st1} and across the region. Free inspection, detailed written proposals."
+    cta_btn = f"Free Commercial Inspection — {name}"
+    checklist_items = [
+        "<strong>Flat roof specialists</strong> — TPO, EPDM, modified bitumen, and built-up systems",
+        "<strong>Commercial repairs</strong> — leaks, membrane failures, drain issues",
+        "<strong>Full replacements</strong> — detailed proposals for complete re-roofing projects",
+        "<strong>Minimal business disruption</strong> — we work around your schedule",
+        "<strong>Insurance claims</strong> — storm damage on commercial properties handled",
+        "<strong>Free inspection and proposal</strong> — detailed scope before any commitment",
+    ]
+    info_box_title = f"Commercial roofing in {name} — don't defer maintenance"
+    info_box_body = f"Commercial roof failures in {name} rarely happen without warning — there are always signs. A proactive inspection and small repair today prevents a major business disruption and expensive emergency replacement tomorrow. We inspect commercial properties for free and give you a clear written report."
+    faq_items = [
+        (f"What types of commercial roofs do you work on in {name}?", f"We work on all common commercial roofing systems: TPO single-ply membrane, EPDM rubber roofing, modified bitumen, built-up (BUR) systems, and metal roofing. We assess and recommend the right solution for your building."),
+        ("Do you handle commercial insurance claims?", f"Yes — we manage the full commercial insurance claim process for hail, wind, and storm damage to commercial properties in {name}."),
+        ("How is commercial roofing priced?", "Commercial projects are priced by the square foot based on roof type, system selected, and condition of the existing substrate. We provide detailed written proposals with no surprises."),
+        ("Can you work around our business hours?", f"Yes — we schedule commercial roofing projects in {name} to minimize disruption to your operations, including early morning, evening, and weekend work when needed."),
+    ]
+    section2_h = f"Commercial Roofing Services in {name}"
+    section2_body = f"Atlas Roofing & Restoration provides the full range of commercial roofing services to {name} businesses and property owners: flat roof inspection and maintenance, leak diagnosis and repair, TPO and EPDM membrane installation, modified bitumen and built-up roof systems, commercial gutters and drainage, and complete commercial roof replacements. We bring the same GAF certified standards and BBB A+ accountability to every commercial project that we deliver on residential work throughout {county}."
+    final_h = f"Commercial Roofing in {name} — Certified and Reliable."
+    final_p = "Free inspection and written proposal. No disruption to your business."
+    return slug_out, title, desc, canonical, h1_line1, h1_line2, badge_text, hero_p, cta_btn, checklist_items, info_box_title, info_box_body, faq_items, section2_h, section2_body, final_h, final_p, c
+
+def page_roof_damage(c):
+    name, slug, county, era, streets = c["name"], c["slug"], c["county"], c["housing_era"], c["streets"]
+    slug_out = f"roof-damage-{slug}-oh"
+    title = f"Roof Damage {name} Ohio | Storm & Weather Damage Repair — Atlas Roofing"
+    desc = f"Roof damage in {name}, Ohio? Atlas Roofing assesses and repairs all storm and weather damage. GAF certified, BBB A+, insurance claims handled. Call (216) 888-3208."
+    canonical = f"https://atlasroofingrestoration.com/{slug_out}/"
+    h1_line1 = "Roof Damage Repair in"
+    h1_line2 = f"{name}, Ohio"
+    badge_text = f"Roof Damage — {name}, {c['state']}"
+    hero_p = f"Roof damaged in {name}? Whether it's from a recent storm, fallen tree limb, age-related wear, or something you spotted during a routine check, Atlas Roofing & Restoration provides thorough damage assessment and repair throughout {name} and {county}. We document everything, give you an honest repair vs. replace recommendation, and handle the insurance process if the damage qualifies. Free inspection, no obligation."
+    cta_btn = f"Free Damage Assessment — {name}"
+    checklist_items = [
+        "<strong>Full roof damage assessment</strong> — thorough inspection, photo documented",
+        "<strong>All damage types</strong> — storm, hail, wind, impact, age-related",
+        "<strong>Honest repair vs. replace guidance</strong> — no upsell, ever",
+        "<strong>Insurance claim management</strong> — we work with your adjuster",
+        "<strong>GAF certified repairs</strong> — manufacturer-backed materials",
+        "<strong>Free inspection</strong> — always, no obligation",
+    ]
+    info_box_title = f"Roof damage in {name} often isn't visible from the ground"
+    info_box_body = f"The most costly roof damage in {name} is the kind you can't see from the yard — hail bruising on shingles, lifted flashing, cracked pipe boots, and damaged ridge cap. By the time a leak appears inside your home, the damage has been accumulating for months. A free inspection catches it early."
+    faq_items = [
+        ("What types of roof damage do you repair?", f"We repair all types of roof damage on {name} homes: hail and wind damage, missing or cracked shingles, damaged flashing, impact damage from fallen branches, ice dam damage, and age-related deterioration."),
+        ("How do I know if my roof has storm damage?", f"Signs visible from the ground include dented gutters, granules washing out of downspouts, and missing shingles. But many types of storm damage — especially hail — require a roof-level inspection to identify. We inspect {name} roofs for free."),
+        ("Will insurance cover my roof damage?", "Storm-related damage is typically covered. Age-related wear is not. We help you understand what qualifies and manage the claims process for covered events."),
+        ("How soon after a storm should I get an inspection?", f"As soon as possible. Ohio insurance policies typically allow 1-2 years to file a storm claim, but evidence of damage can degrade over time. Getting a free inspection in {name} right after a storm gives you the best documentation."),
+    ]
+    section2_h = f"Types of Roof Damage We See in {name}"
+    section2_body = f"After decades of Ohio winters, {name} homes from the {era} era face a predictable set of roof damage patterns: hail impacts that bruise shingles and accelerate granule loss, wind damage that lifts tabs and separates flashing, ice dam damage that forces water back under shingles at the eaves, and general age deterioration that manifests as cracking, curling, and blistering. Our certified inspectors identify all of it — not just the obvious damage — and give you a complete picture of your roof's condition."
+    final_h = f"Roof Damage in {name}? Get a Free Assessment."
+    final_p = "Thorough inspection. Honest guidance. Insurance handled."
+    return slug_out, title, desc, canonical, h1_line1, h1_line2, badge_text, hero_p, cta_btn, checklist_items, info_box_title, info_box_body, faq_items, section2_h, section2_body, final_h, final_p, c
+
+def page_wind_damage(c):
+    name, slug, county, era, streets = c["name"], c["slug"], c["county"], c["housing_era"], c["streets"]
+    slug_out = f"wind-damage-roof-{slug}-oh"
+    title = f"Wind Damage Roof {name} Ohio | Storm Repair — Atlas Roofing & Restoration"
+    desc = f"Wind damaged your roof in {name}, Ohio? Atlas Roofing inspects and repairs fast. Insurance claims handled. GAF certified, BBB A+. Free inspection. Call (216) 888-3208."
+    canonical = f"https://atlasroofingrestoration.com/{slug_out}/"
+    h1_line1 = "Wind Damage Roof Repair in"
+    h1_line2 = f"{name}, Ohio"
+    badge_text = f"Wind Damage — {name}, {c['state']}"
+    hero_p = f"High winds damage roofs throughout {name} every year — ripping off shingles, lifting flashing, and knocking down tree limbs onto roofs. Atlas Roofing & Restoration provides fast wind damage assessment and repair throughout {name} and {county}. We document all damage with photos, repair or replace what's needed, and help you file an insurance claim for covered wind damage events. Free inspection, fast response."
+    cta_btn = f"Free Wind Damage Inspection — {name}"
+    checklist_items = [
+        "<strong>Fast storm response</strong> — same-day and next-day available",
+        "<strong>Photo-documented damage report</strong> — insurance-ready documentation",
+        "<strong>Full roof assessment</strong> — wind damage is often more widespread than it appears",
+        "<strong>Insurance claim management</strong> — wind damage is a covered event",
+        "<strong>Temporary tarping</strong> — available while permanent repairs are scheduled",
+        "<strong>Free inspection</strong> — no charge, no obligation",
+    ]
+    info_box_title = f"Wind damage in {name} is often worse than it looks"
+    info_box_body = f"A few missing shingles visible from the yard often means more lifted tabs and damaged flashing elsewhere on the roof. {name} homes that go through high-wind events frequently have storm damage on multiple roof planes. Our free inspection documents everything — which matters a lot when you file an insurance claim."
+    faq_items = [
+        ("Does homeowner's insurance cover wind damage to my roof?", f"Yes — wind damage is one of the most commonly covered events under standard Ohio homeowner's insurance. We inspect your {name} home for free, document all damage, and help you through the claims process."),
+        ("What does wind damage look like on a roof?", "Common signs: missing shingles, lifted or creased shingle tabs, damaged ridge cap, bent or dented flashing, and gutters that have pulled away from the fascia. Some wind damage is only visible from roof level."),
+        ("How quickly do I need to act after wind damage?", f"Quickly — any exposed roof deck or lifted shingles can allow water intrusion in the next rain event. Call us at (216) 888-3208 for a fast response in {name}."),
+        ("What if a tree hit my roof?", "Impact damage from fallen trees or branches is typically covered under homeowner's insurance. We assess the full extent of the damage, including any structural concerns, and help coordinate the claim."),
+    ]
+    section2_h = f"Wind Damage Patterns in {name}"
+    section2_body = f"Northeast Ohio experiences sustained high winds and severe thunderstorm gusts regularly, and {name} homes are no exception. Wind damage on {name} homes typically presents as: missing shingles along the ridgeline and at gable edges where uplift is greatest, creased or lifted shingle tabs where wind has gotten underneath, damaged ridge cap that has blown off or separated, flashing lifted at chimneys or skylights, and gutter sections that have pulled away or collapsed under wind load. Our free inspection covers the entire roof surface and provides photo documentation suitable for an insurance claim."
+    final_h = f"Wind Damage to Your {name} Roof? We Respond Fast."
+    final_p = "Free inspection. Insurance claim handled. GAF certified repairs."
+    return slug_out, title, desc, canonical, h1_line1, h1_line2, badge_text, hero_p, cta_btn, checklist_items, info_box_title, info_box_body, faq_items, section2_h, section2_body, final_h, final_p, c
+
+def page_emergency_roof_repair(c):
+    name, slug, county, era, streets = c["name"], c["slug"], c["county"], c["housing_era"], c["streets"]
+    slug_out = f"emergency-roof-repair-{slug}-oh"
+    title = f"Emergency Roof Repair {name} Ohio | Fast Response — Atlas Roofing"
+    desc = f"Emergency roof repair in {name}, Ohio. Fast response to active leaks, storm damage, and blown-off shingles. GAF certified, BBB A+. Call now: (216) 888-3208."
+    canonical = f"https://atlasroofingrestoration.com/{slug_out}/"
+    h1_line1 = "Emergency Roof Repair in"
+    h1_line2 = f"{name}, Ohio"
+    badge_text = f"Emergency Repair — {name}, {c['state']}"
+    hero_p = f"Roofing emergency in {name}? Call Atlas Roofing & Restoration right now at (216) 888-3208. We respond to emergency roof situations throughout {name} and {county} — active leaks, storm damage, blown-off shingles, fallen trees, and anything else that can't wait. We'll assess the situation, stop the immediate damage, and get your home protected fast. GAF certified. BBB A+."
+    cta_btn = f"Call Now — Emergency in {name}"
+    checklist_items = [
+        f"<strong>Fast emergency response</strong> — we prioritize urgent calls in {name}",
+        "<strong>Temporary tarping</strong> — immediate protection while permanent repair is scheduled",
+        "<strong>Active leak stopping</strong> — get water out of your home now",
+        "<strong>Storm damage response</strong> — same-day after severe weather events",
+        "<strong>Insurance documentation</strong> — we photograph and document everything",
+        "<strong>Honest assessment</strong> — clear repair vs. replace recommendation on the spot",
+    ]
+    info_box_title = "Roofing emergency? Call (216) 888-3208 right now"
+    info_box_body = f"Don't search — call. If you have an active leak, blown-off shingles, or a fallen tree on your {name} roof, every minute counts. Atlas Roofing responds to emergencies throughout {name} and {county}. We'll get someone out fast to assess the situation and stop the damage."
+    faq_items = [
+        (f"How fast can you respond to a roofing emergency in {name}?", f"We prioritize emergency calls. Call (216) 888-3208 immediately — we aim for same-day response to active emergencies throughout {name} and {county}."),
+        ("What counts as a roofing emergency?", "Active leaks with water entering your home, shingles blown off exposing the deck, fallen trees or branches on the roof, and major storm damage that leaves your home vulnerable to the next rain event."),
+        ("What will you do when you arrive?", "We assess the full situation, stop immediate water intrusion, tarp exposed areas if needed, document all damage with photos, and give you a clear repair plan and written quote."),
+        ("Does emergency roof repair affect my insurance claim?", "Taking emergency protective measures — tarping, temporary repairs — does not negatively affect your insurance claim. Your policy may actually require you to take reasonable steps to prevent further damage."),
+    ]
+    section2_h = f"Common Roofing Emergencies in {name}"
+    section2_body = f"The most common emergency calls we receive from {name} homeowners: active leaks with water pouring into living spaces during or after storms, shingles blown off in high-wind events leaving the roof deck exposed, tree limbs or whole trees that have fallen and punctured the roof, and ice dam situations where water is visibly backing up into the attic or living areas. In every case, our priority is to get to your {name} home fast, stop the immediate damage, and give you a clear path forward."
+    final_h = f"Roofing Emergency in {name}? Call Now."
+    final_p = "Fast response. Immediate protection. (216) 888-3208."
+    return slug_out, title, desc, canonical, h1_line1, h1_line2, badge_text, hero_p, cta_btn, checklist_items, info_box_title, info_box_body, faq_items, section2_h, section2_body, final_h, final_p, c
+
+
+# ── Complete PAGE_TYPES — all 20 types ───────────────────────────────────────
+PAGE_TYPES = [
+    page_roof_repair,
+    page_roof_replacement,
+    page_roofing_contractor,
+    page_roof_leak,
+    page_roof_inspection,
+    page_new_roof_cost,
+    page_hail_damage,
+    page_gutter,
+    page_siding,
+    page_leaking_roof,
+    page_water_stains,
+    page_blown_shingles,
+    page_shingle_repair,
+    page_gutter_repair,
+    page_gutter_collapse,
+    page_ice_dam,
+    page_commercial_roof,
+    page_roof_damage,
+    page_wind_damage,
+    page_emergency_roof_repair,
+]
+
+
 if __name__ == "__main__":
     import sys
     dry = "--dry-run" in sys.argv
-
-    print(f"Starting generation {'(DRY RUN)' if dry else ''}...")
+    print("Starting generation (DRY RUN)..." if dry else "Starting generation ...")
     generated, skipped = generate_all(dry_run=dry)
-
     print(f"\nGenerated: {len(generated)} pages")
     print(f"Skipped (already exist): {len(skipped)} pages")
-
     if generated and not dry:
         added = update_sitemap(generated)
         print(f"Sitemap updated: {added} new URLs added")
         write_tracker(skipped, generated)
         print("PAGE_TRACKER.md updated")
-
     if dry:
         print("\nSample slugs that would be created:")
         for s in generated[:15]:

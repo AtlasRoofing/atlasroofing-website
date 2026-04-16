@@ -48,3 +48,6 @@
 
 # Catch-all for any unmatched WordPress year-based URLs
 /20:splat                                    /blog/                               301
+
+/residential-roofing-solon-ohio/         /roofing-solon-ohio/         301
+/commercial-roofing-beachwood-ohio/      /commercial-roofing/         301

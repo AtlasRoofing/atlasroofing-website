@@ -986,6 +986,212 @@ CITIES = [
   },
 ]
 
+
+# ── COMMERCIAL & MULTI-FAMILY EXPANSION CITIES ──────────────────────────────
+# These cities are targeted for commercial/multi-family roofing only
+# Wider Ohio geography beyond the residential service area
+
+COMMERCIAL_CITIES = [
+  {
+    "slug": "akron",
+    "name": "Akron",
+    "state": "OH",
+    "zip": "44301",
+    "county": "Summit County",
+    "housing_era": "1900s-1970s",
+    "landmarks": ["Akron Zoo", "Canal Park", "University of Akron", "Cascade Plaza", "Main Street corridor"],
+    "streets": ["Main Street", "Market Street", "Exchange Street", "Buchtel Avenue", "East Market Street"],
+    "neighbors": ["Cuyahoga Falls", "Stow", "Barberton", "Fairlawn", "Hudson"],
+    "notes": "Major Summit County city. Large stock of aging commercial and industrial buildings. Strong demand for flat roof replacement and repair.",
+    "review": {"text": "They literally put a roof over our heads. Great communication. Employees were pleasant and were there when they said they would be there.", "author": "Robert Schloss", "source": "Northeast Ohio · Google Review"}
+  },
+  {
+    "slug": "canton",
+    "name": "Canton",
+    "state": "OH",
+    "zip": "44702",
+    "county": "Stark County",
+    "housing_era": "1900s-1970s",
+    "landmarks": ["Pro Football Hall of Fame", "downtown Canton", "Belden Village area", "Tuscarawas Street corridor"],
+    "streets": ["Tuscarawas Street", "Market Avenue", "Cleveland Avenue", "Whipple Avenue", "Fulton Road"],
+    "neighbors": ["Massillon", "North Canton", "Louisville", "Jackson Township", "Plain Township"],
+    "notes": "Stark County hub. Mix of older industrial buildings and newer commercial development. Active commercial roofing market.",
+    "review": {"text": "Quick and professional roofing service. Great communication throughout the entire process and left a very clean job site.", "author": "Tawn Kramer", "source": "Northeast Ohio · Google Review"}
+  },
+  {
+    "slug": "youngstown",
+    "name": "Youngstown",
+    "state": "OH",
+    "zip": "44501",
+    "county": "Mahoning County",
+    "housing_era": "1900s-1960s",
+    "landmarks": ["Youngstown State University", "downtown Youngstown", "Market Street corridor", "Mahoning Avenue"],
+    "streets": ["Market Street", "Mahoning Avenue", "Belmont Avenue", "Southern Boulevard", "Glenwood Avenue"],
+    "neighbors": ["Boardman", "Austintown", "Struthers", "Warren", "Niles"],
+    "notes": "Mahoning Valley hub. Large inventory of older commercial and industrial buildings needing roof work. Cost-conscious market.",
+    "review": {"text": "Andrew is fantastic — called him about a roof leak, he came out the same day, assessed what needed to be done, and had everything sorted out quickly.", "author": "Jimmy Valencia", "source": "Northeast Ohio · Google Review"}
+  },
+  {
+    "slug": "lorain",
+    "name": "Lorain",
+    "state": "OH",
+    "zip": "44052",
+    "county": "Lorain County",
+    "housing_era": "1900s-1960s",
+    "landmarks": ["Lorain Harbor", "Black River Landing", "Broadway Avenue corridor", "Lakeview Park"],
+    "streets": ["Broadway Avenue", "Reid Avenue", "East 28th Street", "Oberlin Avenue", "Colorado Avenue"],
+    "neighbors": ["Elyria", "Avon Lake", "Sheffield Lake", "Vermilion", "Amherst"],
+    "notes": "Lake Erie industrial city. Many older commercial and multi-family buildings. Lake exposure means more weather-related roof damage.",
+    "review": {"text": "I had such a great experience with Atlas Roofing and truly can't recommend them enough. They replaced my entire roof in just one day.", "author": "Adina Forouzan", "source": "Northeast Ohio · Google Review"}
+  },
+  {
+    "slug": "elyria",
+    "name": "Elyria",
+    "state": "OH",
+    "zip": "44035",
+    "county": "Lorain County",
+    "housing_era": "1900s-1970s",
+    "landmarks": ["Elyria City Hall", "Cascade Park", "Midway Mall area", "Broad Street corridor"],
+    "streets": ["Broad Street", "Middle Avenue", "Gulf Road", "Abbe Road", "Lake Avenue"],
+    "neighbors": ["Lorain", "Avon", "North Olmsted", "Grafton", "LaGrange"],
+    "notes": "Lorain County seat. Active commercial corridor. Mix of industrial, retail, and multi-family roofing needs.",
+    "review": {"text": "They literally put a roof over our heads. Great communication. Employees were pleasant and were there when they said they would be there.", "author": "Robert Schloss", "source": "Northeast Ohio · Google Review"}
+  },
+  {
+    "slug": "medina",
+    "name": "Medina",
+    "state": "OH",
+    "zip": "44256",
+    "county": "Medina County",
+    "housing_era": "1960s-2000s",
+    "landmarks": ["Medina Square", "Medina County Courthouse", "Lafayette Road corridor", "Route 18 commercial strip"],
+    "streets": ["Lafayette Road", "North Court Street", "Weymouth Road", "Friendsville Road", "Route 18"],
+    "neighbors": ["Brunswick", "Wadsworth", "Seville", "Lodi", "Chippewa Lake"],
+    "notes": "Fast-growing Medina County seat. Mix of newer commercial development and older buildings. Strong multi-family growth.",
+    "review": {"text": "Quick and professional roofing service. Great communication throughout the entire process and left a very clean job site.", "author": "Tawn Kramer", "source": "Northeast Ohio · Google Review"}
+  },
+  {
+    "slug": "brunswick",
+    "name": "Brunswick",
+    "state": "OH",
+    "zip": "44212",
+    "county": "Medina County",
+    "housing_era": "1970s-2000s",
+    "landmarks": ["Brunswick City Hall", "Pearl Road corridor", "Brunswick Auto Mile", "Route 303"],
+    "streets": ["Pearl Road", "Center Road", "Grafton Road", "Route 303", "Substation Road"],
+    "neighbors": ["Strongsville", "Medina", "North Royalton", "Hinckley", "Montville"],
+    "notes": "Rapidly growing suburb between Cleveland and Medina. Active commercial development. Many newer strip malls and office parks.",
+    "review": {"text": "I asked them to take a look at my roof based on my home inspection report. They were very honest when inspecting and only recommended the exact work that needed to be done.", "author": "Benjamin Kaplan", "source": "Northeast Ohio · Google Review"}
+  },
+  {
+    "slug": "cuyahoga-falls",
+    "name": "Cuyahoga Falls",
+    "state": "OH",
+    "zip": "44221",
+    "county": "Summit County",
+    "housing_era": "1920s-1970s",
+    "landmarks": ["Cuyahoga Falls City Hall", "Blossom Music Center", "Front Street corridor", "Portage Trail"],
+    "streets": ["Front Street", "State Road", "Portage Trail", "Bailey Road", "Graham Road"],
+    "neighbors": ["Akron", "Stow", "Kent", "Hudson", "Tallmadge"],
+    "notes": "Summit County city adjacent to Akron. Strong mix of commercial and multi-family roofing. Many mid-century apartment complexes.",
+    "review": {"text": "What a divine appointment from beginning to completion. Trustworthy, competent, efficient, polite, orderly team work.", "author": "Lorna Joy Larkin", "source": "South Euclid, OH · Google Review"}
+  },
+  {
+    "slug": "sandusky",
+    "name": "Sandusky",
+    "state": "OH",
+    "zip": "44870",
+    "county": "Erie County",
+    "housing_era": "1900s-1970s",
+    "landmarks": ["Cedar Point", "Sandusky Bay", "downtown Sandusky", "Columbus Avenue corridor"],
+    "streets": ["Columbus Avenue", "Perkins Avenue", "Milan Road", "Camp Street", "Venice Road"],
+    "neighbors": ["Huron", "Vermilion", "Port Clinton", "Milan", "Norwalk"],
+    "notes": "Erie County tourist and industrial hub. Many hospitality and commercial buildings. Cedar Point proximity drives hotel/hospitality roofing.",
+    "review": {"text": "They literally put a roof over our heads. Great communication. Employees were pleasant and were there when they said they would be there.", "author": "Robert Schloss", "source": "Northeast Ohio · Google Review"}
+  },
+  {
+    "slug": "warren",
+    "name": "Warren",
+    "state": "OH",
+    "zip": "44481",
+    "county": "Trumbull County",
+    "housing_era": "1900s-1960s",
+    "landmarks": ["Warren City Hall", "Packard Music Hall", "Mahoning Avenue corridor", "downtown Warren square"],
+    "streets": ["Mahoning Avenue", "High Street", "Market Street", "Tod Avenue", "Elm Road"],
+    "neighbors": ["Youngstown", "Niles", "Cortland", "Brookfield", "Howland"],
+    "notes": "Trumbull County hub. Older industrial and commercial building stock. Strong need for flat roof repair and replacement.",
+    "review": {"text": "Andrew is fantastic — called him about a roof leak, he came out the same day, assessed what needed to be done, and had everything sorted out quickly.", "author": "Jimmy Valencia", "source": "Northeast Ohio · Google Review"}
+  },
+  {
+    "slug": "mansfield",
+    "name": "Mansfield",
+    "state": "OH",
+    "zip": "44902",
+    "county": "Richland County",
+    "housing_era": "1900s-1970s",
+    "landmarks": ["Ohio State Reformatory", "Richland Carrousel Park", "downtown Mansfield", "Park Avenue West corridor"],
+    "streets": ["Park Avenue West", "Lexington Avenue", "Ashland Road", "Newman Street", "Route 30"],
+    "neighbors": ["Ontario", "Shelby", "Ashland", "Mount Vernon", "Galion"],
+    "notes": "Richland County hub. Large inventory of older commercial and industrial buildings. Cost-effective roofing solutions in demand.",
+    "review": {"text": "I had such a great experience with Atlas Roofing and truly can't recommend them enough. They replaced my entire roof in just one day.", "author": "Adina Forouzan", "source": "Northeast Ohio · Google Review"}
+  },
+  {
+    "slug": "painesville",
+    "name": "Painesville",
+    "state": "OH",
+    "zip": "44077",
+    "county": "Lake County",
+    "housing_era": "1900s-1970s",
+    "landmarks": ["Painesville City Hall", "Lake County Fairgrounds", "Main Street corridor", "Grand River"],
+    "streets": ["Main Street", "Mentor Avenue", "Richmond Street", "Bank Street", "State Route 2"],
+    "neighbors": ["Mentor", "Willoughby", "Kirtland", "Madison", "Geneva"],
+    "notes": "Lake County seat. Mix of commercial, multi-family, and historic buildings. Active local business community.",
+    "review": {"text": "Quick and professional roofing service. Great communication throughout the entire process and left a very clean job site.", "author": "Tawn Kramer", "source": "Northeast Ohio · Google Review"}
+  },
+  {
+    "slug": "stow",
+    "name": "Stow",
+    "state": "OH",
+    "zip": "44224",
+    "county": "Summit County",
+    "housing_era": "1960s-1990s",
+    "landmarks": ["Stow City Hall", "Kent Road corridor", "Stow-Monroe Falls Schools", "Silver Springs Park"],
+    "streets": ["Kent Road", "Graham Road", "Darrow Road", "Route 91", "Hudson Drive"],
+    "neighbors": ["Cuyahoga Falls", "Hudson", "Munroe Falls", "Tallmadge", "Kent"],
+    "notes": "Growing Summit County suburb. Active commercial strip development and multi-family construction. Strong roof replacement demand.",
+    "review": {"text": "I asked them to take a look at my roof based on my home inspection report. They were very honest when inspecting and only recommended the exact work that needed to be done.", "author": "Benjamin Kaplan", "source": "Northeast Ohio · Google Review"}
+  },
+  {
+    "slug": "north-olmsted",
+    "name": "North Olmsted",
+    "state": "OH",
+    "zip": "44070",
+    "county": "Cuyahoga County",
+    "housing_era": "1950s-1980s",
+    "landmarks": ["Great Northern Mall area", "Lorain Road corridor", "North Olmsted City Hall", "Clague Park"],
+    "streets": ["Lorain Road", "Great Northern Boulevard", "Butternut Ridge Road", "Dover Center Road", "Clague Road"],
+    "neighbors": ["Westlake", "Fairview Park", "Strongsville", "Olmsted Falls", "Berea"],
+    "notes": "Active commercial corridor anchored by Great Northern Mall. Many strip centers and office buildings with aging flat roofs.",
+    "review": {"text": "What a divine appointment from beginning to completion. Trustworthy, competent, efficient, polite, orderly team work.", "author": "Lorna Joy Larkin", "source": "South Euclid, OH · Google Review"}
+  },
+  {
+    "slug": "berea",
+    "name": "Berea",
+    "state": "OH",
+    "zip": "44017",
+    "county": "Cuyahoga County",
+    "housing_era": "1920s-1970s",
+    "landmarks": ["Baldwin Wallace University", "Berea City Hall", "Front Street corridor", "Grindstone Creek"],
+    "streets": ["Front Street", "Bagley Road", "West Bagley Road", "Eastland Road", "Rocky River Drive"],
+    "neighbors": ["Brook Park", "Middleburg Heights", "North Olmsted", "Olmsted Falls", "Strongsville"],
+    "notes": "Home to Baldwin Wallace University and Cleveland Browns training facility. Mix of institutional, commercial, and multi-family buildings.",
+    "review": {"text": "They literally put a roof over our heads. Great communication. Employees were pleasant and were there when they said they would be there.", "author": "Robert Schloss", "source": "Northeast Ohio · Google Review"}
+  },
+]
+
+# Combined list for commercial page generation
+ALL_COMMERCIAL_CITIES = CITIES + COMMERCIAL_CITIES
+
 # Quick lookup helpers
 CITY_BY_SLUG = {c["slug"]: c for c in CITIES}
 

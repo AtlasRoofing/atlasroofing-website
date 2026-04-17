@@ -1491,6 +1491,56 @@ img { max-width: 100%; display: block; }
   </div>
 </div>
 
+<!-- PAST JOBS GALLERY -->
+<section class="gallery" id="past-jobs">
+  <div class="container">
+    <div class="gallery-header">
+      <div>
+        <span class="eyebrow">Our work</span>
+        <h2 class="section-title">See the Atlas Difference</h2>
+      </div>
+      <a href="/past-jobs/" class="btn-primary">View All Projects</a>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid">
+      <div class="gallery-item" data-category="residential" onclick="openLightbox(this)">
+        <img src="images/job-01-residential-brown-aerial.jpg" alt="Residential Roof Replacement Northeast Ohio | Atlas Roofing" loading="lazy">
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Residential Replacement — Northeast Ohio</span></div>
+      </div>
+      <div class="gallery-item" data-category="residential" onclick="openLightbox(this)">
+        <img src="images/job-05-charcoal-front-view.jpg" alt="Complete Roof Replacement Northeast Ohio | Atlas Roofing" loading="lazy">
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Complete Roof Replacement — Northeast Ohio</span></div>
+      </div>
+      <div class="gallery-item" data-category="residential" onclick="openLightbox(this)">
+        <img src="images/job-09-gray-skylights-aerial.jpg" alt="Full Replacement with Skylights | Atlas Roofing" loading="lazy">
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Full Replacement with Skylights</span></div>
+      </div>
+      <div class="gallery-item" data-category="residential" onclick="openLightbox(this)">
+        <img src="images/job-13-inprogress-crew-aerial.jpg" alt="Roof Replacement in Progress Northeast Ohio | Atlas Roofing" loading="lazy">
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Roof Replacement in Progress</span></div>
+      </div>
+      <div class="gallery-item" data-category="residential" onclick="openLightbox(this)">
+        <img src="images/job-10-gray-estate-aerial.jpg" alt="Large Estate Roof Replacement | Atlas Roofing" loading="lazy">
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Large Estate Roof — Northeast Ohio</span></div>
+      </div>
+      <div class="gallery-item" data-category="residential" onclick="openLightbox(this)">
+        <img src="images/job-14-charcoal-large-home-aerial.jpg" alt="Charcoal Shingle Roof Replacement | Atlas Roofing" loading="lazy">
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Large Home Replacement — Charcoal Shingles</span></div>
+      </div>
+    </div>
+
+    <div class="gallery-cta">
+      <a href="/past-jobs/" class="btn-primary">See All Past Jobs →</a>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <img id="lightboxImg" src="" alt="">
+</div>
+
 <!-- SERVICES -->
 <section class="services">
   <div class="container">
@@ -1530,6 +1580,39 @@ img { max-width: 100%; display: block; }
         <p class="svc-desc">Vinyl, fiber cement, and more. We install siding that holds up to Ohio weather — hail, ice, and all.</p>
         <span class="svc-link">View service</span>
       </a>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews">
+  <div class="container">
+    <div class="reviews-header">
+      <span class="eyebrow">What customers say</span>
+      <h2 class="section-title">Real Reviews from Real Neighbors</h2>
+      <p class="section-sub">5-star Google reviews from homeowners across Northeast Ohio.</p>
+    </div>
+    <div class="reviews-grid">
+            <div class="review-card">
+        <div class="rc-stars">★★★★★</div>
+        <p class="rc-text">"I asked them to take a look at my roof based on my home inspection report. They were very honest when inspecting and only recommended the exact work that needed to be done, and nothing more. Well done — I'll be using them when I need a new roof down the line."</p>
+        <div class="rc-author"><div class="rc-avatar">BK</div><div><div class="rc-name">Benjamin Kaplan</div><div class="rc-date">Beachwood, OH · Google</div></div></div>
+      </div>
+      <div class="review-card">
+        <div class="rc-stars">★★★★★</div>
+        <p class="rc-text">"Appreciate their quick and professional work. The new garage roof looks great! They kept me up to date, communicated well, and left a clean job site. Would absolutely recommend Atlas to anyone looking for a reliable roofer."</p>
+        <div class="rc-author"><div class="rc-avatar">TK</div><div><div class="rc-name">Tawn Kramer</div><div class="rc-date">Northeast Ohio · Google</div></div></div>
+      </div>
+      <div class="review-card">
+        <div class="rc-stars">★★★★★</div>
+        <p class="rc-text">"I had such a great experience with Atlas Roofing and truly can't recommend them enough. They replaced my entire roof in just one day. Everything was done so efficiently and the quality of the work is excellent."</p>
+        <div class="rc-author"><div class="rc-avatar">AF</div><div><div class="rc-name">Adina Forouzan</div><div class="rc-date">Northeast Ohio · Google</div></div></div>
+      </div>
+</div>
+      </div>
+    </div>
+    <div class="reviews-cta">
+      <a href="https://www.google.com/maps/place/Atlas+Roofing+%26+Restoration/@41.4608547,-81.5060061,707m/data=!3m2!1e3!5s0x883102a495403b37:0xfd9c252c052527cd!4m8!3m7!1s0x883102bd2b5a73b9:0x92937d2914e8a622!8m2!3d41.4608547!4d-81.5060061!9m1!1b1!16s%2Fg%2F11vkr36yfr?entry=ttu&g_ep=EgoyMDI2MDQxMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" class="btn-primary">See Our Google Reviews →</a>
     </div>
   </div>
 </section>
@@ -1616,56 +1699,6 @@ img { max-width: 100%; display: block; }
   </div>
 </section>
 
-<!-- PAST JOBS GALLERY -->
-<section class="gallery" id="past-jobs">
-  <div class="container">
-    <div class="gallery-header">
-      <div>
-        <span class="eyebrow">Our work</span>
-        <h2 class="section-title">See the Atlas Difference</h2>
-      </div>
-      <a href="/past-jobs/" class="btn-primary">View All Projects</a>
-    </div>
-
-    <div class="gallery-grid" id="galleryGrid">
-      <div class="gallery-item" data-category="residential" onclick="openLightbox(this)">
-        <img src="images/job-01-residential-brown-aerial.jpg" alt="Residential Roof Replacement Northeast Ohio | Atlas Roofing" loading="lazy">
-        <div class="gallery-item-overlay"><span class="gallery-item-label">Residential Replacement — Northeast Ohio</span></div>
-      </div>
-      <div class="gallery-item" data-category="residential" onclick="openLightbox(this)">
-        <img src="images/job-05-charcoal-front-view.jpg" alt="Complete Roof Replacement Northeast Ohio | Atlas Roofing" loading="lazy">
-        <div class="gallery-item-overlay"><span class="gallery-item-label">Complete Roof Replacement — Northeast Ohio</span></div>
-      </div>
-      <div class="gallery-item" data-category="residential" onclick="openLightbox(this)">
-        <img src="images/job-09-gray-skylights-aerial.jpg" alt="Full Replacement with Skylights | Atlas Roofing" loading="lazy">
-        <div class="gallery-item-overlay"><span class="gallery-item-label">Full Replacement with Skylights</span></div>
-      </div>
-      <div class="gallery-item" data-category="residential" onclick="openLightbox(this)">
-        <img src="images/job-13-inprogress-crew-aerial.jpg" alt="Roof Replacement in Progress Northeast Ohio | Atlas Roofing" loading="lazy">
-        <div class="gallery-item-overlay"><span class="gallery-item-label">Roof Replacement in Progress</span></div>
-      </div>
-      <div class="gallery-item" data-category="residential" onclick="openLightbox(this)">
-        <img src="images/job-10-gray-estate-aerial.jpg" alt="Large Estate Roof Replacement | Atlas Roofing" loading="lazy">
-        <div class="gallery-item-overlay"><span class="gallery-item-label">Large Estate Roof — Northeast Ohio</span></div>
-      </div>
-      <div class="gallery-item" data-category="residential" onclick="openLightbox(this)">
-        <img src="images/job-14-charcoal-large-home-aerial.jpg" alt="Charcoal Shingle Roof Replacement | Atlas Roofing" loading="lazy">
-        <div class="gallery-item-overlay"><span class="gallery-item-label">Large Home Replacement — Charcoal Shingles</span></div>
-      </div>
-    </div>
-
-    <div class="gallery-cta">
-      <a href="/past-jobs/" class="btn-primary">See All Past Jobs →</a>
-    </div>
-  </div>
-</section>
-
-<!-- Lightbox -->
-<div class="lightbox" id="lightbox" onclick="closeLightbox()">
-  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
-  <img id="lightboxImg" src="" alt="">
-</div>
-
 <!-- INSURANCE SECTION -->
 <section class="insurance">
   <div class="container">
@@ -1713,39 +1746,6 @@ img { max-width: 100%; display: block; }
         <div class="ps-title">Final Walkthrough</div>
         <p class="ps-desc">We walk the job with you before we leave. Your warranty documentation is delivered same day. You're covered.</p>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- REVIEWS -->
-<section class="reviews">
-  <div class="container">
-    <div class="reviews-header">
-      <span class="eyebrow">What customers say</span>
-      <h2 class="section-title">Real Reviews from Real Neighbors</h2>
-      <p class="section-sub">5-star Google reviews from homeowners across Northeast Ohio.</p>
-    </div>
-    <div class="reviews-grid">
-            <div class="review-card">
-        <div class="rc-stars">★★★★★</div>
-        <p class="rc-text">"I asked them to take a look at my roof based on my home inspection report. They were very honest when inspecting and only recommended the exact work that needed to be done, and nothing more. Well done — I'll be using them when I need a new roof down the line."</p>
-        <div class="rc-author"><div class="rc-avatar">BK</div><div><div class="rc-name">Benjamin Kaplan</div><div class="rc-date">Beachwood, OH · Google</div></div></div>
-      </div>
-      <div class="review-card">
-        <div class="rc-stars">★★★★★</div>
-        <p class="rc-text">"Appreciate their quick and professional work. The new garage roof looks great! They kept me up to date, communicated well, and left a clean job site. Would absolutely recommend Atlas to anyone looking for a reliable roofer."</p>
-        <div class="rc-author"><div class="rc-avatar">TK</div><div><div class="rc-name">Tawn Kramer</div><div class="rc-date">Northeast Ohio · Google</div></div></div>
-      </div>
-      <div class="review-card">
-        <div class="rc-stars">★★★★★</div>
-        <p class="rc-text">"I had such a great experience with Atlas Roofing and truly can't recommend them enough. They replaced my entire roof in just one day. Everything was done so efficiently and the quality of the work is excellent."</p>
-        <div class="rc-author"><div class="rc-avatar">AF</div><div><div class="rc-name">Adina Forouzan</div><div class="rc-date">Northeast Ohio · Google</div></div></div>
-      </div>
-</div>
-      </div>
-    </div>
-    <div class="reviews-cta">
-      <a href="https://www.google.com/maps/place/Atlas+Roofing+%26+Restoration/@41.4608547,-81.5060061,707m/data=!3m2!1e3!5s0x883102a495403b37:0xfd9c252c052527cd!4m8!3m7!1s0x883102bd2b5a73b9:0x92937d2914e8a622!8m2!3d41.4608547!4d-81.5060061!9m1!1b1!16s%2Fg%2F11vkr36yfr?entry=ttu&g_ep=EgoyMDI2MDQxMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" class="btn-primary">See Our Google Reviews →</a>
     </div>
   </div>
 </section>

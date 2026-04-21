@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#003d6b">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Atlas Roofing & Restoration | Cleveland Ohio Roofing Contractor</title>
+<meta name="description" content="Learn about Atlas Roofing & Restoration — Cleveland's trusted local roofing contractor. GAF certified, BBB A+ rated, serving Northeast Ohio homeowners and businesses.">
+<link rel="canonical" href="https://atlasroofingrestoration.com/about/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body { font-family: 'Manrope', sans-serif; color: #111827; background: #fff; line-height: 1.6; overflow-x: hidden; }
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; height: auto; display: block; }
+:root {
+  --blue: #0076c1; --blue-dk: #005a94; --blue-lt: #e8f4fb;
+  --green: #65c47b; --green-dk: #4aab61; --green-lt: #eaf7ed;
+  --navy: #003d6b; --dark: #111827; --gray: #6b7280;
+  --gray-lt: #f3f6f9; --border: #e2e8f0; --white: #ffffff;
+  --grad: linear-gradient(135deg, #003d6b 0%, #005a94 60%, #0a6b52 100%);
+  --grad-accent: linear-gradient(135deg, #0076c1, #65c47b);
+  --shadow: 0 4px 20px rgba(0,0,0,0.10); --shadow-lg: 0 8px 40px rgba(0,0,0,0.15);
+  --r: 8px; --r-lg: 14px;
+}
+.wrap { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+.btn { display: inline-block; font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 15px; padding: 13px 26px; border-radius: var(--r); cursor: pointer; transition: transform 0.15s, opacity 0.15s; white-space: nowrap; border: none; }
+.btn:hover { transform: translateY(-1px); opacity: 0.92; }
+.btn-blue { background: var(--blue); color: #fff; }
+.btn-green { background: var(--green); color: #fff; }
+.btn-outline-white { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.5); }
+.btn-outline-white:hover { border-color: #fff; }
+.btn-outline-blue { background: transparent; color: var(--blue); border: 2px solid var(--blue); }
+.btn-outline-blue:hover { background: var(--blue); color: #fff; }
+.btn-white { background: #fff; color: var(--blue); }
+.topbar { background: #0a1520; padding: 8px 0; }
+.topbar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.topbar-left { font-size: 12px; color: rgba(255,255,255,0.45); display: flex; align-items: center; gap: 20px; }
+.topbar-left span { display: flex; align-items: center; gap: 5px; }
+.topbar-left span::before { content: ''; display: inline-block; width: 5px; height: 5px; border-radius: 50%; background: var(--green); }
+.topbar-phone { font-size: 17px; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 7px; }
+.topbar-phone:hover { color: var(--green); }
+.nav { background: #fff; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 12px rgba(0,0,0,0.06); }
+.nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 70px; gap: 16px; }
+.nav-logo img { height: 42px; width: auto; display: block; }
+.nav-links { display: flex; align-items: center; gap: 2px; list-style: none; }
+.nav-links a { font-size: 14px; font-weight: 500; color: var(--gray); padding: 7px 12px; border-radius: 6px; transition: all 0.2s; }
+.nav-links a:hover, .nav-links a.active { color: var(--blue); background: var(--blue-lt); }
+.nav-right { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+.nav-tel { font-size: 14px; font-weight: 700; color: var(--blue); display: flex; align-items: center; gap: 5px; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; flex-direction: column; gap: 5px; }
+.hamburger span { display: block; width: 22px; height: 2px; background: var(--dark); border-radius: 2px; }
+.mobile-nav { display: none; flex-direction: column; background: #fff; border-top: 1px solid var(--border); padding: 12px 24px 20px; gap: 2px; }
+.mobile-nav.open { display: flex; }
+.mobile-nav a { font-size: 15px; font-weight: 500; color: var(--dark); padding: 10px 0; border-bottom: 1px solid #f3f4f6; }
+.mobile-nav .m-btn { margin-top: 12px; text-align: center; background: var(--blue); color: #fff; padding: 13px; border-radius: var(--r); font-weight: 700; font-size: 15px; border: none; display: block; }
+.breadcrumb { background: var(--gray-lt); border-bottom: 1px solid var(--border); padding: 10px 0; }
+.breadcrumb .wrap { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--gray); }
+.breadcrumb a { color: var(--blue); }
+.section { padding: 80px 0; }
+.section.gray { background: var(--gray-lt); }
+.section-label { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--blue); display: block; margin-bottom: 10px; }
+.section-h { font-size: clamp(26px, 4vw, 42px); font-weight: 800; color: var(--dark); letter-spacing: -0.02em; line-height: 1.1; }
+.section-sub { font-size: 16px; color: var(--gray); line-height: 1.7; max-width: 560px; margin-top: 12px; }
+.section-header { margin-bottom: 48px; }
+.section-header.center { text-align: center; }
+.section-header.center .section-sub { margin: 12px auto 0; }
+.trustbar { background: var(--gray-lt); border-bottom: 1px solid var(--border); padding: 14px 0; }
+.trustbar .wrap { display: flex; align-items: center; justify-content: space-around; flex-wrap: wrap; gap: 10px; }
+.trust-item { display: flex; align-items: center; gap: 9px; font-size: 13px; font-weight: 600; color: var(--dark); }
+.trust-icon { width: 30px; height: 30px; border-radius: 7px; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; }
+.trust-icon.blue { background: var(--blue-lt); }
+.trust-icon.green { background: var(--green-lt); }
+.cta-strip { background: var(--grad); padding: 60px 0; }
+.cta-strip-inner { display: flex; gap: 40px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+.cta-strip h2 { font-size: clamp(22px, 3.5vw, 36px); font-weight: 800; color: #fff; letter-spacing: -0.02em; line-height: 1.1; margin-bottom: 10px; }
+.cta-strip p { font-size: 15px; color: rgba(255,255,255,0.65); max-width: 500px; }
+.cta-btns { display: flex; gap: 10px; flex-wrap: wrap; flex-shrink: 0; }
+.final-cta { background: var(--grad-accent); padding: 80px 0; text-align: center; }
+.final-cta h2 { font-size: clamp(30px, 5vw, 50px); font-weight: 800; color: #fff; letter-spacing: -0.02em; margin-bottom: 14px; }
+.final-cta p { font-size: 17px; color: rgba(255,255,255,0.78); max-width: 460px; margin: 0 auto 34px; }
+.final-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.footer { background: #0a1520; padding: 56px 0 26px; }
+.footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.07); margin-bottom: 26px; }
+.footer-logo img { height: 36px; margin-bottom: 14px; }
+.footer-desc { font-size: 13px; color: rgba(255,255,255,0.4); line-height: 1.7; margin-bottom: 18px; }
+.footer-contact { display: flex; flex-direction: column; gap: 8px; }
+.footer-contact a { font-size: 13px; color: rgba(255,255,255,0.45); transition: color 0.2s; }
+.footer-contact a:hover { color: var(--green); }
+.footer-col-title { font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.22); margin-bottom: 14px; }
+.footer-links { display: flex; flex-direction: column; gap: 8px; }
+.footer-links a { font-size: 13px; color: rgba(255,255,255,0.45); transition: color 0.2s; }
+.footer-links a:hover { color: var(--green); }
+.footer-bottom { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; font-size: 12px; color: rgba(255,255,255,0.25); }
+.footer-badges { display: flex; gap: 8px; }
+.fbadge { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.09); border-radius: 5px; padding: 3px 10px; font-size: 11px; color: rgba(255,255,255,0.35); }
+.mob-bar { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 200; background: #0a1520; border-top: 2px solid var(--blue); padding: 10px 16px; gap: 10px; }
+.mob-call { flex:1; background:var(--grad-accent); color:#fff; font-weight:800; font-size:13px; padding:11px 6px; border-radius:var(--r); text-align:center; border:none; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:4px; text-decoration:none; }
+.mob-quote { flex:1.2; background:#fff; color:var(--blue); font-weight:800; font-size:13px; padding:11px 6px; border-radius:var(--r); text-align:center; border:none; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:4px; }
+.mob-text { flex:1; background:transparent; color:#fff; font-weight:700; font-size:13px; padding:11px 6px; border-radius:var(--r); text-align:center; border:1.5px solid rgba(255,255,255,0.25); cursor:pointer; display:flex; align-items:center; justify-content:center; gap:4px; text-decoration:none; }
+.faq-list { display: flex; flex-direction: column; }
+.faq-item { border-bottom: 1px solid var(--border); }
+.faq-q { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 17px 0; cursor: pointer; font-size: 15px; font-weight: 700; color: var(--dark); user-select: none; transition: color 0.2s; }
+.faq-q:hover { color: var(--blue); }
+.faq-toggle { width: 24px; height: 24px; border-radius: 50%; background: #e2e8f0; display: flex; align-items: center; justify-content: center; font-size: 18px; color: var(--gray); flex-shrink: 0; line-height: 1; transition: background 0.2s, transform 0.2s; }
+.faq-item.open .faq-toggle { background: var(--blue); color: #fff; transform: rotate(45deg); }
+.faq-a { font-size: 14px; color: var(--gray); line-height: 1.7; padding: 0 0 16px; display: none; }
+.faq-item.open .faq-a { display: block; }
+@media (max-width: 1000px) { .footer-grid { grid-template-columns: 1fr 1fr; } .cta-strip-inner { flex-direction: column; gap: 24px; } }
+@media (max-width: 680px) { .topbar-left { display: none; } .nav-links, .nav-right .btn, .nav-tel { display: none; } .hamburger { display: flex; } .footer-grid { grid-template-columns: 1fr; } .mob-bar { display: flex; } body { padding-bottom: 64px; } .trustbar .wrap { justify-content: center; } }
+
+.page-hero { background: var(--grad); padding: 72px 0 64px; position: relative; overflow: hidden; }
+.page-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 80% 50%, rgba(101,196,123,0.12) 0%, transparent 60%); pointer-events: none; }
+.ph-inner { max-width: 720px; position: relative; z-index: 1; }
+.ph-badge { display: inline-flex; align-items: center; gap: 7px; background: rgba(101,196,123,0.15); border: 1px solid rgba(101,196,123,0.3); border-radius: 100px; padding: 5px 14px; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; color: #a0eab0; text-transform: uppercase; margin-bottom: 20px; }
+.ph-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); }
+.ph-h1 { font-size: clamp(36px,5vw,56px); font-weight: 800; color: #fff; line-height: 1.05; letter-spacing: -0.025em; margin-bottom: 18px; }
+.ph-h1 .green { color: var(--green); }
+.ph-p { font-size: 18px; color: rgba(255,255,255,0.7); line-height: 1.7; margin-bottom: 32px; }
+.ph-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.team-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+.team-card { background: #fff; border: 1px solid var(--border); border-radius: var(--r-lg); padding: 28px 24px; text-align: center; }
+.team-avatar { width: 64px; height: 64px; border-radius: 50%; background: var(--grad-accent); display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 800; color: #fff; margin: 0 auto 14px; }
+.team-name { font-size: 16px; font-weight: 700; color: var(--dark); margin-bottom: 4px; }
+.team-role { font-size: 13px; color: var(--blue); font-weight: 600; margin-bottom: 10px; }
+.team-desc { font-size: 13px; color: var(--gray); line-height: 1.6; }
+.stats-row { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; }
+.stat { text-align: center; background: #fff; border: 1px solid var(--border); border-radius: var(--r-lg); padding: 24px 16px; }
+.stat-num { font-size: 38px; font-weight: 800; color: var(--blue); line-height: 1; letter-spacing: -0.02em; }
+.stat-num.green { color: var(--green-dk); }
+.stat-label { font-size: 13px; color: var(--gray); margin-top: 6px; line-height: 1.4; }
+.values-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; }
+.value-card { background: var(--gray-lt); border: 1px solid var(--border); border-radius: var(--r-lg); padding: 22px; display: flex; gap: 14px; }
+.value-icon { font-size: 24px; flex-shrink: 0; }
+.value-title { font-size: 15px; font-weight: 700; color: var(--dark); margin-bottom: 5px; }
+.value-desc { font-size: 13px; color: var(--gray); line-height: 1.6; }
+.review-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+.review-card { background: #fff; border: 1px solid var(--border); border-radius: var(--r-lg); padding: 24px; }
+.review-stars { color: #ffc93c; font-size: 16px; letter-spacing: 2px; margin-bottom: 12px; }
+.review-text { font-size: 14px; color: var(--gray); line-height: 1.7; margin-bottom: 18px; font-style: italic; }
+.review-author { display: flex; align-items: center; gap: 10px; }
+.review-avatar { width: 38px; height: 38px; border-radius: 50%; background: var(--grad-accent); display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 800; color: #fff; flex-shrink: 0; }
+.review-name { font-size: 14px; font-weight: 700; color: var(--dark); }
+.review-date { font-size: 12px; color: var(--gray); }
+@media(max-width:1000px){ .two-col{grid-template-columns:1fr;gap:36px;} .team-grid{grid-template-columns:1fr 1fr;} .stats-row{grid-template-columns:1fr 1fr;} .review-grid{grid-template-columns:1fr;} }
+@media(max-width:680px){ .team-grid{grid-template-columns:1fr;} .values-grid{grid-template-columns:1fr;} }
+.mob-quote-overlay{display:none;position:fixed;inset:0;z-index:300;background:rgba(0,0,0,0.6);align-items:flex-end;justify-content:center;}.mob-quote-overlay.open{display:flex;}.mob-quote-panel{background:#fff;width:100%;max-width:480px;border-radius:16px 16px 0 0;padding:24px 20px 32px;position:relative;}.mob-quote-panel h3{font-size:18px;font-weight:800;color:var(--dark);margin-bottom:4px;}.mob-quote-panel p{font-size:13px;color:var(--gray);margin-bottom:16px;}.mob-quote-close{position:absolute;top:14px;right:16px;background:#f3f4f6;border:none;border-radius:50%;width:28px;height:28px;font-size:16px;cursor:pointer;color:var(--gray);}.mob-form-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px;}.mob-form-field{display:flex;flex-direction:column;gap:4px;margin-bottom:10px;}.mob-form-field label{font-size:11px;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:0.05em;}.mob-form-field input,.mob-form-field select{padding:10px 12px;border:1.5px solid var(--border);border-radius:var(--r);font-size:14px;font-family:'Manrope',sans-serif;color:var(--dark);background:#fff;width:100%;}.mob-submit{width:100%;background:var(--grad-accent);color:#fff;font-weight:800;font-size:15px;padding:13px;border-radius:var(--r);border:none;cursor:pointer;font-family:'Manrope',sans-serif;margin-top:6px;}</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": [
+    "RoofingContractor",
+    "LocalBusiness"
+  ],
+  "name": "Atlas Roofing & Restoration",
+  "url": "https://atlasroofingrestoration.com",
+  "telephone": "+12168883208",
+  "email": "office@atlasroofingrestoration.com",
+  "description": "Atlas Roofing & Restoration is a GAF Certified Residential Roofing Contractor and BBB A+ accredited business based in Beachwood, Ohio. Founded to provide honest, quality roofing services to Northeast Ohio homeowners. We specialize in roof replacement, storm damage, insurance claims, gutters, and siding.",
+  "foundingDate": "2020",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "23945 Mercantile Rd, Suite D",
+    "addressLocality": "Beachwood",
+    "addressRegion": "OH",
+    "postalCode": "44122",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "41.4608547",
+    "longitude": "-81.5060061"
+  },
+  "hasCredential": [
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "certification",
+      "name": "2026 GAF Certified Residential Roofing Contractor",
+      "recognizedBy": {
+        "@type": "Organization",
+        "name": "GAF Materials Corporation"
+      }
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "accreditation",
+      "name": "BBB A+ Accreditation",
+      "recognizedBy": {
+        "@type": "Organization",
+        "name": "Better Business Bureau"
+      }
+    }
+  ],
+  "numberOfEmployees": {
+    "@type": "QuantitativeValue",
+    "value": "10"
+  },
+  "sameAs": [
+    "https://www.facebook.com/atlasroofingrestoration",
+    "https://www.instagram.com/atlasroofingrestoration",
+    "https://twitter.com/atlasroofingrestoration",
+    "https://www.pinterest.com/atlasroofingrestoration",
+    "https://www.linkedin.com/company/atlas-roofing-restoration",
+    "https://www.bbb.org/us/oh/beachwood/profile/roofing-contractors/atlas-roofing-restoration-0272-93049999"
+  ],
+  "review": [
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Benjamin Kaplan"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+      },
+      "reviewBody": "They were very honest when inspecting and only recommended the exact work that needed to be done, and nothing more. Well done."
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Tawn Kramer"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+      },
+      "reviewBody": "Quick and professional roofing service. Great communication throughout the entire process and left a very clean job site."
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Lorna Joy Larkin"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+      },
+      "reviewBody": "What a divine appointment from beginning to completion. Trustworthy, competent, efficient, polite, orderly team work. I love my beautiful new roof."
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Adina Forouzan"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+      },
+      "reviewBody": "I had such a great experience with Atlas Roofing and truly can't recommend them enough. They replaced my entire roof in just one day."
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Robert Schloss"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+      },
+      "reviewBody": "They literally put a roof over our heads. Great communication. Employees were pleasant and were there when they said they would be there."
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Jimmy Valencia"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+      },
+      "reviewBody": "Andrew is fantastic \u2014 called him about a roof leak, he came out the same day, assessed what needed to be done, and had everything sorted out quickly."
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "bestRating": "5",
+    "reviewCount": "47"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://atlasroofingrestoration.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "About",
+      "item": "https://atlasroofingrestoration.com/about/"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="topbar"><div class="wrap"><div class="topbar-left"><span>23945 Mercantile Rd, Suite D — Beachwood, OH</span><span>BBB A+ Accredited</span><span>GAF Certified</span></div><a href="tel:2168883208" class="topbar-phone">☎ (216) 888-3208</a></div></div>
+<nav class="nav"><div class="wrap"><a href="/" class="nav-logo"><img src="../logo.png" alt="Atlas Roofing &amp; Restoration — Cleveland Ohio Roofing Contractor"></a><ul class="nav-links"><li><a href="/residential-roofing/">Residential</a></li>
+<li><a href="/commercial-roofing/">Commercial</a></li>
+<li><a href="/gutters/">Gutters</a></li>
+<li><a href="/siding/">Siding</a></li>
+<li><a href="/insurance-claims/">Insurance</a></li>
+<li><a href="/instant-estimate/">Estimate</a></li>
+<li><a href="/about/"class="active">About</a></li></ul><div class="nav-right"><a href="tel:2168883208" class="nav-tel">☎ (216) 888-3208</a><a href="/contact/" class="btn btn-blue">Free Inspection</a></div><button class="hamburger" onclick="document.getElementById('mobileNav').classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button></div>
+<div class="mobile-nav" id="mobileNav"><a href="/residential-roofing/">Residential Roofing</a><a href="/commercial-roofing/">Commercial Roofing</a><a href="/gutters/">Gutters</a><a href="/siding/">Siding</a><a href="/insurance-claims/">Insurance Claims</a><a href="/instant-estimate/">Instant Estimate</a><a href="/financing/">Financing</a><a href="/about/">About Us</a><a href="/contact/" class="m-btn">Get Free Inspection</a></div></nav><div class="breadcrumb"><div class="wrap"><a href="/">Home</a> <span>›</span> <span>About Us</span></div></div>
+<section class="page-hero"><div class="wrap"><div class="ph-inner">
+<div class="ph-badge"><span class="ph-badge-dot"></span> Based in Beachwood, Ohio</div>
+<h1 class="ph-h1">Northeast Ohio's <span class="green">Trusted</span> Roofing Contractor.</h1>
+<p class="ph-p">Atlas Roofing & Restoration was built on a simple idea: do great work, treat people fairly, and stand behind everything we install. We've been serving Cleveland and Northeast Ohio with that promise every single day.</p>
+<div class="ph-btns"><a href="/contact/" class="btn btn-green">Get a Free Inspection</a><a href="tel:2168883208" class="btn btn-outline-white">Call (216) 888-3208</a></div>
+</div></div></section>
+<div class="trustbar"><div class="wrap">
+<div class="trust-item"><span class="trust-icon blue">🛡</span> Licensed, Bonded &amp; Insured</div>
+<div class="trust-item"><span class="trust-icon green">★</span> BBB A+ Accredited</div>
+<div class="trust-item"><span class="trust-icon blue">✓</span> 2026 GAF Certified™ Residential Roofing Contractor</div>
+<div class="trust-item"><span class="trust-icon green">💳</span> Flexible Financing</div>
+<div class="trust-item"><span class="trust-icon blue">📅</span> Most Roofs Done in 1 Day</div>
+</div></div>
+<section class="section"><div class="wrap">
+<div class="section-header center"><span class="section-label">By the numbers</span><h2 class="section-h">The Atlas Track Record</h2></div>
+<div class="stats-row">
+<div class="stat"><div class="stat-num">15+</div><div class="stat-label">Years of combined roofing experience</div></div>
+<div class="stat"><div class="stat-num green">100+</div><div class="stat-label">Local roofs replaced</div></div>
+<div class="stat"><div class="stat-num">20+</div><div class="stat-label">Northeast Ohio communities served</div></div>
+<div class="stat"><div class="stat-num green">A+</div><div class="stat-label">BBB accredited rating</div></div>
+</div></div></section>
+
+<section class="section gray"><div class="wrap"><div class="two-col">
+<div><span class="section-label">Our story</span><h2 class="section-h">Local Roofers Who Actually Show Up.</h2>
+<p class="section-sub">Atlas Roofing & Restoration was founded with a clear mission: provide Northeast Ohio homeowners and businesses with an honest, reliable roofing contractor that delivers what it promises.</p>
+<br>
+<p style="font-size:15px;color:var(--gray);line-height:1.7;">We're not a national franchise or a call center that subs work out to random crews. When you hire Atlas, you get experienced local roofers based right here in Beachwood, Ohio — people who know our climate, our neighborhoods, and our customers.</p>
+<br>
+<p style="font-size:15px;color:var(--gray);line-height:1.7;">From a single shingle repair to a full commercial roof replacement, we approach every job with the same commitment: use the right materials, do the work properly, and make sure you're 100% satisfied before we leave.</p></div>
+<div class="values-grid">
+<div class="value-card"><div class="value-icon">🎯</div><div><div class="value-title">Honesty First</div><p class="value-desc">We tell you what you actually need — not the most expensive option. If a repair will do the job, we'll tell you. We earn trust by being straight with people.</p></div></div>
+<div class="value-card"><div class="value-icon">⚡</div><div><div class="value-title">Quality Workmanship</div><p class="value-desc">We use premium materials — primarily GAF, the largest roofing manufacturer in North America — and install them to manufacturer specs every time.</p></div></div>
+<div class="value-card"><div class="value-icon">🤝</div><div><div class="value-title">We Stand Behind Our Work</div><p class="value-desc">Every project we complete is backed by our workmanship warranty plus manufacturer warranties. If something isn't right, we make it right.</p></div></div>
+<div class="value-card"><div class="value-icon">📍</div><div><div class="value-title">Locally Rooted</div><p class="value-desc">We live and work in Northeast Ohio. We're invested in our community and treat every customer's home with the same care we'd want for our own.</p></div></div>
+</div></div></div></section>
+
+<section class="section"><div class="wrap">
+<div class="section-header center"><span class="section-label">What our customers say</span><h2 class="section-h">Real Reviews from Real Neighbors</h2></div>
+<div class="review-grid">
+<div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"I asked them to look at my roof based on my home inspection. They were very honest and only recommended the exact work that needed to be done — nothing more. Well done and I hope to use them when I need a new roof."</p><div class="review-author"><div class="review-avatar">BK</div><div><div class="review-name">Benjamin K.</div><div class="review-date">Beachwood, OH · Google</div></div></div></div>
+<div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"Quick and professional work. The new roof looks great! They kept me up to date, communicated well, and left a perfectly clean job site. Would absolutely recommend to anyone looking for a reliable roofer."</p><div class="review-author"><div class="review-avatar">TK</div><div><div class="review-name">Tawn K.</div><div class="review-date">Northeast Ohio · Google</div></div></div></div>
+<div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"Atlas replaced our roof to the highest level of professionalism — beyond our expectations at a great price. We never felt taken advantage of or hustled like with others who came to quote. Top ratings for quality, cleanliness, and thoughtfulness."</p><div class="review-author"><div class="review-avatar">JR</div><div><div class="review-name">Joseph R.</div><div class="review-date">Northeast Ohio · Google</div></div></div></div>
+</div></div></div>
+</div>
+<div style="text-align:center;margin-top:32px;"><a href="https://www.google.com/maps/place/Atlas+Roofing+%26+Restoration/@41.4608547,-81.5060061,707m/data=!3m2!1e3!5s0x883102a495403b37:0xfd9c252c052527cd!4m8!3m7!1s0x883102bd2b5a73b9:0x92937d2914e8a622!8m2!3d41.4608547!4d-81.5060061!9m1!1b1!16s%2Fg%2F11vkr36yfr?entry=ttu&g_ep=EgoyMDI2MDQxMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" class="btn btn-blue">Read All Google Reviews →</a></div>
+</div></section>
+
+<section class="section gray"><div class="wrap">
+<div class="section-header center"><span class="section-label">Certifications &amp; credentials</span><h2 class="section-h">Our Credentials</h2></div>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:760px;margin:0 auto;">
+<div style="background:#fff;border:2px solid var(--border);border-radius:var(--r-lg);padding:28px 24px;text-align:center;"><div style="font-size:32px;margin-bottom:12px;">📋</div><div style="font-size:16px;font-weight:700;color:var(--dark);margin-bottom:6px;">2026 GAF Certified™ Residential Roofing Contractor</div><p style="font-size:13px;color:var(--gray);">Certified to install GAF roofing systems and offer the GAF System Plus Limited Warranty — available only through certified contractors.</p></div>
+<div style="background:#fff;border:2px solid var(--border);border-radius:var(--r-lg);padding:28px 24px;text-align:center;"><div style="font-size:32px;margin-bottom:12px;">★</div><div style="font-size:16px;font-weight:700;color:var(--dark);margin-bottom:6px;">BBB A+ Accredited</div><p style="font-size:13px;color:var(--gray);">Accredited by the Better Business Bureau with an A+ rating — reflecting our commitment to customer satisfaction and ethical business practices.</p></div>
+<div style="background:#fff;border:2px solid var(--border);border-radius:var(--r-lg);padding:28px 24px;text-align:center;"><div style="font-size:32px;margin-bottom:12px;">🛡</div><div style="font-size:16px;font-weight:700;color:var(--dark);margin-bottom:6px;">Licensed, Bonded &amp; Insured</div><p style="font-size:13px;color:var(--gray);">Fully licensed to operate in Ohio, bonded for your protection, and carrying comprehensive liability and workers' compensation insurance.</p></div>
+</div></div></section>
+
+<section class="final-cta"><div class="wrap"><h2>Ready to Work With Us?</h2><p>Schedule your free, no-obligation inspection and see the Atlas difference for yourself.</p><div class="final-btns"><a href="/contact/" class="btn btn-white">Get Free Inspection</a><a href="tel:2168883208" class="btn btn-outline-white">Call (216) 888-3208</a></div></div></section>
+<footer class="footer"><div class="wrap">
+<div class="footer-grid">
+<div><div class="footer-logo"><img src="../logo-dark.png" alt="Atlas Roofing &amp; Restoration — Cleveland Ohio Roofing Contractor"></div><p class="footer-desc">Cleveland and Northeast Ohio's trusted roofing contractor. GAF certified, BBB A+ rated.</p><div class="footer-contact"><a href="tel:2168883208">☎ (216) 888-3208</a><a href="mailto:office@atlasroofingrestoration.com">✉ office@atlasroofingrestoration.com</a><a href="#">📍 23945 Mercantile Rd, Suite D, Beachwood OH 44122</a></div>
+<div style="display:flex;gap:12px;margin-top:14px;">
+<a href="https://www.facebook.com/atlasroofingrestoration" target="_blank" rel="noopener" style="width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;font-size:16px;color:rgba(255,255,255,0.6);transition:all 0.2s;" title="Facebook">f</a>
+<a href="https://www.instagram.com/atlasroofingrestoration" target="_blank" rel="noopener" style="width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;font-size:14px;color:rgba(255,255,255,0.6);transition:all 0.2s;" title="Instagram">📷</a>
+<a href="https://www.google.com/maps/place/Atlas+Roofing+%26+Restoration/@41.4608547,-81.5060061,707m/data=!3m2!1e3!5s0x883102a495403b37:0xfd9c252c052527cd!4m8!3m7!1s0x883102bd2b5a73b9:0x92937d2914e8a622!8m2!3d41.4608547!4d-81.5060061!9m1!1b1!16s%2Fg%2F11vkr36yfr?entry=ttu&g_ep=EgoyMDI2MDQxMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" style="width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;font-size:14px;color:rgba(255,255,255,0.6);transition:all 0.2s;" title="Google Reviews">⭐</a>
+</div></div>
+<div><div class="footer-col-title">Services</div><div class="footer-links"><a href="/residential-roofing/">Residential Roofing</a><a href="/commercial-roofing/">Commercial Roofing</a><a href="/gutters/">Gutters</a><a href="/siding/">Siding</a><a href="/multi-family-roofing/">Multi-Family Roofing</a><a href="/insurance-claims/">Insurance Claims</a><a href="/financing/">Financing</a></div></div>
+<div><div class="footer-col-title">Company</div><div class="footer-links"><a href="/about/">About Us</a><a href="/past-jobs/">Past Jobs</a><a href="/faq/">FAQ</a><a href="/blog/">Blog</a><a href="/warranty/">Warranty</a><a href="/contact/">Contact</a></div></div>
+<div><div class="footer-col-title">Service Areas</div><div class="footer-links"><a href="/cleveland-ohio/">Cleveland</a><a href="/beachwood-ohio/">Beachwood</a><a href="/roofing-shaker-heights/">Shaker Heights</a><a href="/roofing-solon-ohio/">Solon</a><a href="/lyndhurst-ohio/">Lyndhurst</a><a href="/roofing-south-euclid-oh/">South Euclid</a><a href="/parma-ohio/">Parma</a><a href="/service-areas/">+ More Areas</a></div></div>
+</div>
+<div class="footer-bottom"><p>© 2026 Atlas Roofing &amp; Restoration. All rights reserved. | <a href="/privacy-policy/" style="color:rgba(255,255,255,0.25);">Privacy Policy</a></p><div class="footer-badges"><span class="fbadge">BBB A+</span><span class="fbadge">GAF Certified</span><span class="fbadge">Licensed &amp; Insured</span></div></div>
+</div></footer>
+<!-- MOBILE STICKY BAR -->
+<div class="mob-bar" id="mobBar">
+  <a href="tel:2168883208" class="mob-call">📞 Call</a>
+  <button class="mob-quote" onclick="document.getElementById('quoteOverlay').classList.add('open');document.body.style.overflow='hidden';">📋 Get a Quote</button>
+  <a href="sms:2168883208" class="mob-text">💬 Text Us</a>
+</div>
+
+<!-- QUOTE POPUP -->
+<div class="mob-quote-overlay" id="quoteOverlay" onclick="if(event.target===this){closeQuote()}">
+  <div class="mob-quote-panel">
+    <button class="mob-quote-close" onclick="closeQuote()">✕</button>
+    <h3>Get a Free Quote</h3>
+    <p>We'll reach out within 1 hour during business hours.</p>
+    <form name="mobile-quote" method="POST" action="/thankyou/" netlify netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="mobile-quote">
+      <input type="hidden" name="subject" value="New Mobile Quote Request">
+      <p style="display:none"><input name="bot-field"></p>
+      <div class="mob-form-row">
+        <div class="mob-form-field">
+          <label>First Name</label>
+          <input type="text" name="first_name" placeholder="John" required>
+        </div>
+        <div class="mob-form-field">
+          <label>Last Name</label>
+          <input type="text" name="last_name" placeholder="Smith">
+        </div>
+      </div>
+      <div class="mob-form-field">
+        <label>Phone</label>
+        <input type="tel" name="phone" placeholder="(216) 555-0100" required>
+      </div>
+      <div class="mob-form-field">
+        <label>Service Needed</label>
+        <select name="service">
+          <option value="">Select a service...</option>
+          <option>Roof Replacement</option>
+          <option>Roof Repair</option>
+          <option>Hail / Storm Damage</option>
+          <option>Gutter Installation</option>
+          <option>Gutter Repair</option>
+          <option>Siding</option>
+          <option>Insurance Claim</option>
+          <option>Free Inspection</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <button type="submit" class="mob-submit">Request Free Quote →</button>
+    </form>
+  </div>
+</div>
+<script>
+function closeQuote(){
+  document.getElementById('quoteOverlay').classList.remove('open');
+  document.body.style.overflow='';
+}
+</script>
+<script>function toggleFaq(el){var item=el.parentElement;var isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(function(i){i.classList.remove('open');});if(!isOpen)item.classList.add('open');}</script>
+</body></html>

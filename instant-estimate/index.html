@@ -19,7 +19,7 @@
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDt5vBZl_l3ZpidtPPAiZLjSUUBvI3KcXo&libraries=places&loading=async&callback=initGooglePlaces"></script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;font-size:16px}
+html{font-size:16px}
 body{font-family:'Manrope',sans-serif;color:#111827;background:#fff;line-height:1.6;overflow-x:hidden}
 a{text-decoration:none;color:inherit}
 img{max-width:100%;height:auto;display:block}
@@ -208,16 +208,6 @@ img{max-width:100%;height:auto;display:block}
 .loading .loader{display:inline-block}
 @keyframes spin{to{transform:rotate(360deg)}}
 
-/* Financing teaser (result screen) */
-.result-financing{background:var(--grad);border-radius:var(--r-lg);padding:28px 32px;color:#fff;max-width:720px;margin-bottom:32px;display:flex;gap:24px;align-items:center;flex-wrap:wrap;position:relative;overflow:hidden}
-.result-financing::after{content:'';position:absolute;bottom:-40%;left:-10%;width:300px;height:300px;background:radial-gradient(circle,rgba(101,196,123,0.15),transparent 70%);pointer-events:none}
-.result-financing .rf-left{flex:1;min-width:260px;position:relative}
-.rf-eyebrow{font-size:11px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:var(--green);margin-bottom:8px}
-.result-financing h3{font-size:clamp(20px,3vw,26px);font-weight:800;letter-spacing:-0.01em;margin-bottom:8px}
-.result-financing h3 span{color:var(--green)}
-.result-financing p{font-size:14px;color:rgba(255,255,255,0.75);line-height:1.55}
-.result-financing .btn{position:relative;flex-shrink:0}
-
 /* Reviews */
 .result-reviews{max-width:1080px;margin-bottom:48px;margin-top:48px}
 .review-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
@@ -260,8 +250,6 @@ img{max-width:100%;height:auto;display:block}
   .form-grid{grid-template-columns:1fr}
   .result-card{padding:36px 26px}
   .gallery-grid{grid-template-columns:repeat(2,1fr)}
-  .result-financing{flex-direction:column;align-items:flex-start;padding:24px}
-  .result-financing .btn{width:100%;text-align:center}
 }
 @media(max-width:520px){
   .footer-grid{grid-template-columns:1fr}
@@ -286,7 +274,6 @@ img{max-width:100%;height:auto;display:block}
   <input type="text" name="roof_pitch">
   <input type="text" name="stories">
   <input type="text" name="timeline">
-  <input type="text" name="financing">
   <input type="text" name="estimate_low">
   <input type="text" name="estimate_high">
   <input type="text" name="polygon_coords">
@@ -350,9 +337,8 @@ img{max-width:100%;height:auto;display:block}
     <div class="progress-step" data-s="3"></div>
     <div class="progress-step" data-s="4"></div>
     <div class="progress-step" data-s="5"></div>
-    <div class="progress-step" data-s="6"></div>
   </div>
-  <div class="progress-label" id="progressLabel">Step 1 of 6 — Address</div>
+  <div class="progress-label" id="progressLabel">Step 1 of 5 — Address</div>
 </div></section>
 
 <!-- Main estimator -->
@@ -463,26 +449,9 @@ img{max-width:100%;height:auto;display:block}
   </div>
 </div>
 
-<!-- Step 5: Financing -->
+<!-- Step 5: Contact -->
 <div class="step-panel" id="step-5">
-  <p class="step-eyebrow">Step 5 — Financing</p>
-  <h2 class="step-title">Would you like to hear about financing options?</h2>
-  <p class="step-sub">We partner with roofing-specific lenders offering low monthly payments. Checking your rate won't affect your credit score.</p>
-  <div class="q-grid" id="financingGrid">
-    <div class="q-card" data-v="yes"><div class="q-icon">💳</div><div class="q-title">Yes, interested</div><div class="q-sub">Tell me about options</div></div>
-    <div class="q-card" data-v="cash"><div class="q-icon">💵</div><div class="q-title">Paying cash</div><div class="q-sub">Or own financing</div></div>
-    <div class="q-card" data-v="insurance"><div class="q-icon">🛡️</div><div class="q-title">Insurance claim</div><div class="q-sub">Storm / hail coverage</div></div>
-    <div class="q-card" data-v="unsure"><div class="q-icon">🤔</div><div class="q-title">Not sure yet</div><div class="q-sub">Still deciding</div></div>
-  </div>
-  <div class="step-nav">
-    <button class="btn btn-ghost" onclick="goto(4)">← Back</button>
-    <button class="btn btn-blue btn-lg" id="btn-5-next" disabled>Continue →</button>
-  </div>
-</div>
-
-<!-- Step 6: Contact -->
-<div class="step-panel" id="step-6">
-  <p class="step-eyebrow">Step 6 — Your info</p>
+  <p class="step-eyebrow">Step 5 — Your info</p>
   <h2 class="step-title">Where should we send your estimate?</h2>
   <p class="step-sub">We'll email your estimate and follow up within 2 business hours. We never share your info or spam you.</p>
   <div class="form-grid">
@@ -508,13 +477,13 @@ img{max-width:100%;height:auto;display:block}
   </div>
   <p class="form-privacy">By continuing, you agree to be contacted by Atlas Roofing &amp; Restoration about your project. Standard rates may apply. See our <a href="/privacy-policy/">privacy policy</a>.</p>
   <div class="step-nav">
-    <button class="btn btn-ghost" onclick="goto(5)">← Back</button>
-    <button class="btn btn-blue btn-lg" id="btn-6-next">See my estimate <span class="loader"></span></button>
+    <button class="btn btn-ghost" onclick="goto(4)">← Back</button>
+    <button class="btn btn-blue btn-lg" id="btn-5-next">See my estimate <span class="loader"></span></button>
   </div>
 </div>
 
-<!-- Step 7: Result -->
-<div class="step-panel" id="step-7">
+<!-- Step 6: Result -->
+<div class="step-panel" id="step-6">
   <p class="step-eyebrow">Your estimated range</p>
   <h2 class="step-title" id="resultGreeting">Here's your estimate</h2>
   <p class="step-sub">Based on your roof size, pitch, and home details. This is a budget range for a GAF System Plus asphalt shingle roof replacement.</p>
@@ -524,21 +493,10 @@ img{max-width:100%;height:auto;display:block}
     <div class="result-range" id="resultRange">$—</div>
     <p class="result-desc" id="resultDesc"></p>
     <div class="result-breakdown">
-      <div class="rb-item"><div class="rb-lbl">Roof Surface</div><div class="rb-val" id="rbSurface">—</div></div>
-      <div class="rb-item"><div class="rb-lbl">Squares</div><div class="rb-val" id="rbSquares">—</div></div>
+      <div class="rb-item"><div class="rb-lbl">Roof Size</div><div class="rb-val" id="rbSquares">—</div></div>
       <div class="rb-item"><div class="rb-lbl">Pitch</div><div class="rb-val" id="rbPitch">—</div></div>
       <div class="rb-item"><div class="rb-lbl">Stories</div><div class="rb-val" id="rbStories">—</div></div>
     </div>
-  </div>
-
-  <!-- Financing teaser (shown for all but especially relevant if they picked financing earlier) -->
-  <div class="result-financing" id="resultFinancing">
-    <div class="rf-left">
-      <p class="rf-eyebrow">💳 Financing available</p>
-      <h3>Starting around <span id="rfMonthly">$—</span>/month</h3>
-      <p>Spread your new roof across 60–120 months. Quick approval, low monthly payments, no prepayment penalty. Checking your rate does not affect your credit score.</p>
-    </div>
-    <a href="/financing/" class="btn btn-white btn-lg">View financing options →</a>
   </div>
 
   <!-- Reviews -->
@@ -649,18 +607,6 @@ const TIMELINE_LABEL = {
   planning:"3–6 months",
   researching:"Just researching"
 };
-const FINANCING_LABEL = {
-  yes:"Yes — interested in financing",
-  cash:"Paying cash / already has financing",
-  insurance:"Insurance claim",
-  unsure:"Not sure yet"
-};
-// Rough monthly estimate — 9.99% APR over 84 months, for teaser only
-function monthlyPayment(principal){
-  const apr = 0.0999, months = 84;
-  const r = apr / 12;
-  return (principal * r) / (1 - Math.pow(1 + r, -months));
-}
 
 /* State */
 const state = {
@@ -674,7 +620,6 @@ const state = {
   stories:null,     // "1"|"2"|"3"
   storiesSurcharge:0,
   timeline:null,
-  financing:null,   // "yes"|"cash"|"insurance"|"unsure"
   contact:{}
 };
 
@@ -717,13 +662,18 @@ function goto(n){
     if(s < n) el.classList.add('done');
     if(s === n) el.classList.add('current');
   });
-  const labels = {1:"Address",2:"Trace roof",3:"Roof details",4:"Timeline",5:"Financing",6:"Your info",7:"Estimate"};
-  if(n <= 6){
-    $("progressLabel").textContent = "Step "+n+" of 6 — "+labels[n];
+  const labels = {1:"Address",2:"Trace roof",3:"Roof details",4:"Timeline",5:"Your info",6:"Estimate"};
+  if(n <= 5){
+    $("progressLabel").textContent = "Step "+n+" of 5 — "+labels[n];
   } else {
     $("progressLabel").textContent = "Done — Your estimate";
   }
-  window.scrollTo({top:0, behavior:'smooth'});
+  // Scroll the estimator section into view (not the whole page) — less disorienting
+  const anchor = document.querySelector('.est-main');
+  if(anchor){
+    const y = anchor.getBoundingClientRect().top + window.pageYOffset - 20;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  }
 }
 
 /* ===========================================================
@@ -947,7 +897,7 @@ $("btn-done").addEventListener('click', closePolygon);
 $("btn-2-next").addEventListener('click', ()=>{ if(closed) goto(3); });
 
 /* ===========================================================
-   Step 3, 4, 5: Question cards (pitch, stories, timeline, financing)
+   Step 3, 4: Question cards (pitch, stories, timeline)
    =========================================================== */
 function wireCardGrid(gridId, stateKey, onChange){
   const grid = $(gridId);
@@ -965,14 +915,12 @@ function wireCardGrid(gridId, stateKey, onChange){
 wireCardGrid('pitchGrid', 'pitch', checkStep3);
 wireCardGrid('storiesGrid', 'stories', checkStep3);
 wireCardGrid('timelineGrid', 'timeline', ()=>{ $("btn-4-next").disabled = !state.timeline; });
-wireCardGrid('financingGrid', 'financing', ()=>{ $("btn-5-next").disabled = !state.financing; });
 function checkStep3(){ $("btn-3-next").disabled = !(state.pitch && state.stories); }
 $("btn-3-next").addEventListener('click', ()=>goto(4));
 $("btn-4-next").addEventListener('click', ()=>goto(5));
-$("btn-5-next").addEventListener('click', ()=>goto(6));
 
 /* ===========================================================
-   Step 6: Contact form validation + Netlify submit
+   Step 5: Contact form validation + Netlify submit
    =========================================================== */
 function validateContact(){
   let ok = true;
@@ -985,9 +933,9 @@ function validateContact(){
   return ok;
 }
 
-$("btn-6-next").addEventListener('click', async ()=>{
+$("btn-5-next").addEventListener('click', async ()=>{
   if(!validateContact()) return;
-  const btn = $("btn-6-next");
+  const btn = $("btn-5-next");
   btn.classList.add('loading'); btn.disabled = true;
 
   state.contact = {
@@ -1015,7 +963,6 @@ $("btn-6-next").addEventListener('click', async ()=>{
     roof_pitch:      state.pitch,
     stories:         state.stories,
     timeline:        state.timeline,
-    financing:       state.financing,
     estimate_low:    Math.round(lo),
     estimate_high:   Math.round(hi),
     polygon_coords:  JSON.stringify(state.vertices)
@@ -1035,20 +982,14 @@ $("btn-6-next").addEventListener('click', async ()=>{
   $("resultGreeting").textContent = "Here's your estimate, " + (state.contact.first_name || "") + "!";
   $("resultRange").textContent = fmtRange(lo, hi);
   const city = state.address.split(',')[1] ? state.address.split(',')[1].trim() : "your area";
-  $("resultDesc").innerHTML = "Based on approximately <strong>"+ squares.toFixed(1) +" squares</strong> of roofing for your home in <strong>"+ city +"</strong>. This is a budget range for a full asphalt shingle replacement.";
-  $("rbSurface").textContent = fmtNumber(surfaceFt2) + " sq ft";
-  $("rbSquares").textContent = squares.toFixed(1);
+  $("resultDesc").innerHTML = "Budget range for a full asphalt shingle replacement on your home in <strong>"+ city +"</strong>, based on your roof's approximate size and details.";
+  // Combined: "22 sq (≈2,200 sq ft)" — gives both the contractor-speak and homeowner-friendly numbers in one place
+  $("rbSquares").innerHTML = squares.toFixed(0) + " sq <span style=\"font-size:13px;font-weight:500;color:rgba(255,255,255,0.7);\">(" + fmtNumber(surfaceFt2).replace(/,/g,",") + " sq ft)</span>";
   $("rbPitch").textContent   = PITCH_LABEL[state.pitch] || "—";
   $("rbStories").textContent = state.stories + (state.stories === "3" ? "+" : "");
 
-  // Populate financing monthly estimate (based on LOW end of range — honest teaser)
-  const monthly = monthlyPayment(lo);
-  // Round to nearest $5 for a clean number
-  const rounded = Math.round(monthly / 5) * 5;
-  $("rfMonthly").textContent = "$" + rounded;
-
   btn.classList.remove('loading');
-  goto(7);
+  goto(6);
 });
 
 /* Restart button */
@@ -1056,14 +997,13 @@ function restart(){
   state.step = 1; state.address = ""; state.lat = null; state.lng = null;
   state.vertices = []; state.areaFt2 = 0;
   state.pitch = null; state.stories = null; state.storiesSurcharge = 0;
-  state.timeline = null; state.financing = null; state.contact = {};
+  state.timeline = null; state.contact = {};
   addrInput.value = "";
   $("fn").value = $("ln").value = $("em").value = $("ph").value = "";
   document.querySelectorAll('.q-card.selected').forEach(c=>c.classList.remove('selected'));
   $("btn-1-next").disabled = true;
   $("btn-3-next").disabled = true;
   $("btn-4-next").disabled = true;
-  $("btn-5-next").disabled = true;
   resetTrace();
   goto(1);
 }

@@ -208,6 +208,16 @@ img{max-width:100%;height:auto;display:block}
 .loading .loader{display:inline-block}
 @keyframes spin{to{transform:rotate(360deg)}}
 
+/* Financing teaser (result screen) */
+.result-financing{background:var(--grad);border-radius:var(--r-lg);padding:28px 32px;color:#fff;max-width:720px;margin-bottom:24px;display:flex;gap:24px;align-items:center;flex-wrap:wrap;position:relative;overflow:hidden}
+.result-financing::after{content:'';position:absolute;bottom:-40%;left:-10%;width:300px;height:300px;background:radial-gradient(circle,rgba(101,196,123,0.15),transparent 70%);pointer-events:none}
+.result-financing .rf-left{flex:1;min-width:260px;position:relative}
+.rf-eyebrow{font-size:11px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:var(--green);margin-bottom:8px}
+.result-financing h3{font-size:clamp(20px,3vw,26px);font-weight:800;letter-spacing:-0.01em;margin-bottom:8px}
+.result-financing h3 span{color:var(--green)}
+.result-financing p{font-size:14px;color:rgba(255,255,255,0.75);line-height:1.55}
+.result-financing .btn{position:relative;flex-shrink:0}
+
 /* Reviews */
 .result-reviews{max-width:1080px;margin-bottom:48px;margin-top:48px}
 .review-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
@@ -250,6 +260,8 @@ img{max-width:100%;height:auto;display:block}
   .form-grid{grid-template-columns:1fr}
   .result-card{padding:36px 26px}
   .gallery-grid{grid-template-columns:repeat(2,1fr)}
+  .result-financing{flex-direction:column;align-items:flex-start;padding:24px}
+  .result-financing .btn{width:100%;text-align:center}
 }
 @media(max-width:520px){
   .footer-grid{grid-template-columns:1fr}
@@ -499,7 +511,45 @@ img{max-width:100%;height:auto;display:block}
     </div>
   </div>
 
-  <!-- Reviews -->
+  <!-- Financing teaser -->
+  <div class="result-financing">
+    <div class="rf-left">
+      <p class="rf-eyebrow">💳 Financing available</p>
+      <h3>As low as <span id="rfMonthly">$—</span>/month</h3>
+      <p>Spread your new roof over 84 months with one of our lender partners. Quick approval, no prepayment penalty. Checking your rate does not affect your credit score.</p>
+    </div>
+    <a href="/financing/" class="btn btn-white btn-lg">View financing options →</a>
+  </div>
+
+  <div class="result-next">
+    <h3>What happens next</h3>
+    <p>One of our team members will reach out within 2 business hours to schedule a free, no-pressure on-site inspection. A precise quote can only be done in person because it depends on:</p>
+    <ul>
+      <li>Condition of your decking and any needed repairs</li>
+      <li>Flashing, vents, and chimney work</li>
+      <li>Ventilation upgrades (ridge vent, soffit intake)</li>
+      <li>Material selection — GAF Timberline HDZ vs. designer shingles</li>
+      <li>Tear-off vs. overlay (we always recommend tear-off)</li>
+    </ul>
+    <p>The good news: <strong>insurance claims are our specialty.</strong> If hail or wind damage caused this, you may only pay your deductible. We handle the claim for you.</p>
+    <div class="result-trust">
+      <span class="trust-pill">🛡️ GAF Certified</span>
+      <span class="trust-pill">★ BBB A+</span>
+      <span class="trust-pill">📍 Local to Beachwood</span>
+      <span class="trust-pill">✓ Licensed &amp; Insured</span>
+    </div>
+  </div>
+
+  <div class="step-nav">
+    <a href="tel:2168883208" class="btn btn-blue btn-lg">Call (216) 888-3208</a>
+    <a href="/contact/" class="btn btn-outline btn-lg">Schedule inspection</a>
+    <a href="/financing/" class="btn btn-ghost btn-lg">See financing</a>
+    <button class="btn btn-ghost" onclick="restart()">Start over</button>
+  </div>
+
+  <p class="disclaimer"><strong>Important:</strong> This is an instant budget range based on aerial imagery and your responses. It is not a binding quote. Actual project cost depends on a full in-person inspection. Ranges assume an asphalt shingle tear-off and re-roof with GAF shingles, ice-and-water shield, synthetic underlayment, new flashing, and standard cleanup. Decking repairs, ventilation upgrades, or material upgrades may adjust final pricing.</p>
+
+  <!-- Reviews (social proof — after the action stuff) -->
   <div class="result-reviews">
     <p class="step-eyebrow" style="text-align:center;margin-bottom:4px;">What homeowners say</p>
     <h3 style="font-size:22px;font-weight:800;color:var(--dark);text-align:center;margin-bottom:28px;">Real reviews from real Cleveland homeowners</h3>
@@ -541,34 +591,6 @@ img{max-width:100%;height:auto;display:block}
       <a href="/past-jobs/" class="btn btn-outline">See more projects →</a>
     </div>
   </div>
-
-  <div class="result-next">
-    <h3>What happens next</h3>
-    <p>One of our team members will reach out within 2 business hours to schedule a free, no-pressure on-site inspection. A precise quote can only be done in person because it depends on:</p>
-    <ul>
-      <li>Condition of your decking and any needed repairs</li>
-      <li>Flashing, vents, and chimney work</li>
-      <li>Ventilation upgrades (ridge vent, soffit intake)</li>
-      <li>Material selection — GAF Timberline HDZ vs. designer shingles</li>
-      <li>Tear-off vs. overlay (we always recommend tear-off)</li>
-    </ul>
-    <p>The good news: <strong>insurance claims are our specialty.</strong> If hail or wind damage caused this, you may only pay your deductible. We handle the claim for you.</p>
-    <div class="result-trust">
-      <span class="trust-pill">🛡️ GAF Certified</span>
-      <span class="trust-pill">★ BBB A+</span>
-      <span class="trust-pill">📍 Local to Beachwood</span>
-      <span class="trust-pill">✓ Licensed &amp; Insured</span>
-    </div>
-  </div>
-
-  <p class="disclaimer"><strong>Important:</strong> This is an instant budget range based on aerial imagery and your responses. It is not a binding quote. Actual project cost depends on a full in-person inspection. Ranges assume an asphalt shingle tear-off and re-roof with GAF shingles, ice-and-water shield, synthetic underlayment, new flashing, and standard cleanup. Decking repairs, ventilation upgrades, or material upgrades may adjust final pricing.</p>
-
-  <div class="step-nav">
-    <a href="tel:2168883208" class="btn btn-blue btn-lg">Call (216) 888-3208</a>
-    <a href="/contact/" class="btn btn-outline btn-lg">Schedule inspection</a>
-    <a href="/financing/" class="btn btn-ghost btn-lg">See financing</a>
-    <button class="btn btn-ghost" onclick="restart()">Start over</button>
-  </div>
 </div>
 
 </div></section>
@@ -607,6 +629,13 @@ const TIMELINE_LABEL = {
   planning:"3–6 months",
   researching:"Just researching"
 };
+// Rough monthly estimate — 9.99% APR over 84 months, for teaser only.
+// Tune APR/term to match what your lenders actually offer.
+function monthlyPayment(principal){
+  const apr = 0.0999, months = 84;
+  const r = apr / 12;
+  return (principal * r) / (1 - Math.pow(1 + r, -months));
+}
 
 /* State */
 const state = {
@@ -987,6 +1016,10 @@ $("btn-5-next").addEventListener('click', async ()=>{
   $("rbSquares").innerHTML = squares.toFixed(0) + " sq <span style=\"font-size:13px;font-weight:500;color:rgba(255,255,255,0.7);\">(" + fmtNumber(surfaceFt2).replace(/,/g,",") + " sq ft)</span>";
   $("rbPitch").textContent   = PITCH_LABEL[state.pitch] || "—";
   $("rbStories").textContent = state.stories + (state.stories === "3" ? "+" : "");
+
+  // Populate financing teaser — based on LOW end, rounded to nearest $5
+  const monthly = monthlyPayment(lo);
+  $("rfMonthly").textContent = "$" + (Math.round(monthly / 5) * 5);
 
   btn.classList.remove('loading');
   goto(6);

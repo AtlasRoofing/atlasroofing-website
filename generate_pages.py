@@ -134,7 +134,7 @@ img { max-width: 100%; height: auto; display: block; }
 
 # ── Nav/Footer shared HTML ────────────────────────────────────────────────────
 def nav_html():
-    return """<div class="topbar"><div class="wrap"><div class="topbar-left"><span>23945 Mercantile Rd, Suite D — Beachwood, OH</span><span>BBB A+ Accredited</span><span>GAF Certified</span></div><a href="tel:2168883208" class="topbar-phone">☎ (216) 888-3208</a></div></div>
+    return """<div class="topbar"><div class="wrap"><div class="topbar-left"><span>23945 Mercantile Rd, Suite D — Beachwood, OH</span><span>BBB A+ Rated</span><span>GAF Certified</span></div><a href="tel:2168883208" class="topbar-phone">☎ (216) 888-3208</a></div></div>
 <nav class="nav"><div class="wrap"><a href="/" class="nav-logo"><img src="../logo.png" alt="Atlas Roofing &amp; Restoration — Cleveland Ohio Roofing Contractor"></a><ul class="nav-links"><li><a href="/residential-roofing/">Residential</a></li>
 <li><a href="/commercial-roofing/">Commercial</a></li>
 <li><a href="/gutters/">Gutters</a></li>
@@ -165,7 +165,7 @@ def footer_html():
 def trustbar_html():
     return """<div class="trustbar"><div class="wrap">
 <div class="trust-item"><span class="trust-icon blue">🛡</span> Licensed, Bonded &amp; Insured</div>
-<div class="trust-item"><span class="trust-icon green">★</span> BBB A+ Accredited</div>
+<div class="trust-item"><span class="trust-icon green">★</span> BBB A+ Rated</div>
 <div class="trust-item"><span class="trust-icon blue">✓</span> 2026 GAF Certified™ Residential Roofing Contractor</div>
 <div class="trust-item"><span class="trust-icon green">💳</span> Flexible Financing</div>
 <div class="trust-item"><span class="trust-icon blue">📅</span> Most Roofs Done in 1 Day</div>
@@ -257,7 +257,7 @@ def page_roof_replacement(c):
         f"<strong>Local expertise</strong> — we know {name} homes, styles, and HOA requirements",
         "<strong>Full tear-off & cleanup</strong> — we haul everything away, leave zero mess",
         "<strong>Upfront written quotes</strong> — no surprises, no hidden fees",
-        "<strong>BBB A+ accredited</strong> — independently verified trustworthiness",
+        "<strong>BBB A+ rated</strong> — independently verified trustworthiness",
     ]
     info_box_title = f"Homes in {name} built in the {era} era"
     info_box_body = f"Many {name} homes from the {era} period are now on their second or third roof cycle. If your home was built during this era and hasn't had a replacement in 20+ years, a free inspection will tell you exactly where you stand. No obligation."
@@ -282,16 +282,16 @@ def page_roofing_contractor(c):
     st1 = streets[0]
     slug_out = f"roofing-contractor-{slug}-oh"
     title = f"Roofing Contractor {name} Ohio | Atlas Roofing & Restoration"
-    desc = f"Top-rated roofing contractor in {name}, Ohio. GAF certified, BBB A+ accredited. Residential & commercial. Free inspections. Atlas Roofing & Restoration. Call (216) 888-3208."
+    desc = f"Top-rated roofing contractor in {name}, Ohio. GAF certified, BBB A+ rated. Residential & commercial. Free inspections. Atlas Roofing & Restoration. Call (216) 888-3208."
     canonical = f"https://atlasroofingrestoration.com/{slug_out}/"
     h1_line1 = "Roofing Contractor in"
     h1_line2 = f"{name}, Ohio"
     badge_text = f"GAF Certified Contractor — {name}, {c['state']}"
-    hero_p = f"Looking for a roofing contractor in {name}? Atlas Roofing & Restoration is {county}'s GAF certified, BBB A+ accredited roofing contractor serving homeowners throughout {name} and the surrounding area. We handle residential roof replacements, repairs, gutters, siding, and insurance claims — all with the same commitment to honest work and quality results. Free inspection, written quotes, no pressure."
+    hero_p = f"Looking for a roofing contractor in {name}? Atlas Roofing & Restoration is {county}'s GAF certified, BBB A+ rated roofing contractor serving homeowners throughout {name} and the surrounding area. We handle residential roof replacements, repairs, gutters, siding, and insurance claims — all with the same commitment to honest work and quality results. Free inspection, written quotes, no pressure."
     cta_btn = f"Get Free Inspection — {name}"
     checklist_items = [
         "<strong>2026 GAF Certified™</strong> — officially certified residential roofing contractor",
-        "<strong>BBB A+ Accredited</strong> — independently verified through the Better Business Bureau",
+        "<strong>BBB A+ Rated</strong> — independently verified through the Better Business Bureau",
         "<strong>Licensed, bonded & insured</strong> — full coverage, zero risk to you",
         f"<strong>Locally operated</strong> — based in Beachwood, serving {name} daily",
         "<strong>Insurance claim experts</strong> — we handle hail, wind, and storm claims",

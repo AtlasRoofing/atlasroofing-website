@@ -149,7 +149,7 @@ img { max-width: 100%; height: auto; display: block; }
 """
 
 def nav_html():
-    return """<div class="topbar"><div class="wrap"><div class="topbar-left"><span>23945 Mercantile Rd, Suite D — Beachwood, OH</span><span>BBB A+ Accredited</span><span>GAF Certified</span></div><a href="tel:2168883208" class="topbar-phone">☎ (216) 888-3208</a></div></div>
+    return """<div class="topbar"><div class="wrap"><div class="topbar-left"><span>23945 Mercantile Rd, Suite D — Beachwood, OH</span><span>BBB A+ Rated</span><span>GAF Certified</span></div><a href="tel:2168883208" class="topbar-phone">☎ (216) 888-3208</a></div></div>
 <nav class="nav"><div class="wrap"><a href="/" class="nav-logo"><img src="../logo.png" alt="Atlas Roofing &amp; Restoration — Cleveland Ohio Roofing Contractor"></a><ul class="nav-links"><li><a href="/residential-roofing/">Residential</a></li>
 <li><a href="/commercial-roofing/">Commercial</a></li>
 <li><a href="/gutters/">Gutters</a></li>
@@ -180,7 +180,7 @@ def footer_html():
 def trustbar_html():
     return """<div class="trustbar"><div class="wrap">
 <div class="trust-item"><span class="trust-icon blue">🛡</span> Licensed, Bonded &amp; Insured</div>
-<div class="trust-item"><span class="trust-icon green">★</span> BBB A+ Accredited</div>
+<div class="trust-item"><span class="trust-icon green">★</span> BBB A+ Rated</div>
 <div class="trust-item"><span class="trust-icon blue">✓</span> 2026 GAF Certified™ Contractor</div>
 <div class="trust-item"><span class="trust-icon green">🏢</span> Commercial &amp; Multi-Family</div>
 <div class="trust-item"><span class="trust-icon blue">📋</span> Free Inspections &amp; Proposals</div>

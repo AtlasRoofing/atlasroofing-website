@@ -1,5 +1,9 @@
 /404  /404/index.html  404
 
+# Deprecated page redirects
+/instant-estimates/  /instant-estimate/  301
+/instant-estimates   /instant-estimate/  301
+
 # ── Legacy WordPress URL redirects ───────────────────────────────────────────
 
 # City pages — old slugs to new

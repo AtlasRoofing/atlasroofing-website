@@ -2,6 +2,25 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1T65MH1XKG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-1T65MH1XKG');
+  // Phone-click tracking: fires when any tel: link is tapped
+  document.addEventListener('click', function(e) {
+    var a = e.target.closest('a[href^="tel:"]');
+    if (a) {
+      gtag('event', 'phone_click', {
+        phone_number: a.getAttribute('href').replace('tel:', ''),
+        link_text: (a.innerText || '').substring(0, 50),
+        page_path: window.location.pathname
+      });
+    }
+  }, true);
+</script>
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -255,4 +274,13 @@ function closeQuote(){
 }
 </script>
 <script>function toggleFaq(el){var item=el.parentElement;var isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(function(i){i.classList.remove('open');});if(!isOpen)item.classList.add('open');}</script>
+<script>
+  // form_submit conversion event — fires when the thank-you page loads
+  if (typeof gtag === 'function') {
+    gtag('event', 'form_submit', {
+      form_source: document.referrer || 'direct',
+      page_path: window.location.pathname
+    });
+  }
+</script>
 </body></html>

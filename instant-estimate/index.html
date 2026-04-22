@@ -2,6 +2,25 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1T65MH1XKG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-1T65MH1XKG');
+  // Phone-click tracking: fires when any tel: link is tapped
+  document.addEventListener('click', function(e) {
+    var a = e.target.closest('a[href^="tel:"]');
+    if (a) {
+      gtag('event', 'phone_click', {
+        phone_number: a.getAttribute('href').replace('tel:', ''),
+        link_text: (a.innerText || '').substring(0, 50),
+        page_path: window.location.pathname
+      });
+    }
+  }, true);
+</script>
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -1029,6 +1048,19 @@ $("btn-5-next").addEventListener('click', async ()=>{
   }catch(e){
     // Still show the result — Netlify may be temporarily unreachable
     console.warn("Form submission failed:", e);
+  }
+
+  // estimator_complete conversion event
+  if (typeof gtag === 'function') {
+    gtag('event', 'estimator_complete', {
+      estimate_low:    Math.round(lo),
+      estimate_high:   Math.round(hi),
+      roof_area_sqft:  Math.round(state.areaFt2),
+      roof_pitch:      state.pitch,
+      stories:         state.stories,
+      timeline:        state.timeline,
+      city:            (state.address.split(',')[1] || '').trim()
+    });
   }
 
   // Render result

@@ -1,6 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://atlasroofingrestoration.com/sitemap.xml
-
-Disallow: /thankyou/

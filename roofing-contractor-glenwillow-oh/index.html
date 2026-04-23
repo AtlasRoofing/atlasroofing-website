@@ -9,13 +9,22 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-1T65MH1XKG');
-  // Phone-click tracking: fires when any tel: link is tapped
+  // Phone-click and SMS-click tracking: fires when tel: or sms: link is tapped
   document.addEventListener('click', function(e) {
-    var a = e.target.closest('a[href^="tel:"]');
-    if (a) {
+    var tel = e.target.closest('a[href^="tel:"]');
+    if (tel) {
       gtag('event', 'phone_click', {
-        phone_number: a.getAttribute('href').replace('tel:', ''),
-        link_text: (a.innerText || '').substring(0, 50),
+        phone_number: tel.getAttribute('href').replace('tel:', ''),
+        link_text: (tel.innerText || '').substring(0, 50),
+        page_path: window.location.pathname
+      });
+      return;
+    }
+    var sms = e.target.closest('a[href^="sms:"]');
+    if (sms) {
+      gtag('event', 'sms_click', {
+        phone_number: sms.getAttribute('href').replace('sms:', ''),
+        link_text: (sms.innerText || '').substring(0, 50),
         page_path: window.location.pathname
       });
     }

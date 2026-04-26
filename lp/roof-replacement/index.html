@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1T65MH1XKG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-1T65MH1XKG');
+  document.addEventListener('click', function(e) {
+    var tel = e.target.closest('a[href^="tel:"]');
+    if (tel) {
+      gtag('event', 'phone_click', {
+        phone_number: tel.getAttribute('href').replace('tel:', ''),
+        link_text: (tel.innerText || '').substring(0, 50),
+        page_path: window.location.pathname
+      });
+      return;
+    }
+    var sms = e.target.closest('a[href^="sms:"]');
+    if (sms) {
+      gtag('event', 'sms_click', {
+        phone_number: sms.getAttribute('href').replace('sms:', ''),
+        link_text: (sms.innerText || '').substring(0, 50),
+        page_path: window.location.pathname
+      });
+    }
+  }, true);
+</script>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#003d6b">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cleveland Roof Replacement — Free Inspection | Atlas Roofing</title>
+<meta name="description" content="GAF Certified, BBB Accredited A+ roofer serving Cleveland's east side. Free inspections. Most replacements done in one day. Call (216) 888-3208.">
+<meta name="robots" content="noindex,follow">
+<link rel="canonical" href="https://atlasroofingrestoration.com/lp/roof-replacement/">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Cleveland Roof Replacement — Free Inspection">
+<meta property="og:description" content="GAF Certified, BBB Accredited A+ roofer. Free inspections. Most replacements done in one day.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://atlasroofingrestoration.com/lp/roof-replacement/">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+/* ---- RESET ---- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body { font-family: 'Manrope', sans-serif; color: #111827; background: #fff; line-height: 1.6; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; height: auto; display: block; }
+button { font-family: inherit; cursor: pointer; }
+
+/* ---- VARIABLES ---- */
+:root {
+  --blue: #0076c1;
+  --blue-dk: #005a94;
+  --blue-lt: #e8f4fb;
+  --green: #65c47b;
+  --green-dk: #4aab61;
+  --navy: #003d6b;
+  --navy-dk: #001f3d;
+  --dark: #111827;
+  --gray: #6b7280;
+  --gray-dk: #374151;
+  --gray-lt: #f3f6f9;
+  --border: #e2e8f0;
+  --grad: linear-gradient(135deg, #003d6b 0%, #005a94 60%, #0a6b52 100%);
+  --grad-dark: linear-gradient(135deg, #001f3d 0%, #003d6b 100%);
+  --shadow: 0 4px 20px rgba(0,0,0,0.08);
+  --shadow-lg: 0 16px 50px rgba(0,0,0,0.18);
+  --shadow-form: 0 30px 80px -20px rgba(0, 31, 61, 0.45);
+  --r: 10px;
+  --r-lg: 16px;
+}
+
+/* ---- LAYOUT ---- */
+.wrap { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+
+/* ---- HEADER (stripped down — no nav links) ---- */
+.lp-header { background: #fff; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 8px rgba(0,0,0,0.04); }
+.lp-header .wrap { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+.lp-logo img { height: 44px; width: auto; display: block; }
+.lp-header-right { display: flex; align-items: center; gap: 14px; }
+.lp-trust-mini { font-size: 12px; color: var(--gray); display: flex; align-items: center; gap: 6px; font-weight: 600; }
+.lp-trust-mini::before { content: '⭐⭐⭐⭐⭐'; font-size: 11px; }
+.lp-call { display: flex; align-items: center; gap: 10px; padding: 10px 18px; background: var(--blue); color: #fff; border-radius: var(--r); font-weight: 800; font-size: 16px; transition: transform 0.15s, background 0.15s; }
+.lp-call:hover { background: var(--blue-dk); transform: translateY(-1px); }
+.lp-call-icon { width: 22px; height: 22px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; }
+
+/* ---- HERO ---- */
+.hero { position: relative; background: var(--grad-dark); padding: 56px 0 80px; overflow: hidden; }
+.hero::before { content: ''; position: absolute; inset: 0; background-image:
+  radial-gradient(circle at 20% 20%, rgba(101, 196, 123, 0.25) 0%, transparent 40%),
+  radial-gradient(circle at 80% 80%, rgba(0, 118, 193, 0.35) 0%, transparent 50%);
+  opacity: 0.9; }
+.hero::after { content: ''; position: absolute; inset: 0; background-image: url('/images/job-10-gray-estate-aerial.jpg'); background-size: cover; background-position: center; opacity: 0.18; mix-blend-mode: luminosity; }
+.hero .wrap { position: relative; z-index: 2; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 56px; align-items: center; }
+
+.hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(101, 196, 123, 0.15); border: 1px solid rgba(101, 196, 123, 0.3); color: var(--green); padding: 8px 14px; border-radius: 999px; font-size: 12px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 22px; }
+.hero-badge::before { content: ''; width: 6px; height: 6px; background: var(--green); border-radius: 50%; box-shadow: 0 0 0 4px rgba(101, 196, 123, 0.25); animation: pulse 2s infinite; }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+
+.hero-h1 { font-size: clamp(34px, 4.8vw, 58px); font-weight: 800; line-height: 1.05; letter-spacing: -0.02em; color: #fff; margin-bottom: 20px; }
+.hero-h1 em { font-style: normal; color: var(--green); }
+.hero-sub { font-size: 18px; color: rgba(255,255,255,0.78); line-height: 1.6; margin-bottom: 28px; max-width: 540px; }
+.hero-sub strong { color: #fff; font-weight: 700; }
+
+.hero-trust { display: flex; flex-wrap: wrap; gap: 20px 28px; margin-bottom: 36px; }
+.hero-trust-item { display: flex; align-items: center; gap: 8px; font-size: 14px; color: rgba(255,255,255,0.85); font-weight: 600; }
+.hero-trust-item-check { width: 22px; height: 22px; background: var(--green); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; color: #fff; font-weight: 800; flex-shrink: 0; }
+
+.hero-cta-row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+.hero-tel { display: inline-flex; align-items: center; gap: 12px; background: var(--green); color: #fff; padding: 16px 26px; border-radius: var(--r); font-weight: 800; font-size: 18px; transition: all 0.2s; }
+.hero-tel:hover { background: var(--green-dk); transform: translateY(-2px); box-shadow: 0 12px 30px rgba(101, 196, 123, 0.4); }
+.hero-tel-icon { width: 32px; height: 32px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; }
+.hero-or { color: rgba(255,255,255,0.5); font-size: 14px; font-weight: 600; padding: 0 6px; }
+.hero-scroll-link { color: rgba(255,255,255,0.85); font-size: 14px; font-weight: 600; text-decoration: underline; text-underline-offset: 4px; }
+.hero-scroll-link:hover { color: var(--green); }
+
+/* ---- HERO FORM ---- */
+.hero-form-card { background: #fff; border-radius: var(--r-lg); padding: 36px 32px 32px; box-shadow: var(--shadow-form); position: relative; }
+.hero-form-card::before { content: 'FREE'; position: absolute; top: -16px; right: 24px; background: var(--green); color: #fff; padding: 6px 14px; border-radius: 999px; font-size: 11px; font-weight: 800; letter-spacing: 0.08em; box-shadow: 0 8px 20px rgba(101, 196, 123, 0.5); }
+.form-eyebrow { font-size: 11px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--blue); margin-bottom: 6px; }
+.form-h { font-size: 24px; font-weight: 800; color: var(--dark); line-height: 1.2; margin-bottom: 6px; letter-spacing: -0.01em; }
+.form-sub { font-size: 14px; color: var(--gray); margin-bottom: 22px; line-height: 1.5; }
+.form-grid { display: grid; gap: 12px; }
+.form-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.form-field { display: flex; flex-direction: column; gap: 5px; }
+.form-field label { font-size: 12px; font-weight: 700; color: var(--gray-dk); letter-spacing: 0.02em; }
+.form-field input, .form-field select, .form-field textarea { padding: 13px 14px; border: 1.5px solid var(--border); border-radius: 8px; font-size: 15px; font-family: inherit; transition: border-color 0.15s, box-shadow 0.15s; background: #fff; }
+.form-field input:focus, .form-field select:focus, .form-field textarea:focus { outline: none; border-color: var(--blue); box-shadow: 0 0 0 3px rgba(0, 118, 193, 0.12); }
+.form-submit { background: var(--blue); color: #fff; border: none; padding: 16px 24px; border-radius: 10px; font-weight: 800; font-size: 16px; letter-spacing: 0.01em; cursor: pointer; transition: all 0.2s; margin-top: 6px; display: flex; align-items: center; justify-content: center; gap: 10px; }
+.form-submit:hover { background: var(--blue-dk); transform: translateY(-1px); box-shadow: 0 10px 24px rgba(0, 118, 193, 0.4); }
+.form-fineprint { font-size: 11px; color: var(--gray); text-align: center; margin-top: 12px; line-height: 1.5; }
+.honeypot { display: none; }
+
+/* ---- TRUST BAR ---- */
+.trustbar { background: #fff; padding: 32px 0; border-bottom: 1px solid var(--border); }
+.trustbar-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; align-items: center; text-align: center; }
+.trustbar-item { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.trustbar-num { font-size: clamp(28px, 3.5vw, 36px); font-weight: 800; color: var(--navy); letter-spacing: -0.02em; line-height: 1; }
+.trustbar-num span { color: var(--green); }
+.trustbar-label { font-size: 12px; font-weight: 700; color: var(--gray); letter-spacing: 0.06em; text-transform: uppercase; }
+
+/* ---- SECTION DEFAULTS ---- */
+section { padding: 80px 0; }
+.section-eyebrow { font-size: 12px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--blue); margin-bottom: 12px; }
+.section-h { font-size: clamp(28px, 4vw, 44px); font-weight: 800; color: var(--dark); letter-spacing: -0.02em; line-height: 1.1; }
+.section-sub { font-size: 16px; color: var(--gray); line-height: 1.7; max-width: 600px; margin-top: 14px; }
+.section-header { margin-bottom: 56px; }
+.section-header.center { text-align: center; }
+.section-header.center .section-sub { margin: 14px auto 0; }
+
+/* ---- WHY ATLAS (3 col) ---- */
+.why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.why-card { background: #fff; border: 1px solid var(--border); border-radius: var(--r-lg); padding: 32px 28px; transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s; position: relative; overflow: hidden; }
+.why-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--grad); transform: scaleX(0); transform-origin: left; transition: transform 0.3s; }
+.why-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); border-color: transparent; }
+.why-card:hover::before { transform: scaleX(1); }
+.why-icon { width: 52px; height: 52px; background: var(--blue-lt); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 26px; margin-bottom: 18px; }
+.why-h { font-size: 18px; font-weight: 800; color: var(--dark); margin-bottom: 8px; letter-spacing: -0.01em; }
+.why-p { font-size: 14px; color: var(--gray); line-height: 1.7; }
+
+/* ---- HOW IT WORKS ---- */
+.how { background: var(--gray-lt); }
+.how-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; position: relative; }
+.how-grid::before { content: ''; position: absolute; top: 32px; left: 12%; right: 12%; height: 2px; background-image: linear-gradient(to right, var(--blue) 50%, transparent 50%); background-size: 14px 2px; z-index: 0; }
+.how-card { background: #fff; border-radius: var(--r-lg); padding: 32px 28px; text-align: center; box-shadow: var(--shadow); position: relative; z-index: 1; }
+.how-num { width: 64px; height: 64px; background: var(--grad); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 800; margin: 0 auto 20px; box-shadow: 0 8px 20px rgba(0, 61, 107, 0.3); }
+.how-h { font-size: 18px; font-weight: 800; color: var(--dark); margin-bottom: 8px; }
+.how-p { font-size: 14px; color: var(--gray); line-height: 1.7; }
+
+/* ---- REVIEWS ---- */
+.reviews-meta { display: flex; align-items: center; justify-content: center; gap: 16px; margin-top: 24px; padding: 16px 24px; background: #fff; border: 1px solid var(--border); border-radius: var(--r); display: inline-flex; box-shadow: var(--shadow); }
+.reviews-meta-stars { color: #fbbf24; font-size: 18px; letter-spacing: 2px; }
+.reviews-meta-num { font-weight: 800; font-size: 16px; color: var(--dark); }
+.reviews-meta-num span { color: var(--gray); font-weight: 600; }
+.reviews-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 48px; }
+.review-card { background: #fff; border: 1px solid var(--border); border-radius: var(--r-lg); padding: 28px; transition: transform 0.2s, box-shadow 0.2s; }
+.review-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+.review-stars { color: #fbbf24; font-size: 16px; letter-spacing: 2px; margin-bottom: 14px; }
+.review-text { font-size: 15px; color: var(--gray-dk); line-height: 1.7; margin-bottom: 18px; font-style: italic; }
+.review-text::before { content: '"'; color: var(--blue); font-size: 32px; line-height: 0; vertical-align: -10px; margin-right: 4px; font-style: normal; }
+.review-attr { display: flex; align-items: center; gap: 12px; padding-top: 16px; border-top: 1px solid var(--border); }
+.review-avatar { width: 40px; height: 40px; background: var(--grad); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px; flex-shrink: 0; }
+.review-name { font-weight: 700; font-size: 14px; color: var(--dark); }
+.review-loc { font-size: 12px; color: var(--gray); margin-top: 1px; }
+
+/* ---- SERVICE AREA ---- */
+.areas { background: var(--navy); color: #fff; }
+.areas-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 56px; align-items: center; }
+.areas-h { font-size: clamp(28px, 4vw, 40px); font-weight: 800; color: #fff; letter-spacing: -0.02em; line-height: 1.1; }
+.areas-sub { font-size: 16px; color: rgba(255,255,255,0.7); line-height: 1.7; margin-top: 14px; max-width: 480px; }
+.areas-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px 16px; padding: 28px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--r-lg); }
+.areas-list span { font-size: 14px; color: rgba(255,255,255,0.85); display: flex; align-items: center; gap: 6px; }
+.areas-list span::before { content: ''; width: 4px; height: 4px; background: var(--green); border-radius: 50%; flex-shrink: 0; }
+
+/* ---- FINAL CTA ---- */
+.cta-final { background: var(--grad); padding: 80px 0; text-align: center; }
+.cta-final h2 { font-size: clamp(30px, 4.5vw, 48px); font-weight: 800; color: #fff; line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 16px; }
+.cta-final p { font-size: 18px; color: rgba(255,255,255,0.8); margin-bottom: 36px; max-width: 540px; margin-left: auto; margin-right: auto; line-height: 1.6; }
+.cta-final-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.cta-final-btn-primary { background: var(--green); color: #fff; padding: 18px 32px; border-radius: var(--r); font-weight: 800; font-size: 17px; transition: all 0.2s; display: inline-flex; align-items: center; gap: 10px; }
+.cta-final-btn-primary:hover { background: var(--green-dk); transform: translateY(-2px); box-shadow: 0 16px 36px rgba(101, 196, 123, 0.5); }
+.cta-final-btn-secondary { background: rgba(255,255,255,0.1); border: 1.5px solid rgba(255,255,255,0.3); color: #fff; padding: 18px 32px; border-radius: var(--r); font-weight: 700; font-size: 16px; transition: all 0.2s; display: inline-flex; align-items: center; gap: 10px; }
+.cta-final-btn-secondary:hover { background: rgba(255,255,255,0.18); border-color: #fff; }
+
+/* ---- MINIMAL FOOTER ---- */
+.lp-footer { background: #0a1520; padding: 36px 0; }
+.lp-footer .wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+.lp-footer-left { display: flex; align-items: center; gap: 16px; }
+.lp-footer img { height: 32px; }
+.lp-footer-info { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.5; }
+.lp-footer-info strong { color: #fff; font-weight: 700; }
+.lp-footer-links { display: flex; gap: 24px; font-size: 13px; color: rgba(255,255,255,0.5); }
+.lp-footer-links a:hover { color: var(--green); }
+
+/* ---- STICKY MOBILE BAR ---- */
+.mob-bar { display: none; position: fixed; bottom: 0; left: 0; right: 0; background: #fff; border-top: 1px solid var(--border); padding: 10px 12px; z-index: 99; gap: 8px; box-shadow: 0 -4px 20px rgba(0,0,0,0.1); }
+.mob-bar a { flex: 1; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 12px; border-radius: 10px; font-weight: 800; font-size: 14px; }
+.mob-bar a.call { background: var(--blue); color: #fff; }
+.mob-bar a.text { background: var(--green); color: #fff; }
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 960px) {
+  .hero { padding: 40px 0 60px; }
+  .hero .wrap { grid-template-columns: 1fr; gap: 36px; }
+  .hero-form-card { padding: 28px 24px 24px; }
+  .why-grid, .reviews-grid, .how-grid { grid-template-columns: 1fr; }
+  .how-grid::before { display: none; }
+  .areas-grid { grid-template-columns: 1fr; gap: 32px; }
+  .areas-list { grid-template-columns: repeat(2, 1fr); }
+  .trustbar-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+  .trustbar-grid .trustbar-item:nth-child(3), .trustbar-grid .trustbar-item:nth-child(4) { padding-top: 16px; border-top: 1px solid var(--border); }
+}
+@media (max-width: 680px) {
+  section { padding: 56px 0; }
+  .hero-h1 { font-size: 36px; }
+  .hero-trust { gap: 12px; }
+  .hero-trust-item { font-size: 13px; }
+  .lp-trust-mini { display: none; }
+  .lp-call { padding: 9px 14px; font-size: 14px; }
+  .lp-call-icon { width: 20px; height: 20px; }
+  .form-row-2 { grid-template-columns: 1fr; }
+  .reviews-meta { flex-direction: column; gap: 8px; }
+  .lp-footer .wrap { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .mob-bar { display: flex; }
+  body { padding-bottom: 70px; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER (stripped) -->
+<header class="lp-header">
+  <div class="wrap">
+    <a href="/" class="lp-logo">
+      <img src="/logo.png" alt="Atlas Roofing &amp; Restoration">
+    </a>
+    <div class="lp-header-right">
+      <span class="lp-trust-mini">60+ Five-Star Reviews</span>
+      <a href="tel:+12168883208" class="lp-call">
+        <span class="lp-call-icon">📞</span>
+        (216) 888-3208
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-left">
+      <span class="hero-badge">Now Booking — Limited Slots</span>
+      <h1 class="hero-h1">Cleveland's <em>Top-Rated</em> Roof Replacement Crew</h1>
+      <p class="hero-sub">
+        <strong>GAF Certified. BBB Accredited A+.</strong> Most residential replacements completed in a single day. Owner Andrew Farkas personally inspects every job &mdash; no high-pressure sales reps, no commissioned closers.
+      </p>
+
+      <div class="hero-trust">
+        <div class="hero-trust-item"><span class="hero-trust-item-check">✓</span> Free in-home inspection</div>
+        <div class="hero-trust-item"><span class="hero-trust-item-check">✓</span> 100% financing available</div>
+        <div class="hero-trust-item"><span class="hero-trust-item-check">✓</span> Honest, no-pressure quotes</div>
+        <div class="hero-trust-item"><span class="hero-trust-item-check">✓</span> Locally owned &amp; insured</div>
+      </div>
+
+      <div class="hero-cta-row">
+        <a href="tel:+12168883208" class="hero-tel">
+          <span class="hero-tel-icon">📞</span>
+          (216) 888-3208
+        </a>
+        <span class="hero-or">or</span>
+        <a href="#quote" class="hero-scroll-link">Get a written quote &rarr;</a>
+      </div>
+    </div>
+
+    <div class="hero-right" id="quote">
+      <div class="hero-form-card">
+        <div class="form-eyebrow">Free Inspection Request</div>
+        <h2 class="form-h">Book your free inspection</h2>
+        <p class="form-sub">We'll call within the hour to confirm. Most inspections scheduled within 48 hours.</p>
+
+        <form name="lp-roof-replacement" method="POST" action="/thankyou/" data-netlify="true" data-netlify-honeypot="bot-field" class="form-grid">
+          <input type="hidden" name="form-name" value="lp-roof-replacement">
+          <input type="hidden" name="campaign" value="roof-replacement">
+          <p class="honeypot"><label>Don't fill this out: <input name="bot-field"></label></p>
+
+          <div class="form-row-2">
+            <div class="form-field">
+              <label for="name">Full Name</label>
+              <input id="name" name="name" type="text" required autocomplete="name" placeholder="Jane Doe">
+            </div>
+            <div class="form-field">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" required autocomplete="tel" placeholder="(216) 555-1234">
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="address">Property Address</label>
+            <input id="address" name="address" type="text" required autocomplete="street-address" placeholder="123 Main St, Beachwood OH">
+          </div>
+
+          <div class="form-row-2">
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@example.com">
+            </div>
+            <div class="form-field">
+              <label for="age">Roof Age</label>
+              <select id="age" name="roof_age">
+                <option value="">Select...</option>
+                <option value="under-10">Under 10 years</option>
+                <option value="10-20">10–20 years</option>
+                <option value="20-30">20–30 years</option>
+                <option value="30+">30+ years</option>
+                <option value="unsure">Not sure</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit" class="form-submit">
+            Request Free Inspection &rarr;
+          </button>
+          <p class="form-fineprint">
+            No commitment. We'll never share your info. Most quotes within 48 hrs.
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<section class="trustbar" style="padding: 28px 0;">
+  <div class="wrap">
+    <div class="trustbar-grid">
+      <div class="trustbar-item">
+        <div class="trustbar-num">A+</div>
+        <div class="trustbar-label">BBB Accredited</div>
+      </div>
+      <div class="trustbar-item">
+        <div class="trustbar-num">2026</div>
+        <div class="trustbar-label">GAF Certified</div>
+      </div>
+      <div class="trustbar-item">
+        <div class="trustbar-num">60<span>+</span></div>
+        <div class="trustbar-label">5-Star Reviews</div>
+      </div>
+      <div class="trustbar-item">
+        <div class="trustbar-num">1<span>-Day</span></div>
+        <div class="trustbar-label">Most Replacements</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY ATLAS -->
+<section>
+  <div class="wrap">
+    <div class="section-header center">
+      <div class="section-eyebrow">Why Cleveland Homeowners Pick Us</div>
+      <h2 class="section-h">A roofer that actually shows up &mdash;<br>and stays until the job's done right.</h2>
+      <p class="section-sub">No commissioned reps. No high-pressure sales. Andrew personally walks every roof and every quote. Here's what that means for you.</p>
+    </div>
+
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">🏠</div>
+        <h3 class="why-h">Owner-led inspections</h3>
+        <p class="why-p">Andrew Farkas personally inspects every roof. You get a real assessment from the person who'll be running the job — not a salesperson on commission.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">📋</div>
+        <h3 class="why-h">Honest, written quotes</h3>
+        <p class="why-p">Every quote is itemized. No vague pricing, no surprise upcharges. If you don't need a full replacement, we'll tell you straight.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">⚡</div>
+        <h3 class="why-h">One-day replacements</h3>
+        <p class="why-p">Most residential roofs done in a single day. Tear-off, install, cleanup. We treat your property like it's our own — every nail accounted for.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how">
+  <div class="wrap">
+    <div class="section-header center">
+      <div class="section-eyebrow">How It Works</div>
+      <h2 class="section-h">From first call to finished roof in days, not months.</h2>
+    </div>
+
+    <div class="how-grid">
+      <div class="how-card">
+        <div class="how-num">1</div>
+        <h3 class="how-h">Request your free inspection</h3>
+        <p class="how-p">Call or fill the form. We confirm within an hour and book the inspection within 48 hours.</p>
+      </div>
+      <div class="how-card">
+        <div class="how-num">2</div>
+        <h3 class="how-h">Get an honest assessment</h3>
+        <p class="how-p">Andrew walks your roof, photographs damage, and gives you a written quote — usually same-day. Repair vs replace, your call.</p>
+      </div>
+      <div class="how-card">
+        <div class="how-num">3</div>
+        <h3 class="how-h">We install &amp; clean up</h3>
+        <p class="how-p">Most replacements done in one day. Full cleanup, magnet sweep for nails, GAF System Plus warranty registered with the manufacturer.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section>
+  <div class="wrap">
+    <div class="section-header center">
+      <div class="section-eyebrow">What Our Customers Say</div>
+      <h2 class="section-h">Real reviews from real Cleveland homeowners.</h2>
+      <a href="https://www.google.com/maps/place/Atlas+Roofing+%26+Restoration/@41.4608547,-81.5060061,707m" target="_blank" rel="noopener" style="display: inline-block; margin-top: 24px;">
+        <div class="reviews-meta">
+          <span class="reviews-meta-stars">★★★★★</span>
+          <span class="reviews-meta-num">5.0 <span>· 60+ Google reviews</span></span>
+        </div>
+      </a>
+    </div>
+
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Andrew was honest with his inspection — only recommended what was actually needed. No pressure, no upselling. The crew showed up on time, finished in one day, and cleaned up better than I expected.</p>
+        <div class="review-attr">
+          <div class="review-avatar">BK</div>
+          <div>
+            <div class="review-name">Benjamin Kaplan</div>
+            <div class="review-loc">Cleveland, OH</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Quick and professional. Communication was great — I knew what was happening every step. The site was kept clean throughout, and they finished ahead of schedule. Highly recommend.</p>
+        <div class="review-attr">
+          <div class="review-avatar">TK</div>
+          <div>
+            <div class="review-name">Tawn Kramer</div>
+            <div class="review-loc">Cleveland, OH</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Highest level of professionalism I've experienced from a contractor. Great price, never felt taken advantage of. Andrew explained everything clearly and the work speaks for itself.</p>
+        <div class="review-attr">
+          <div class="review-avatar">JR</div>
+          <div>
+            <div class="review-name">Joseph Reichman</div>
+            <div class="review-loc">Cleveland, OH</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">A divine appointment. Andrew and his crew were respectful, fast, and did beautiful work. I love my new roof and how the whole process was handled — no stress, no surprises.</p>
+        <div class="review-attr">
+          <div class="review-avatar">LL</div>
+          <div>
+            <div class="review-name">Lorna Joy Larkin</div>
+            <div class="review-loc">South Euclid, OH</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREA -->
+<section class="areas">
+  <div class="wrap">
+    <div class="areas-grid">
+      <div>
+        <div class="section-eyebrow" style="color: var(--green);">Where We Work</div>
+        <h2 class="areas-h">Serving Cleveland's east side &amp; surrounding suburbs.</h2>
+        <p class="areas-sub">Based in Beachwood, we serve 30+ communities across Cuyahoga, Lake, and Geauga counties. If you're nearby, we're nearby.</p>
+        <a href="tel:+12168883208" class="hero-tel" style="margin-top: 28px;">
+          <span class="hero-tel-icon">📞</span>
+          Call (216) 888-3208
+        </a>
+      </div>
+      <div class="areas-list">
+        <span>Beachwood</span>
+        <span>Shaker Heights</span>
+        <span>Solon</span>
+        <span>Pepper Pike</span>
+        <span>Lyndhurst</span>
+        <span>Mayfield Heights</span>
+        <span>Chagrin Falls</span>
+        <span>Hunting Valley</span>
+        <span>Gates Mills</span>
+        <span>Moreland Hills</span>
+        <span>Bentleyville</span>
+        <span>Orange</span>
+        <span>Woodmere</span>
+        <span>University Heights</span>
+        <span>South Euclid</span>
+        <span>Highland Heights</span>
+        <span>Richmond Heights</span>
+        <span>Mayfield Village</span>
+        <span>Bedford</span>
+        <span>Bedford Heights</span>
+        <span>Willoughby Hills</span>
+        <span>Kirtland</span>
+        <span>South Russell</span>
+        <span>Chesterland</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="cta-final">
+  <div class="wrap">
+    <h2>Free inspection. No commitment. Owner answers.</h2>
+    <p>Call now and Andrew will personally schedule your inspection — usually within 48 hours.</p>
+    <div class="cta-final-row">
+      <a href="tel:+12168883208" class="cta-final-btn-primary">
+        📞 (216) 888-3208
+      </a>
+      <a href="#quote" class="cta-final-btn-secondary">
+        Or request online &rarr;
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- MINIMAL FOOTER -->
+<footer class="lp-footer">
+  <div class="wrap">
+    <div class="lp-footer-left">
+      <img src="/logo-white.png" alt="Atlas Roofing">
+      <div class="lp-footer-info">
+        <strong>Atlas Roofing &amp; Restoration LLC</strong><br>
+        23945 Mercantile Rd, Suite D, Beachwood OH 44122 · (216) 888-3208
+      </div>
+    </div>
+    <div class="lp-footer-links">
+      <a href="/privacy-policy/">Privacy</a>
+      <a href="/contact/">Contact</a>
+      <a href="/">Main Site</a>
+    </div>
+  </div>
+</footer>
+
+<!-- STICKY MOBILE BAR -->
+<div class="mob-bar">
+  <a href="tel:+12168883208" class="call">📞 Call Now</a>
+  <a href="sms:+12168883208" class="text">💬 Text</a>
+</div>
+
+</body>
+</html>

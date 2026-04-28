@@ -171,7 +171,27 @@ img { max-width: 100%; height: auto; display: block; }
 .ty-review p { font-size:14px; color:#2d6e42; line-height:1.6; }
 .ty-review a { color:#1a5c30; font-weight:700; }
 @media(max-width:600px){ .ty-card { padding:36px 24px; } .ty-h1 { font-size:26px; } }
-.mob-quote-overlay{display:none;position:fixed;inset:0;z-index:300;background:rgba(0,0,0,0.6);align-items:flex-end;justify-content:center;}.mob-quote-overlay.open{display:flex;}.mob-quote-panel{background:#fff;width:100%;max-width:480px;border-radius:16px 16px 0 0;padding:24px 20px 32px;position:relative;}.mob-quote-panel h3{font-size:18px;font-weight:800;color:var(--dark);margin-bottom:4px;}.mob-quote-panel p{font-size:13px;color:var(--gray);margin-bottom:16px;}.mob-quote-close{position:absolute;top:14px;right:16px;background:#f3f4f6;border:none;border-radius:50%;width:28px;height:28px;font-size:16px;cursor:pointer;color:var(--gray);}.mob-form-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px;}.mob-form-field{display:flex;flex-direction:column;gap:4px;margin-bottom:10px;}.mob-form-field label{font-size:11px;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:0.05em;}.mob-form-field input,.mob-form-field select{padding:10px 12px;border:1.5px solid var(--border);border-radius:var(--r);font-size:14px;font-family:'Manrope',sans-serif;color:var(--dark);background:#fff;width:100%;}.mob-submit{width:100%;background:var(--grad-accent);color:#fff;font-weight:800;font-size:15px;padding:13px;border-radius:var(--r);border:none;cursor:pointer;font-family:'Manrope',sans-serif;margin-top:6px;}</style>
+.mob-quote-overlay{display:none;position:fixed;inset:0;z-index:300;background:rgba(0,0,0,0.6);align-items:flex-end;justify-content:center;}.mob-quote-overlay.open{display:flex;}.mob-quote-panel{background:#fff;width:100%;max-width:480px;border-radius:16px 16px 0 0;padding:24px 20px 32px;position:relative;}.mob-quote-panel h3{font-size:18px;font-weight:800;color:var(--dark);margin-bottom:4px;}.mob-quote-panel p{font-size:13px;color:var(--gray);margin-bottom:16px;}.mob-quote-close{position:absolute;top:14px;right:16px;background:#f3f4f6;border:none;border-radius:50%;width:28px;height:28px;font-size:16px;cursor:pointer;color:var(--gray);}.mob-form-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px;}.mob-form-field{display:flex;flex-direction:column;gap:4px;margin-bottom:10px;}.mob-form-field label{font-size:11px;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:0.05em;}.mob-form-field input,.mob-form-field select{padding:10px 12px;border:1.5px solid var(--border);border-radius:var(--r);font-size:14px;font-family:'Manrope',sans-serif;color:var(--dark);background:#fff;width:100%;}.mob-submit{width:100%;background:var(--grad-accent);color:#fff;font-weight:800;font-size:15px;padding:13px;border-radius:var(--r);border:none;cursor:pointer;font-family:'Manrope',sans-serif;margin-top:6px;}
+/* Thank-you page: social proof reviews + gallery */
+.ty-proof { margin: 0 -8px 32px; padding: 28px 24px; background: var(--gray-lt); border-radius: var(--r-lg); text-align: left; }
+.ty-proof-label { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--blue); margin-bottom: 18px; text-align: center; }
+.ty-reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 28px; }
+.ty-rev { background: #fff; border: 1px solid var(--border); border-radius: var(--r); padding: 18px; }
+.ty-rev-stars { color: #f59e0b; font-size: 13px; letter-spacing: 1px; margin-bottom: 8px; }
+.ty-rev-text { font-size: 13px; color: var(--gray); line-height: 1.6; margin-bottom: 14px; font-style: italic; }
+.ty-rev-author { display: flex; align-items: center; gap: 10px; }
+.ty-rev-avatar { width: 32px; height: 32px; border-radius: 50%; background: var(--grad-accent); color: #fff; font-size: 11px; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+.ty-rev-name { font-size: 13px; font-weight: 700; color: var(--dark); }
+.ty-rev-loc { font-size: 11px; color: var(--gray-400); }
+.ty-gallery-label { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--blue); margin-bottom: 14px; text-align: center; }
+.ty-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.ty-gallery img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: var(--r); display: block; }
+@media (max-width: 720px) {
+  .ty-reviews-grid { grid-template-columns: 1fr; }
+  .ty-gallery { grid-template-columns: repeat(2, 1fr); }
+}
+
+</style>
 </head>
 <body>
 <div class="topbar"><div class="wrap"><div class="topbar-left"><span>23945 Mercantile Rd, Suite D — Beachwood, OH</span><span>BBB A+ Rated</span><span>GAF Certified</span></div><a href="tel:2168883208" class="topbar-phone">☎ (216) 888-3208</a></div></div>
@@ -196,10 +216,36 @@ img { max-width: 100%; height: auto; display: block; }
     <div class="ty-step"><div class="ty-step-num">4</div><div class="ty-step-text"><strong>No pressure</strong> — the inspection is free whether you hire us or not</div></div>
   </div>
 
-  <div class="ty-review">
-    <p>⭐ While you wait — if you've worked with us before, we'd love a Google review! It helps Northeast Ohio homeowners find a contractor they can trust.</p>
-    <p style="margin-top:8px;"><a href="https://www.google.com/maps/place/Atlas+Roofing+%26+Restoration/@41.4608547,-81.5060061,707m/data=!3m2!1e3!5s0x883102a495403b37:0xfd9c252c052527cd!4m8!3m7!1s0x883102bd2b5a73b9:0x92937d2914e8a622!8m2!3d41.4608547!4d-81.5060061!9m1!1b1!16s%2Fg%2F11vkr36yfr?entry=ttu&g_ep=EgoyMDI2MDQxMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Leave us a Google review →</a>
-<a href="https://www.bbb.org/us/oh/beachwood/profile/roofing-contractors/atlas-roofing-restoration-0312-92057214/#sealclick" target="_blank" rel="noopener nofollow" aria-label="BBB A+ Accredited — view profile" style="display:inline-flex;align-items:center;height:34px;background:#fff;border-radius:6px;padding:3px 6px;border:1px solid rgba(255,255,255,0.12);" title="BBB A+ Accredited Business"><img src="https://seal-cleveland.bbb.org/seals/blue-seal-250-52-bbb-92057214.png" alt="BBB A+ Accredited Business" loading="lazy" style="display:block;height:28px;width:auto;border:0;"></a></p>
+  <!-- SOCIAL PROOF: reviews + recent work -->
+  <div class="ty-proof">
+    <div class="ty-proof-label">Why Northeast Ohio homeowners choose Atlas</div>
+    <div class="ty-reviews-grid">
+      <div class="ty-rev">
+        <div class="ty-rev-stars">★★★★★</div>
+        <p class="ty-rev-text">"I asked them to take a look at my roof based on my home inspection report. They were very honest and only recommended the exact work that needed to be done — nothing more."</p>
+        <div class="ty-rev-author"><div class="ty-rev-avatar">BK</div><div><div class="ty-rev-name">Benjamin K.</div><div class="ty-rev-loc">Beachwood, OH</div></div></div>
+      </div>
+      <div class="ty-rev">
+        <div class="ty-rev-stars">★★★★★</div>
+        <p class="ty-rev-text">"Appreciate their quick and professional work. They kept me up to date, communicated well, and left a clean job site. Would absolutely recommend Atlas."</p>
+        <div class="ty-rev-author"><div class="ty-rev-avatar">TK</div><div><div class="ty-rev-name">Tawn K.</div><div class="ty-rev-loc">Northeast Ohio</div></div></div>
+      </div>
+      <div class="ty-rev">
+        <div class="ty-rev-stars">★★★★★</div>
+        <p class="ty-rev-text">"Such a great experience. They replaced my entire roof in just one day. Everything was done so efficiently and the quality of the work is excellent."</p>
+        <div class="ty-rev-author"><div class="ty-rev-avatar">AF</div><div><div class="ty-rev-name">Adina F.</div><div class="ty-rev-loc">Northeast Ohio</div></div></div>
+      </div>
+    </div>
+
+    <div class="ty-gallery-label">Some of our recent work</div>
+    <div class="ty-gallery">
+      <img src="/images/job-02-residential-brown-aerial.jpg" alt="Recent Atlas Roofing project" loading="lazy">
+      <img src="/images/job-09-gray-skylights-aerial.jpg" alt="Recent Atlas Roofing project" loading="lazy">
+      <img src="/images/job-14-charcoal-large-home-aerial.jpg" alt="Recent Atlas Roofing project" loading="lazy">
+      <img src="/images/job-05-charcoal-front-view.jpg" alt="Recent Atlas Roofing project" loading="lazy">
+      <img src="/images/job-11-gray-estate-patio.jpg" alt="Recent Atlas Roofing project" loading="lazy">
+      <img src="/images/job-16-gray-fresh-install-aerial.jpg" alt="Recent Atlas Roofing project" loading="lazy">
+    </div>
   </div>
 
   <p class="ty-direct">Can't wait? Call or text us directly: <a href="tel:2168883208">(216) 888-3208</a></p>
